@@ -1,0 +1,1 @@
+# Requirements for the LOBSHOT configuration extractor from Elastic Security Labs.
