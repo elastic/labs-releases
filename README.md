@@ -2,7 +2,7 @@
 
 ## Elastic Security Labs - Releases
 
-This repository is the home to tools, configuration extractors, and other contributions to the infosec, threat hunting, and intelligence analysis community. At Elastic, we believe that being open and transparent is critical for the success of us and our users. Check out our [blog post](https://www.elastic.co/blog/continued-leadership-in-open-and-transparent-security) if you are interested in additional background.
+This repository is the home to tools, configuration extractors, and other contributions to the infosec, threat hunting, malware researcher, and intelligence analysis community. At Elastic, we believe that being open and transparent is critical for the success of us and our users. Check out our [blog post](https://www.elastic.co/blog/continued-leadership-in-open-and-transparent-security) if you are interested in additional background.
 
 ## Directory
 
