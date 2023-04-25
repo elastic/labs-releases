@@ -10,7 +10,7 @@ Below you will find the sections we have opened in this repository:
 
 | Folder | Description |
 | ------ | ----------- |
-| [`configuration_extractors/`](configuration_extractors/) | Malware configuration extractors, organized by family |
+| [`extractors/`](configuration_extractors/) | Malware configuration extractors, organized by family |
 
 ## Questions? Problems? Suggestions?
 
