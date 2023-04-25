@@ -12,7 +12,7 @@ In each directory, you'll find all the components needed to run the configuratio
 | `requirements.txt` | The Python requirements file for the extractor |
 | `[malware]_config_extractor.py` | The Python configuration extractor |
 
-To run the extractors, you'll need Python 3.6+ and the dependent libraries in the `requirements.txt` file in the respective directory:
+To run the extractors, you'll need Python 3.10+ and the dependent libraries in the `requirements.txt` file in the respective directory:
 
 ```
 python -m pip install -r requirements.txt
@@ -20,24 +20,17 @@ python -m pip install -r requirements.txt
 
 Once you have the requirements installed, you'll run the extractor against an individual binary or a directory containing multiple samples.
 
+## Example Usage
+
 ```
-# Single binary
-python [malware]_config_extractor.py --file malware.bin
+$ python [malware]_config_extractor.py -h
 
-# Directory of samples
-python [malware]_config_extractor.py --directory malware-directory
-```
-
-# Example Usage
-
-```text
-(venv) $$> python .\extractors\lobshot\lobshot_config_extractor.py -h
-usage: LOBSHOT config file extractor [-h] (-f FILE | -d DIRECTORY)
+usage: [MALWARE] config file extractor [-h] (-f FILE | -d DIRECTORY)
 
 options:
   -h, --help            show this help message and exit
-  -f FILE, --file FILE  LOBSHOT file path
-  -d DIRECTORY, --directory DIRECTORY  LOBSHOT directory
+  -f FILE, --file FILE  [MALWARE] file path
+  -d DIRECTORY, --directory DIRECTORY  [MALWARE] directory
 ```
 
 ## Legacy extractors
