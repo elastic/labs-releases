@@ -8,6 +8,7 @@ In each directory, you'll find all the components needed to run the configuratio
 
 | Component | Description |
 | ------ | ----------- |
+| `README.md` | Brief description of the extractor family |
 | `requirements.txt` | The Python requirements file for the extractor |
 | `[malware]_config_extractor.py` | The Python configuration extractor |
 
