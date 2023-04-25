@@ -11,6 +11,7 @@ Below you will find the sections we have opened in this repository:
 | Folder | Description |
 | ------ | ----------- |
 | [`extractors/`](extractors/) | Malware configuration extractors, organized by family |
+| [`indicators/`](indicators/) | Research atomic indicators, organized by family |
 
 ## Questions? Problems? Suggestions?
 
