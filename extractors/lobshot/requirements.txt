@@ -4,8 +4,4 @@
 
 # Requirements for the LOBSHOT configuration extractor from Elastic Security Labs.
 
-argparse
-os
-pathlib
-pefile
-re
+pefile==2023.2.7
