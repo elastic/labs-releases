@@ -28,6 +28,18 @@ python [malware]_config_extractor.py --file malware.bin
 python [malware]_config_extractor.py --directory malware-directory
 ```
 
+# Example Usage
+
+```text
+(venv) $$> python .\extractors\lobshot\lobshot_config_extractor.py -h
+usage: LOBSHOT config file extractor [-h] (-f FILE | -d DIRECTORY)
+
+options:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  LOBSHOT file path
+  -d DIRECTORY, --directory DIRECTORY  LOBSHOT directory
+```
+
 ## Legacy extractors
 
 If you're looking for our legacy extractors written as Docker containers, you can still find them [here](https://www.elastic.co/security-labs/tools).
