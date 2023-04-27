@@ -30,11 +30,30 @@ For more information, check out the [Threat ECS fieldset](https://www.elastic.co
 
 ## Ingesting data
 
-All NDJSON documents are structured in ECS format so they can be ingested by Filebeat.
+All NDJSON documents are structured in ECS format so they can be ingested by the Elastic Agent or Filebeat.
+
+### The Elastic Agent 
+
+Instructions below are to upload the ECS NDJSON document using the Elastic Agent.
+
+1. In Kibana, create a Fleet policy with the [Custom Logs integration](https://docs.elastic.co/integrations/log). 
+2. Define the Log file path (`/path/to/documents/*.ndjson`)
+3. Click the Advanced options dropdown and enter the following in the Custom configurations box
+```
+json:
+  keys_under_root: true
+  add_error_key: true
+  overwrite_keys: true
+```
+4. Click Save integration
+5. Install and enroll the Elastic Agent on the endpoint where the NDJSON documents are located
+6. Check the `logs-*` data view in Kibana
+
+![image](https://user-images.githubusercontent.com/7442091/234921587-0e660a67-c773-4518-8894-38b890ad8b8d.png)
 
 ### Filebeat
 
-Instructions below are to upload the NDJSON document using Filebeat.
+Instructions below are to upload the ECS NDJSON document using Filebeat.
 
 1. [Install Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html)
 2. [Enable the Filestream input](https://www.elastic.co/guide/en/beats/filebeat/current/configuration-filebeat-options.html)
@@ -69,3 +88,5 @@ parsers:
 6. Check your configuration with `filebeat test output` and `filebeat test config`
 7. Run the Filebeat setup `filebeat setup`
 8. Start Filebeat and check the `filebeat-*` data view in Kibana
+
+![image](https://user-images.githubusercontent.com/7442091/234921714-41b88463-802d-4a7a-a289-5b2c144f8502.png)
