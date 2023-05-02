@@ -2,10 +2,10 @@
 
 ## Elastic Security Labs - Tools
 
-This directory contains various tools that can be used to enhance automation around malware and intrusion anlaysis.
+This directory contains various tools that can be used to enhance automation around malware and intrusion analysis.
 
-In each directory, you'll find all the components needed to run the tools.
+These tools are operated by Elastic Security Labs' [nightMARE](../nightMARE) framework.
 
 | Tool | Description |
 | ------ | ----------- |
-| [`nightMARE`](nightMARE/) | A Python framwork for malware configuration extractors |
+| [`icedid`](icedid/) | Tools to aid in the analysis of the ICEDID malware family. |
