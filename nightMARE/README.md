@@ -6,7 +6,7 @@ This directory contains the night**MARE** (Malware Analysis & Reverse Engineerin
 
 The nightMARE library is born from the need to refactor our code base into reusable bricks. We want to concentrate logics and dependencies into a single library in order to speed up tool developement for members of the Elastic Security Labs team.
 
-By open sourcing our this library to the community we hope that it'll contribute to our battle against threats.
+By open sourcing our library to the community we hope that it'll contribute to our battle against threats.
 
 **Please note that this library is still young and under developement. Pull requests are welcome.**  
 Example usage: https://www.elastic.co/security-labs/unpacking-icedid
