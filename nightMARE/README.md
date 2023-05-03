@@ -16,8 +16,12 @@ By open sourcing our this library to the community we hope that it'll contribute
 | ------------------------ | --------------------------- |
 | nightmare.malware.icedid | Implement ICEDID algorithms |
 
-To install nightMARE, you'll need Python 3.10+:
+To install nightMARE, you'll need Python 3.10+. From the `labs-releases/` root directory:
 
 ```
+# Windows
+python -m pip install .\nightMARE
+
+# Linux/macOS
 python -m pip install ./nightMARE
 ```
