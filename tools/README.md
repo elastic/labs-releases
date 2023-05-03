@@ -4,8 +4,8 @@
 
 This directory contains various tools that can be used to enhance automation around malware and intrusion analysis.
 
-These tools are operated by Elastic Security Labs' [nightMARE](../nightMARE) framework.
+These tools are operated by Elastic Security Labs' [nightMARE](../nightMARE) library.
 
-| Tool | Description |
-| ------ | ----------- |
+| Tool                | Description                                                |
+| ------------------- | ---------------------------------------------------------- |
 | [`icedid`](icedid/) | Tools to aid in the analysis of the ICEDID malware family. |

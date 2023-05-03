@@ -2,24 +2,22 @@
 
 ## Elastic Security Labs - nightMARE
 
-This directory contains the night**MARE** (Malware Analysis & Reverse Engineering) framework. nightMARE will be a central framework that will allow for an efficient and logical approach to automating various reverse engineering functions. 
+This directory contains the night**MARE** (Malware Analysis & Reverse Engineering) library. nightMARE will be a central module that will allow for an efficient and logical approach to automating various reverse engineering functions. 
 
-| Module | Description |
-| ------ | ----------- |
-| [`icedid`](../tools/icedid) | Analysis module for the ICEDID malware family |
+the nightMARE library is born from the need to refactor our code base into reusable bricks. We want to concentrate logics and dependencies into a single library in order to speed up tool developement for members of the Elastic Security Labs team.
 
-To run nightMARE, you'll need Python 3.10+:
+By open sourcing our this library to the community we hope that it'll contribute to our battle against threats.
+
+**Please note that this library is still young and under developement. Any contribution is welcomed.**
+
+## Malware Modules
+
+| Module                   | Description                 |
+| ------------------------ | --------------------------- |
+| nightmare.malware.icedid | Implement ICEDID algorithms |
+
+To install nightMARE, you'll need Python 3.10+:
 
 ```
 python -m pip install ./nightMARE
-```
-
-## Example Usage
-
-```
-$ python nightMARE -h
-
-usage: 
-
-options:
 ```
