@@ -13,6 +13,11 @@ PAGE_EXECUTE_READWRITE = 0x40
 IMAGE_REL_BASED_HIGHLOW = 3
 IMAGE_REL_BASED_DIR64 = 10
 
+COMPRESSION_FORMAT_LZNT1 = 2
+
+STATUS_SUCCESS = 0
+STATUS_BAD_COMPRESSION_BUFFER = 0xC0000242
+
 
 class IMAGE_BASE_RELOCATION(ctypes.Structure):
     _fields_ = [("VirtualAddress", ctypes.c_uint32), ("SizeOfBlock", ctypes.c_uint32)]
@@ -66,3 +71,5 @@ VirtualAlloc.argtypes = [
     ctypes.c_uint32,
     ctypes.c_uint32,
 ]
+
+RtlDecompressBuffer = ctypes.windll.Ntdll.RtlDecompressBuffer

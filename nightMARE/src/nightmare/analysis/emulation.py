@@ -33,7 +33,7 @@ class WindowsEmulator(object):
     def __find_free_memory(self, size: int) -> int:
         address = 0x10000
         while self.__is_memory_mapped(address, size):
-            if address >= 0xFFFFFFFF:
+            if address >= 2 ** (32 if self.__is_x86 else 64) - 1:
                 raise RuntimeError("Failed to find free memory")
             address += 0x10000
         return address
