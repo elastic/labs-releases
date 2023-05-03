@@ -8,7 +8,7 @@ The nightMARE library is born from the need to refactor our code base into reusa
 
 By open sourcing our this library to the community we hope that it'll contribute to our battle against threats.
 
-**Please note that this library is still young and under developement. Pull requests are welcome.**
+**Please note that this library is still young and under developement. Pull requests are welcome.**  
 Example usage: https://www.elastic.co/security-labs/unpacking-icedid
 
 ## Malware modules
