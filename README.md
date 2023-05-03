@@ -8,10 +8,12 @@ This repository is the home to tools, configuration extractors, and other contri
 
 Below you will find the sections we have opened in this repository:
 
-| Folder | Description |
-| ------ | ----------- |
+| Folder                       | Description                                           |
+| ---------------------------- | ----------------------------------------------------- |
 | [`extractors/`](extractors/) | Malware configuration extractors, organized by family |
-| [`indicators/`](indicators/) | Research atomic indicators, organized by family |
+| [`indicators/`](indicators/) | Research atomic indicators, organized by family       |
+| [`nightMARE/`](nightMARE/)   | Malware reverse engineering and analysis library      |
+| [`tools/`](tools/)           | Tools released for community use                      |
 
 ## Questions? Problems? Suggestions?
 

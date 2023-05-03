@@ -1,0 +1,9 @@
+{
+    "field_0": 67,
+    "is_dll": true,
+    "stage_2_fullpath": "[redacted]\\extract\\lake_x32.tmp",
+    "core_fullpath": "[redacted]\\extract\\UponBetter\\license.dat",
+    "core_subpath": "UponBetter\\license.dat",
+    "stage_2_export": "#1",
+    "encrypted_config_path": "[redacted]\\extract\\configuration.bin"
+}
