@@ -1,0 +1,506 @@
+{
+    "type": "bundle",
+    "id": "bundle--707fa1ae-4ed9-4fa6-a0c0-2554c540969a",
+    "objects": [
+        {
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--4032f083-2dde-5d33-9b54-731192c0d924",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T19:36:29.015Z",
+            "modified": "2023-05-18T16:12:23.427Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '5.133.65.53']",
+            "name": "5.133.65.53",
+            "description": "\n**ISP:** UAB Baltnetos komunikacijos\n\n**OS:** Windows\n\n--------------------------\nHostnames:\n\n--------------------------\nDomains:\n\n--------------------------\nServices:\n\n**80:**\n```\nHTTP/1.1 200 OK\r\nVia: 1.1 MSUPDATE\r\nConnection: Keep-Alive\r\nProxy-Connection: Keep-Alive\r\nContent-Length: 689\r\nDate: Mon, 01 May 2023 17:58:12 GMT\r\nContent-Type: text/html\r\nETag: \"c56b7a39ea92d31:0\"\r\nServer: Microsoft-IIS/7.5\r\nAccept-Ranges: bytes\r\nCache-Control: no-cache\r\nLast-Modified: Sun, 21 Jan 2018 19:01:20 GMT\r\nX-Powered-By: ASP.NET\n```\n------------------\n**443:**\n```\nHTTP/1.1 200 OK\r\nCache-Control: no-cache\r\nContent-Type: text/html\r\nLast-Modified: Sun, 21 Jan 2018 19:01:20 GMT\r\nAccept-Ranges: bytes\r\nETag: \"c56b7a39ea92d31:0\"\r\nServer: Microsoft-IIS/7.5\r\nX-Powered-By: ASP.NET\r\nDate: Mon, 15 May 2023 02:43:08 GMT\r\nContent-Length: 689\n```\nHEARTBLEED: 2023/05/15 02:43:21 5.133.65.53:443 - ERROR: write tcp 5.133.65.53:443: broken pipe\n\n------------------\n        ",
+            "valid_from": "2023-05-17T21:19:56.254Z",
+            "valid_until": "2023-06-16T21:19:56.254Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "r77",
+                "ref9597",
+                "self-signed",
+                "cryptominer"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "51936533-3238-461d-8a89-d8ccf95750c8",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e0086626-8b83-527d-9581-c646729e46da",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T19:36:29.201Z",
+            "modified": "2023-05-18T16:12:23.589Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '5.133.65.54']",
+            "name": "5.133.65.54",
+            "description": "\n**ISP:** UAB Baltnetos komunikacijos\n\n**OS:** None\n\n--------------------------\nHostnames:\n\n--------------------------\nDomains:\n\n--------------------------\nServices:\n\n**80:**\n```\n\n```\n------------------\n        ",
+            "valid_from": "2023-05-17T21:19:56.493Z",
+            "valid_until": "2023-06-16T21:19:56.493Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref9597",
+                "r77",
+                "cryptominer"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "47fca340-eea3-4ffe-9d0d-749a25288eac",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5b403e74-994f-5be6-82ec-a3b90a89b932",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T19:36:29.219Z",
+            "modified": "2023-05-18T16:12:23.693Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'msupdate.info']",
+            "name": "msupdate.info",
+            "description": "Simple indicator of observable {msupdate.info}",
+            "valid_from": "2023-05-17T21:19:56.922Z",
+            "valid_until": "2024-05-16T21:19:56.922Z",
+            "x_score": 15,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "ref9597",
+                "r77",
+                "cryptominer"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                },
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/msupdate.info"
+                }
+            ],
+            "x_id": "43301290-1c9d-42d0-babe-e935f197bc9c",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0fa35120-36f3-514b-b20f-5e43fd61aae6",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T19:36:29.221Z",
+            "modified": "2023-05-18T16:12:23.794Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '5.133.65.55']",
+            "name": "5.133.65.55",
+            "description": "\n**ISP:** UAB \"Baltnetos komunikacijos\"\n\n**OS:** None\n\n--------------------------\nHostnames:\n\n--------------------------\nDomains:\n\n--------------------------\nServices:\n\n**80:**\n```\n\n```\n------------------\n        ",
+            "valid_from": "2023-05-17T21:19:56.692Z",
+            "valid_until": "2023-06-16T21:19:56.692Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref9597",
+                "r77",
+                "cryptominer"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "f0941b27-405f-417d-a722-fe8883b24e97",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--cf36c35d-c86a-528d-8946-a6c7343c5f6b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T19:36:29.373Z",
+            "modified": "2023-05-18T16:12:23.900Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '5.133.65.56']",
+            "name": "5.133.65.56",
+            "description": "\n**ISP:** UAB \"Baltnetos komunikacijos\"\n\n**OS:** None\n\n--------------------------\nHostnames:\n\n--------------------------\nDomains:\n\n--------------------------\nServices:\n\n**80:**\n```\n\n```\n------------------\n        ",
+            "valid_from": "2023-05-17T21:19:57.159Z",
+            "valid_until": "2023-06-16T21:19:57.159Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "cryptominer",
+                "ref9597",
+                "r77"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "1474b493-a6cb-4f13-a643-9de2254cbd8d",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--72edfe82-08b6-565f-a95f-61af63039f11",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T19:38:52.484Z",
+            "modified": "2023-05-18T16:12:24.002Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '91c6e2621121a6871af091c52fafe41220ae12d6e47e52fd13a7b9edd8e31796']",
+            "name": "91c6e2621121a6871af091c52fafe41220ae12d6e47e52fd13a7b9edd8e31796",
+            "description": "Simple indicator of observable {91c6e2621121a6871af091c52fafe41220ae12d6e47e52fd13a7b9edd8e31796}",
+            "valid_from": "2023-05-17T21:19:57.704Z",
+            "valid_until": "2024-05-16T21:19:57.704Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref9597",
+                "cryptominer",
+                "r77"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "361dcc93-329d-45a1-82fa-16fa5176f4f4",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--aa724f73-5bc9-549f-bd14-8206b5855edd",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T19:38:52.848Z",
+            "modified": "2023-05-18T16:12:24.109Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '96849108e13172d14591169f8fdcbf8a8aa6be05b7b6ef396d65529eacc02d89']",
+            "name": "96849108e13172d14591169f8fdcbf8a8aa6be05b7b6ef396d65529eacc02d89",
+            "description": "Simple indicator of observable {96849108e13172d14591169f8fdcbf8a8aa6be05b7b6ef396d65529eacc02d89}",
+            "valid_from": "2023-05-17T21:19:58.715Z",
+            "valid_until": "2024-05-16T21:19:58.715Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref9597",
+                "cryptominer",
+                "r77"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "c068da3d-589f-4675-8403-5c589bfe6fd2",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--bc767b9b-0d65-5b22-b402-c0f52420739b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T21:19:57.452Z",
+            "modified": "2023-05-18T16:12:24.214Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '10165e27e0db0a6708f346ddea657ab0409499f93eb8426a80864a966f0f401e' OR file:hashes.'SHA-1' = '3a028761638f5aa93b0719c5650c83a138e8abc9' OR file:hashes.MD5 = 'cb2ffac2a251378cda3f91cd613f453d']",
+            "name": "10165e27e0db0a6708f346ddea657ab0409499f93eb8426a80864a966f0f401e",
+            "description": "Simple indicator of observable {10165e27e0db0a6708f346ddea657ab0409499f93eb8426a80864a966f0f401e}",
+            "valid_from": "2023-05-17T21:19:57.426Z",
+            "valid_until": "2024-05-16T21:19:57.426Z",
+            "x_score": 67,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref9597",
+                "r77",
+                "cryptominer"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "ff161822-4dac-4ee8-a436-ee0cb02b90ff",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--6593aeed-62b2-5a63-aee6-eec4b6f24c31",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T21:19:57.936Z",
+            "modified": "2023-05-18T16:12:24.319Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'a7e31abe10be6bca44f0a846d631e578efe78c14f6bf1cf834cfb15469fc1d3a' OR file:hashes.'SHA-1' = '603be792ab700278a278d3388cb124b6349b1fa4' OR file:hashes.MD5 = 'bd96e11f157a19d969bf585811e434cf']",
+            "name": "a7e31abe10be6bca44f0a846d631e578efe78c14f6bf1cf834cfb15469fc1d3a",
+            "description": "Simple indicator of observable {a7e31abe10be6bca44f0a846d631e578efe78c14f6bf1cf834cfb15469fc1d3a}",
+            "valid_from": "2023-05-17T21:19:57.914Z",
+            "valid_until": "2024-05-16T21:19:57.914Z",
+            "x_score": 64,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "cryptominer",
+                "r77",
+                "ref9597"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "00665099-0e3e-470c-b8de-7374214ed2f8",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--88398607-98f4-5019-a3a6-836194eca8a5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T21:19:58.130Z",
+            "modified": "2023-05-18T16:12:24.423Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '9fb38412cac94255a3abbec80f15620098a0c85247690850c302a9ff060b5c0c' OR file:hashes.'SHA-1' = 'fcf8f57501358e67a78e8f3cd063cb7149e52d9d' OR file:hashes.MD5 = '31cb2855a8614ae22337f9899d9e32b1']",
+            "name": "9fb38412cac94255a3abbec80f15620098a0c85247690850c302a9ff060b5c0c",
+            "description": "Simple indicator of observable {9fb38412cac94255a3abbec80f15620098a0c85247690850c302a9ff060b5c0c}",
+            "valid_from": "2023-05-17T21:19:58.107Z",
+            "valid_until": "2024-05-16T21:19:58.107Z",
+            "x_score": 71,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref9597",
+                "r77",
+                "cryptominer"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "8c9680ef-35f1-4f7b-a4cc-a83c54d81ae7",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--a655bfda-6839-54c4-9313-7037e3fb6ebe",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T21:19:58.339Z",
+            "modified": "2023-05-18T16:12:24.525Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '29bc88a316e3f34ed29c5358e459b9fbf3b7962a72cac388ab5c977dd990ea77' OR file:hashes.'SHA-1' = 'd7aead7d16a291f378b6c6febf9c00e76e856a55' OR file:hashes.MD5 = 'ef98211a181f7608d30ee2fbf15af903']",
+            "name": "29bc88a316e3f34ed29c5358e459b9fbf3b7962a72cac388ab5c977dd990ea77",
+            "description": "Simple indicator of observable {29bc88a316e3f34ed29c5358e459b9fbf3b7962a72cac388ab5c977dd990ea77}",
+            "valid_from": "2023-05-17T21:19:58.314Z",
+            "valid_until": "2024-05-16T21:19:58.314Z",
+            "x_score": 67,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "cryptominer",
+                "ref9597",
+                "r77"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "3f868725-c46d-4201-a814-6fce78581ef0",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c643c92a-73e1-50d6-8219-3adcbd11ae30",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T21:19:58.542Z",
+            "modified": "2023-05-18T16:12:24.628Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '916c805b0d512dd7bbd88f46632d66d9613de61691b4bd368e4b7cb1f0ac7f60' OR file:hashes.'SHA-1' = '7ca54e93420d704056b527d70772e33de6e40d71' OR file:hashes.MD5 = '49ce755b910429b6ed2775ca5035daff']",
+            "name": "916c805b0d512dd7bbd88f46632d66d9613de61691b4bd368e4b7cb1f0ac7f60",
+            "description": "Simple indicator of observable {916c805b0d512dd7bbd88f46632d66d9613de61691b4bd368e4b7cb1f0ac7f60}",
+            "valid_from": "2023-05-17T21:19:58.516Z",
+            "valid_until": "2024-05-16T21:19:58.516Z",
+            "x_score": 72,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "cryptominer",
+                "r77",
+                "ref9597"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "178cd84a-b325-4dcc-a915-f47b5f5b7c96",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ac1b1024-a023-5497-ab21-68f18f0480f6",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-17T21:19:58.939Z",
+            "modified": "2023-05-18T16:12:24.727Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '757fa687a9b4d461ffda78d93e4d812003307a9b9747dce7fb469625429cc551' OR file:hashes.'SHA-1' = 'c77b26bf58884507389cd1c5699174eec3459df2' OR file:hashes.MD5 = '3b89f9f1e9932eee5a031b0266894f5f']",
+            "name": "757fa687a9b4d461ffda78d93e4d812003307a9b9747dce7fb469625429cc551",
+            "description": "Simple indicator of observable {757fa687a9b4d461ffda78d93e4d812003307a9b9747dce7fb469625429cc551}",
+            "valid_from": "2023-05-17T21:19:58.914Z",
+            "valid_until": "2024-05-16T21:19:58.914Z",
+            "x_score": 70,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "r77",
+                "cryptominer",
+                "ref9597"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "dabb3918-a5d5-4558-9790-a478f8a8b2c0",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--1dd2595c-5405-5244-9ee6-e626b31e7281",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-05-18T15:58:08.937Z",
+            "modified": "2023-05-18T16:12:24.831Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'aeb6a7b9ca890dc08259d7c239eb188e466210d48a17640671cba398bf69392f' OR file:hashes.'SHA-1' = '203f592ef1a64542d44ea5b811ef9c147141a3a6' OR file:hashes.MD5 = '4812d48c31b88cb9749ff40d30b97da3']",
+            "name": "aeb6a7b9ca890dc08259d7c239eb188e466210d48a17640671cba398bf69392f",
+            "description": "Simple indicator of observable {aeb6a7b9ca890dc08259d7c239eb188e466210d48a17640671cba398bf69392f}",
+            "valid_from": "2023-05-18T15:58:08.910Z",
+            "valid_until": "2024-05-17T15:58:08.910Z",
+            "x_score": 42,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "r77",
+                "ref9597",
+                "cryptominer"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit"
+                }
+            ],
+            "x_id": "2ffa5e25-89cd-4fb4-b6d9-218249cc321d",
+            "type": "indicator",
+            "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
