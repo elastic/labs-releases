@@ -1,0 +1,485 @@
+{
+    "type": "bundle",
+    "id": "bundle--850c087e-17dc-45a7-92ea-a960c1fff069",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2023-05-18T19:34:27.704Z",
+            "x_organization_type": "vendor",
+            "x_reliability": "A",
+            "x_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--8598af15-7a5f-5012-9093-331bc5db6f79",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-08T15:49:11.698Z",
+            "modified": "2023-06-08T18:00:05.309Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'appointmentmedia.com']",
+            "name": "appointmentmedia.com",
+            "description": "Simple indicator of observable {appointmentmedia.com}",
+            "valid_from": "2023-06-08T17:55:57.701Z",
+            "valid_until": "2024-06-07T17:55:57.701Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "spectralviper",
+                "ref2754",
+                "backdoor"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "59678a64-ca6e-446a-acb9-67402e8817fd",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--20989225-3a9d-5d4b-bf3d-8d6f1ca6aed5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-08T15:49:11.701Z",
+            "modified": "2023-06-08T18:00:05.413Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'hosting-wordpress-services.com']",
+            "name": "hosting-wordpress-services.com",
+            "description": "Simple indicator of observable {hosting-wordpress-services.com}",
+            "valid_from": "2023-06-08T17:55:58.355Z",
+            "valid_until": "2024-06-07T17:55:58.355Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "ref2754",
+                "backdoor",
+                "spectralviper"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "33b51e9e-4a18-48ba-b2b3-98613d4ca66c",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b3ff4848-d4a7-54aa-862c-99dd929ea43e",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-08T15:49:11.701Z",
+            "modified": "2023-06-08T18:00:05.518Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'webmanufacturers.com']",
+            "name": "webmanufacturers.com",
+            "description": "Simple indicator of observable {webmanufacturers.com}",
+            "valid_from": "2023-06-08T17:55:58.149Z",
+            "valid_until": "2024-06-07T17:55:58.149Z",
+            "x_score": 2,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "backdoor",
+                "spectralviper",
+                "ref2754"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "18de8f03-74bd-4af5-bb37-d923ea6426a3",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--db1050db-c127-56b6-b6ce-90adc2a0951b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-08T15:49:11.861Z",
+            "modified": "2023-06-08T18:00:05.636Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'toppaperservices.com']",
+            "name": "toppaperservices.com",
+            "description": "Simple indicator of observable {toppaperservices.com}",
+            "valid_from": "2023-06-08T17:55:58.828Z",
+            "valid_until": "2024-06-07T17:55:58.828Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "spectralviper",
+                "backdoor",
+                "ref2754"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "cd0f7a6d-1999-43f4-a477-158842911e4d",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--647d4bee-6222-5f99-a793-f9363efd74b0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-08T15:49:11.906Z",
+            "modified": "2023-06-08T18:00:05.738Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'stablewindowsapp.com']",
+            "name": "stablewindowsapp.com",
+            "description": "Simple indicator of observable {stablewindowsapp.com}",
+            "valid_from": "2023-06-08T17:55:59.254Z",
+            "valid_until": "2024-06-07T17:55:59.254Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "ref2754",
+                "spectralviper",
+                "backdoor"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "fa542476-3525-444a-9a66-609c10943d0e",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--a1961545-11c4-5191-a54f-19434bbfa274",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-08T15:54:37.771Z",
+            "modified": "2023-06-08T18:00:05.842Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '4e3a88cf00e0b4718e7317a37297a185ff35003192e5832f5cf3020c4fc45966' OR file:hashes.'SHA-1' = '8eac64944ebb7aed3d3a1f256d8b9133cd899625' OR file:hashes.MD5 = '0403c1ef68593f4127b9a660b38a773b']",
+            "name": "4e3a88cf00e0b4718e7317a37297a185ff35003192e5832f5cf3020c4fc45966",
+            "description": "Simple indicator of observable {4e3a88cf00e0b4718e7317a37297a185ff35003192e5832f5cf3020c4fc45966}",
+            "valid_from": "2023-06-08T17:55:57.935Z",
+            "valid_until": "2024-06-07T17:55:57.935Z",
+            "x_score": 44,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "backdoor",
+                "ref2754",
+                "spectralviper"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "407a1e8e-564b-4759-8496-58dc80300925",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0b2192a1-f514-56e7-86f9-42a09a99125e",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-08T15:54:37.775Z",
+            "modified": "2023-06-08T18:00:05.937Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '7b5e56443812eed76a94077763c46949d1e49cd7de79cde029f1984e0d970644' OR file:hashes.'SHA-1' = 'd81f69e7cfc19208064d08826492b760eec6579a' OR file:hashes.MD5 = 'b5a06ff6b41ca6bf4f00cbc0e7099a30']",
+            "name": "7b5e56443812eed76a94077763c46949d1e49cd7de79cde029f1984e0d970644",
+            "description": "Simple indicator of observable {7b5e56443812eed76a94077763c46949d1e49cd7de79cde029f1984e0d970644}",
+            "valid_from": "2023-06-08T17:55:59.458Z",
+            "valid_until": "2024-06-07T17:55:59.458Z",
+            "x_score": 51,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "backdoor",
+                "spectralviper",
+                "ref2754"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "3b0f4d17-58cb-4b06-bfa6-2b14c2c9a60a",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--cec5118c-f10f-5a75-ad07-0eab00ac138c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-08T15:54:37.837Z",
+            "modified": "2023-06-08T18:00:06.031Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '5191fe222010ba7eb589e2ff8771c3a75ea7c7ffc00f0ba3f7d716f12010dd96' OR file:hashes.'SHA-1' = '6852777dbd21562869e57937dc61185ac6bc13ba' OR file:hashes.MD5 = '795dc022c8897e290b26f620b0124e5e']",
+            "name": "5191fe222010ba7eb589e2ff8771c3a75ea7c7ffc00f0ba3f7d716f12010dd96",
+            "description": "Simple indicator of observable {5191fe222010ba7eb589e2ff8771c3a75ea7c7ffc00f0ba3f7d716f12010dd96}",
+            "valid_from": "2023-06-08T17:55:59.719Z",
+            "valid_until": "2024-06-07T17:55:59.719Z",
+            "x_score": 33,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "backdoor",
+                "ref2754",
+                "spectralviper"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "e2b09294-ef10-4036-89f7-862f19431986",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5a59baef-65d4-5a3a-a9e4-2aafaf09d112",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-08T15:54:37.840Z",
+            "modified": "2023-06-08T18:00:06.127Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '56d2d05988b6c23232b013b38c49b7a9143c6649d81321e542d19ae46f4a4204' OR file:hashes.'SHA-1' = 'e4b1bb4057a2017e1b67009f2fea1a226365a628' OR file:hashes.MD5 = 'e4e927c949b4f820dcee4dd82083a4e4']",
+            "name": "56d2d05988b6c23232b013b38c49b7a9143c6649d81321e542d19ae46f4a4204",
+            "description": "Simple indicator of observable {56d2d05988b6c23232b013b38c49b7a9143c6649d81321e542d19ae46f4a4204}",
+            "valid_from": "2023-06-08T17:55:59.042Z",
+            "valid_until": "2024-06-07T17:55:59.042Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "backdoor",
+                "ref2754",
+                "spectralviper"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "3cd413b2-e6a9-445d-b620-09d35b89b7c0",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--f4a7ab2a-59b9-521e-97b9-ac598d72255c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-08T15:54:37.843Z",
+            "modified": "2023-06-08T18:00:06.226Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '7e35ba39c2c77775b0394712f89679308d1a4577b6e5d0387835ac6c06e556cb' OR file:hashes.'SHA-1' = '805d0d48bf12bb8cadeccedb87b47479063d6546' OR file:hashes.MD5 = '67b447f52eaa9e133b19d7954dad18c8']",
+            "name": "7e35ba39c2c77775b0394712f89679308d1a4577b6e5d0387835ac6c06e556cb",
+            "description": "Simple indicator of observable {7e35ba39c2c77775b0394712f89679308d1a4577b6e5d0387835ac6c06e556cb}",
+            "valid_from": "2023-06-08T17:55:58.587Z",
+            "valid_until": "2024-06-07T17:55:58.587Z",
+            "x_score": 4,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "idle",
+                "detect-debug-environment",
+                "pedll",
+                "backdoor",
+                "assembly",
+                "ref2754",
+                "64bits",
+                "checks-user-input",
+                "long-sleeps",
+                "spectralviper"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "1b38722e-6c5b-4ecc-931b-25a4d1f72950",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--122bcae1-6740-5b4b-8466-c957c46582aa",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-08T15:54:38.230Z",
+            "modified": "2023-06-08T18:00:06.317Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'd1c32176b46ce171dbce46493eb3c5312db134b0a3cfa266071555c704e6cff8' OR file:hashes.'SHA-1' = 'bfc0093ee0a89e72367cbf3c90ec138359c9e2ef' OR file:hashes.MD5 = '5128d0e41d625c06a07cf86e24462823']",
+            "name": "d1c32176b46ce171dbce46493eb3c5312db134b0a3cfa266071555c704e6cff8",
+            "description": "Simple indicator of observable {d1c32176b46ce171dbce46493eb3c5312db134b0a3cfa266071555c704e6cff8}",
+            "valid_from": "2023-06-08T17:56:00.215Z",
+            "valid_until": "2024-06-07T17:56:00.215Z",
+            "x_score": 55,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "spectralviper",
+                "backdoor",
+                "ref2754"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "69464360-9b67-4b0f-8e03-b43e90a0492f",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b557f024-03f1-562c-8beb-911487225b1d",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-08T15:54:38.252Z",
+            "modified": "2023-06-08T18:00:06.411Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '4775fc861bc2685ff5ca43535ec346495549a69891f2bf45b1fcd85a0c1f57f7' OR file:hashes.'SHA-1' = 'c919f492c85a84beee99f9fcd086e5c2e6bb7dd3' OR file:hashes.MD5 = 'f7128f7bfe103cee226af89f7ba3c70b']",
+            "name": "4775fc861bc2685ff5ca43535ec346495549a69891f2bf45b1fcd85a0c1f57f7",
+            "description": "Simple indicator of observable {4775fc861bc2685ff5ca43535ec346495549a69891f2bf45b1fcd85a0c1f57f7}",
+            "valid_from": "2023-06-08T17:55:59.949Z",
+            "valid_until": "2024-06-07T17:55:59.949Z",
+            "x_score": 51,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "backdoor",
+                "spectralviper",
+                "ref2754"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "85bfef82-2a79-4e47-bbf3-211b603543df",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--037917f5-33dd-5d98-bfe0-23c9125f8668",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-08T15:54:38.286Z",
+            "modified": "2023-06-08T18:00:06.523Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '2482c7ececb23225e090af08feabc8dec8d23fe993306cb1a1f84142b051b621' OR file:hashes.'SHA-1' = 'e054c29688a15e67fbd0675c024d42583c90cdbd' OR file:hashes.MD5 = '30ba174fbbe29a271027175b92934ba9']",
+            "name": "2482c7ececb23225e090af08feabc8dec8d23fe993306cb1a1f84142b051b621",
+            "description": "Simple indicator of observable {2482c7ececb23225e090af08feabc8dec8d23fe993306cb1a1f84142b051b621}",
+            "valid_from": "2023-06-08T17:56:00.435Z",
+            "valid_until": "2024-06-07T17:56:00.435Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "idle",
+                "spectralviper",
+                "ref2754",
+                "detect-debug-environment",
+                "backdoor",
+                "long-sleeps",
+                "pedll",
+                "assembly"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/elastic-charms-spectralviper"
+                }
+            ],
+            "x_id": "12265232-8bd7-4709-b555-cb6ff49fbce0",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
