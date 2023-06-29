@@ -1,0 +1,637 @@
+{
+    "type": "bundle",
+    "id": "bundle--e1f99f56-a385-4bad-b299-de9f7a03e3f2",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2023-05-18T19:34:27.704Z",
+            "x_organization_type": "vendor",
+            "x_reliability": "A",
+            "x_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--d63d2bd8-47bc-5fad-ba9a-f9873f9502ff",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-29T13:45:49.242Z",
+            "modified": "2023-06-29T15:49:26.890Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'webhostwatto.work.gd']",
+            "name": "webhostwatto.work.gd",
+            "description": "Simple indicator of observable {webhostwatto.work.gd}",
+            "valid_from": "2023-06-29T14:11:56.871Z",
+            "valid_until": "2024-06-28T14:11:56.871Z",
+            "x_score": 17,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "ref9135",
+                "rustbucket",
+                "dprk",
+                "macho"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/webhostwatto.work.gd"
+                },
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "a637b122-ccb3-4314-9984-eaa46bfa7b4c",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--f1e582cf-457a-57e0-ac6e-0a5cb31aca54",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-29T13:45:49.242Z",
+            "modified": "2023-06-29T15:49:27.037Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'starbucls.xyz']",
+            "name": "starbucls.xyz",
+            "description": "Simple indicator of observable {starbucls.xyz}",
+            "valid_from": "2023-06-29T14:11:57.057Z",
+            "valid_until": "2024-06-28T14:11:57.057Z",
+            "x_score": 1,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "rustbucket",
+                "ref9135",
+                "dprk",
+                "macho"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "39339612-dfd7-4775-b626-eb0abf7d0fd2",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e531cf68-38b1-5007-b1bd-c5aa55998cf9",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-29T13:45:49.251Z",
+            "modified": "2023-06-29T15:49:27.136Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'crypto.hondchain.com']",
+            "name": "crypto.hondchain.com",
+            "description": "Simple indicator of observable {crypto.hondchain.com}",
+            "valid_from": "2023-06-29T14:11:56.661Z",
+            "valid_until": "2024-06-28T14:11:56.661Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "rustbucket",
+                "dprk",
+                "macho",
+                "ref9135"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "9bf328a3-ec31-42f3-bc46-d8555d5e1304",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c5001c92-0638-5f5a-9f70-79cc31b2accd",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-29T13:45:49.264Z",
+            "modified": "2023-06-29T15:49:27.329Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'companydeck.online']",
+            "name": "companydeck.online",
+            "description": "Simple indicator of observable {companydeck.online}",
+            "valid_from": "2023-06-29T14:11:57.244Z",
+            "valid_until": "2024-06-28T14:11:57.244Z",
+            "x_score": 5,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "rustbucket",
+                "dprk",
+                "macho",
+                "ref9135"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "d794545f-87c3-4d72-9b8d-369d8f2407b3",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--49198b14-9181-5612-baf8-0402c6b9b766",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-29T13:45:49.320Z",
+            "modified": "2023-06-29T15:49:27.428Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'docsend.linkpc.net']",
+            "name": "docsend.linkpc.net",
+            "description": "Simple indicator of observable {docsend.linkpc.net}",
+            "valid_from": "2023-06-29T14:11:57.642Z",
+            "valid_until": "2024-06-28T14:11:57.642Z",
+            "x_score": 6,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "ref9135",
+                "dprk",
+                "macho",
+                "rustbucket"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "933948b2-54da-4aa1-90bc-b34228cbd65b",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0a9acfdf-f460-5292-950a-32d78ee24f1b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-29T13:45:49.367Z",
+            "modified": "2023-06-29T15:49:27.531Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '104.168.167.88']",
+            "name": "104.168.167.88",
+            "description": "Simple indicator of observable {104.168.167.88}",
+            "valid_from": "2023-06-29T14:11:57.460Z",
+            "valid_until": "2023-07-29T14:11:57.460Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "dprk",
+                "rustbucket",
+                "ref9135",
+                "macho"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "6844d018-6ce2-423c-84b1-bf7ddc11608f",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7ef2b52c-7b67-55ed-b5da-d0e220eaa4dc",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-29T13:45:49.416Z",
+            "modified": "2023-06-29T15:49:27.626Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '64.44.141.15']",
+            "name": "64.44.141.15",
+            "description": "Simple indicator of observable {64.44.141.15}",
+            "valid_from": "2023-06-29T14:11:58.285Z",
+            "valid_until": "2023-07-29T14:11:58.285Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref9135",
+                "macho",
+                "dprk",
+                "rustbucket"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "2ebf776d-c122-4c41-b9a0-5acd3744aeef",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c28a7b9e-96a1-5ce8-b93a-bba6832c7756",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-06-29T13:45:49.427Z",
+            "modified": "2023-06-29T15:49:27.723Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'jaicvc.com']",
+            "name": "jaicvc.com",
+            "description": "Simple indicator of observable {jaicvc.com}",
+            "valid_from": "2023-06-29T14:11:58.077Z",
+            "valid_until": "2024-06-28T14:11:58.077Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "rustbucket",
+                "dprk",
+                "macho",
+                "ref9135"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "96286c93-4367-4dfc-ace8-120480a4dc93",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--4fffb49d-1fa7-5cc4-9d4d-9fc31b388773",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-29T14:11:57.862Z",
+            "modified": "2023-06-29T15:49:27.820Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'ec8f97d5595d92ec678ffbf5ae1f60ce90e620088927f751c76935c46aa7dc41' OR file:hashes.'SHA-1' = '3cc19cef767dee93588525c74fe9c1f1bf6f8007' OR file:hashes.MD5 = 'e2699d59c3602893698c5958f485c6c2']",
+            "name": "ec8f97d5595d92ec678ffbf5ae1f60ce90e620088927f751c76935c46aa7dc41",
+            "description": "Simple indicator of observable {ec8f97d5595d92ec678ffbf5ae1f60ce90e620088927f751c76935c46aa7dc41}",
+            "valid_from": "2023-06-29T14:11:57.832Z",
+            "valid_until": "2024-06-28T14:11:57.832Z",
+            "x_score": 52,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "rustbucket",
+                "macho",
+                "ref9135",
+                "dprk"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "f93eaa1c-9546-4cf1-a42b-f2874c5f8ac0",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0bd75911-5ffb-5a8f-b1d3-5862fff9efc1",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-29T14:11:58.507Z",
+            "modified": "2023-06-29T15:49:27.952Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '4f49514ab1794177a61c50c63b93b903c46f9b914c32ebe9c96aa3cbc1f99b16' OR file:hashes.'SHA-1' = 'cd8f41b91e8f1d8625e076f0a161e46e32c62bbf' OR file:hashes.MD5 = 'b7cb512be2f564a77608b4ffd57af9da']",
+            "name": "4f49514ab1794177a61c50c63b93b903c46f9b914c32ebe9c96aa3cbc1f99b16",
+            "description": "Simple indicator of observable {4f49514ab1794177a61c50c63b93b903c46f9b914c32ebe9c96aa3cbc1f99b16}",
+            "valid_from": "2023-06-29T14:11:58.479Z",
+            "valid_until": "2024-06-28T14:11:58.479Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "dropper",
+                "ref9135",
+                "macho",
+                "rustbucket",
+                "dprk"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "d914f8db-1c5f-4f46-81c3-b9a11119d1f6",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0b13b967-9323-552c-b90c-3bfbe0d56ea5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-29T14:11:58.763Z",
+            "modified": "2023-06-29T15:49:28.095Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'de81e5246978775a45f3dbda43e2716aaa1b1c4399fe7d44f918fccecc4dd500' OR file:hashes.'SHA-1' = '8a1b32ab8c2a889985e530425ae00f4428c575cc' OR file:hashes.MD5 = 'cdc7ae6934b904c62c942b6803ee31d6']",
+            "name": "de81e5246978775a45f3dbda43e2716aaa1b1c4399fe7d44f918fccecc4dd500",
+            "description": "Simple indicator of observable {de81e5246978775a45f3dbda43e2716aaa1b1c4399fe7d44f918fccecc4dd500}",
+            "valid_from": "2023-06-29T14:11:58.729Z",
+            "valid_until": "2024-06-28T14:11:58.729Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref9135",
+                "dprk",
+                "64bits",
+                "multi-arch",
+                "arm",
+                "dropper",
+                "rustbucket",
+                "checks-hostname",
+                "macho"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "c26d1305-c1b9-4523-88a1-28ee5cb52575",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c3a4aa16-3fd8-5587-b16f-310871cbb5ee",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-29T14:11:58.988Z",
+            "modified": "2023-06-29T15:49:28.192Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '7887638bcafd57e2896c7c16698e927ce92fd7d409aae698d33cdca3ce8d25b8' OR file:hashes.'SHA-1' = 'ed4f16b36bc47a701814b63e30d8ea7a226ca906' OR file:hashes.MD5 = 'e169d95fffd8ab489f5eae02365d39ca']",
+            "name": "7887638bcafd57e2896c7c16698e927ce92fd7d409aae698d33cdca3ce8d25b8",
+            "description": "Simple indicator of observable {7887638bcafd57e2896c7c16698e927ce92fd7d409aae698d33cdca3ce8d25b8}",
+            "valid_from": "2023-06-29T14:11:58.962Z",
+            "valid_until": "2024-06-28T14:11:58.962Z",
+            "x_score": 33,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref9135",
+                "macho",
+                "dprk",
+                "rustbucket"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "6e3e70b6-e963-4499-91e2-2fe915b8cc7b",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ff772d95-f0e1-5f9d-bea5-a961c7a74029",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-29T14:11:59.229Z",
+            "modified": "2023-06-29T15:49:28.288Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'fe8c0e881593cc3dfa7a66e314b12b322053c67cbc9b606d5a2c0a12f097ef69' OR file:hashes.'SHA-1' = '69f24956fb75beb9b93ef974d873914500e35601' OR file:hashes.MD5 = '029456110598a8fddefbf942d6f50cc4']",
+            "name": "fe8c0e881593cc3dfa7a66e314b12b322053c67cbc9b606d5a2c0a12f097ef69",
+            "description": "Simple indicator of observable {fe8c0e881593cc3dfa7a66e314b12b322053c67cbc9b606d5a2c0a12f097ef69}",
+            "valid_from": "2023-06-29T14:11:59.166Z",
+            "valid_until": "2024-06-28T14:11:59.166Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "rustbucket",
+                "ref9135",
+                "64bits",
+                "macho",
+                "dprk",
+                "arm"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "c8d4cb50-f05a-4bae-a649-ab8eae6385f1",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7360b756-a530-5cff-8b62-81e003824fe1",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-29T14:11:59.428Z",
+            "modified": "2023-06-29T15:49:28.387Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '7fccc871c889a4f4c13a977fdd5f062d6de23c3ffd27e72661c986fae6370387' OR file:hashes.'SHA-1' = '831dc7bc4a234907d94a889bcb60b7bedf1a1e13' OR file:hashes.MD5 = '352715d5770b53768bf9f23d810ad55f']",
+            "name": "7fccc871c889a4f4c13a977fdd5f062d6de23c3ffd27e72661c986fae6370387",
+            "description": "Simple indicator of observable {7fccc871c889a4f4c13a977fdd5f062d6de23c3ffd27e72661c986fae6370387}",
+            "valid_from": "2023-06-29T14:11:59.403Z",
+            "valid_until": "2024-06-28T14:11:59.403Z",
+            "x_score": 52,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "macho",
+                "rustbucket",
+                "ref9135",
+                "dprk"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "6fe34647-7e7f-4104-92fc-fea969328105",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--15fe4746-06c5-5235-a6b9-045de8b17968",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-29T14:11:59.617Z",
+            "modified": "2023-06-29T15:49:28.480Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '9ca914b1cfa8c0ba021b9e00bda71f36cad132f27cf16bda6d937badee66c747' OR file:hashes.'SHA-1' = '182760cbe11fa0316abfb8b7b00b63f83159f5aa' OR file:hashes.MD5 = 'f90b544f89cfbe38aee18024d7c39e40']",
+            "name": "9ca914b1cfa8c0ba021b9e00bda71f36cad132f27cf16bda6d937badee66c747",
+            "description": "Simple indicator of observable {9ca914b1cfa8c0ba021b9e00bda71f36cad132f27cf16bda6d937badee66c747}",
+            "valid_from": "2023-06-29T14:11:59.589Z",
+            "valid_until": "2024-06-28T14:11:59.589Z",
+            "x_score": 51,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "rustbucket",
+                "dprk",
+                "ref9135",
+                "macho"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "x_id": "0a7c6afa-c864-4c1f-8c0f-9dce2ccc16ee",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5a5424af-74ef-507b-be15-d8311de396be",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-29T14:11:59.617Z",
+            "modified": "2023-06-29T14:27:59.280Z",
+            "pattern_type": "stix",
+            "pattern": "[x509-certificate:hashes.'SHA-256' = '788261d948177acfcfeb1f839053c8ee9f325bd6fb3f07637a7465acdbbef76a' OR x509-certificate:hashes.'SHA-1' = 'fd24c03f07af1ec1271c40009ff648fdc0fd3ba8' OR x509-certificate:hashes.MD5 = '02da572d59e4aaac9341747efc00f5ae']",
+            "name": "REF9135 TLS certificate hash",
+            "description": "Simple indicator of observable {788261d948177acfcfeb1f839053c8ee9f325bd6fb3f07637a7465acdbbef76a}",
+            "valid_from": "2023-06-29T14:11:59.589Z",
+            "valid_until": "2024-06-28T14:11:59.589Z",
+            "x_score": 51,
+            "x_detection": false,
+            "x_main_observable_type": "x509-certificate",
+            "labels": [
+                "rustbucket",
+                "dprk",
+                "ref9135",
+                "macho"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2d7f711b-747f-523b-870a-41674824fdb2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-06-29T14:11:59.617Z",
+            "modified": "2023-06-29T14:27:59.280Z",
+            "pattern_type": "stix",
+            "pattern": "[x509-certificate:hashes.'SHA-256' = '1031871a8bb920033af87078e4a418ebd30a5d06152cd3c2c257aecdf8203ce6' OR x509-certificate:hashes.'SHA-1' = 'bdffdab55d7857d08bb77ddeef5628c709481f15' OR x509-certificate:hashes.MD5 = '16fe5b27828928b3864b11e4630c825b']",
+            "name": "REF9135 TLS certificate hash",
+            "description": "Simple indicator of observable {1031871a8bb920033af87078e4a418ebd30a5d06152cd3c2c257aecdf8203ce6}",
+            "valid_from": "2023-06-29T14:11:59.589Z",
+            "valid_until": "2024-06-28T14:11:59.589Z",
+            "x_score": 51,
+            "x_detection": false,
+            "x_main_observable_type": "x509-certificate",
+            "labels": [
+                "rustbucket",
+                "dprk",
+                "ref9135",
+                "macho"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/DPRK-strikes-using-a-new-variant-of-rustbucket"
+                }
+            ],
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
