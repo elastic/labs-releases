@@ -1,0 +1,109 @@
+{
+    "type": "bundle",
+    "objects": [
+        {
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "spec_version": "2.1",
+            "revoked": false,
+            "created": "2023-06-08T15:49:11.698Z",
+            "modified": "2023-06-08T18:00:05.309Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'app.influmarket.org']",
+            "name": "app.influmarket.org",
+            "description": "Simple indicator of observable {app.influmarket.org}",
+            "observable_type": "Url",
+            "labels": [
+                "jokerspy",
+                "ref9134",
+                "backdoor"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/inital-research-of-jokerspy"
+                }
+            ],
+            "type": "indicator"
+        },
+        {
+            "spec_version": "2.1",
+            "revoked": false,
+            "created": "2023-06-08T15:54:37.771Z",
+            "modified": "2023-06-08T18:00:05.842Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'd895075057e491b34b0f8c0392b44e43ade425d19eaaacea6ef8c5c9bd3487d8' OR file:hashes.'SHA-1' = '370a0bb4177eeebb2a75651a8addb0477b7d610b' OR file:hashes.MD5 = '8251b13b7516ca408630c8bdf74e45ca']",
+            "name": "d895075057e491b34b0f8c0392b44e43ade425d19eaaacea6ef8c5c9bd3487d8",
+            "description": "Simple indicator of observable {d895075057e491b34b0f8c0392b44e43ade425d19eaaacea6ef8c5c9bd3487d8}",
+            "observable_type": "File",
+            "labels": [
+                "ref9134",
+                "jokerspy"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/inital-research-of-jokerspy"
+                }
+            ],
+            "type": "indicator"
+        },
+        {
+            "spec_version": "2.1",
+            "revoked": false,
+            "created": "2023-06-08T15:54:37.771Z",
+            "modified": "2023-06-08T18:00:05.842Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '8ca86f78f0c73a46f31be366538423ea0ec58089f3880e041543d08ce11fa626']",
+            "name": "8ca86f78f0c73a46f31be366538423ea0ec58089f3880e041543d08ce11fa626",
+            "description": "Simple indicator of observable {8ca86f78f0c73a46f31be366538423ea0ec58089f3880e041543d08ce11fa626}",
+            "observable_type": "File",
+            "labels": [
+                "ref9134",
+                "jokerspy"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/inital-research-of-jokerspy"
+                }
+            ],
+            "type": "indicator"
+        },
+        {
+            "spec_version": "2.1",
+            "revoked": false,
+            "created": "2023-06-08T15:54:37.771Z",
+            "modified": "2023-06-08T18:00:05.842Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'aa951c053baf011d08f3a60a10c1d09bbac32f332413db5b38b8737558a08dc1' OR file:hashes.'SHA-1' = 'bd8626420ecfd1ab5f4576d83be35edecd8fa70e' OR file:hashes.MD5 = '7c7cd27b91a6f5bf3271f47b4dc32d54']",
+            "name": "aa951c053baf011d08f3a60a10c1d09bbac32f332413db5b38b8737558a08dc1",
+            "description": "Simple indicator of observable {aa951c053baf011d08f3a60a10c1d09bbac32f332413db5b38b8737558a08dc1}",
+            "observable_type": "File",
+            "labels": [
+                "ref9134",
+                "jokerspy"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/inital-research-of-jokerspy"
+                }
+            ],
+            "type": "indicator"
+        }
+    ]
+}
