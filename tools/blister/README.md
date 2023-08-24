@@ -4,6 +4,13 @@
 
 BLISTER is a loader discovered by Elastic in December 2021. It is actively being used to load a variety of malware including clipbankers, information stealers, trojans, ransomware, and shellcode.
 
+The configuration extractor was originally published in December of 2021 and updated in August of 2023.
+
+BLISTER research is published here:
+
+- https://www.elastic.co/security-labs/elastic-security-uncovers-blister-malware-campaign
+- https://www.elastic.co/security-labs/revisiting-blister-new-developments-of-the-blister-loader#payload-extractor-update
+
 ## Description
 
 | Path               | Description                             |
