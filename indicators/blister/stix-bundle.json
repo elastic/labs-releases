@@ -1,0 +1,2907 @@
+{
+    "type": "bundle",
+    "id": "bundle--62b65029-b165-4535-a726-cc38981aa083",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2023-05-18T19:34:27.704Z",
+            "x_organization_type": "vendor",
+            "x_reliability": "A",
+            "x_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--8dce6c82-659d-50cb-b512-fdbac46b5a76",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:53.299Z",
+            "modified": "2023-08-17T16:27:20.627Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'ffb255e7a2aa48b96dd3430a5177d6f7f24121cc0097301f2e91f7e02c37e6bf' OR file:hashes.'SHA-1' = 'bd437081600b0ab238d67daf2dba22040944fade' OR file:hashes.MD5 = '2e33c25889c11154112f76544cb09c02']",
+            "name": "ffb255e7a2aa48b96dd3430a5177d6f7f24121cc0097301f2e91f7e02c37e6bf",
+            "description": "Simple indicator of observable {ffb255e7a2aa48b96dd3430a5177d6f7f24121cc0097301f2e91f7e02c37e6bf}",
+            "valid_from": "2023-08-17T16:07:53.276Z",
+            "valid_until": "2024-08-16T16:07:53.276Z",
+            "x_score": 31,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "513c54d0-de93-4cfb-b283-e97c456a8c55",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--1b067017-3931-5a4c-9977-170813df0134",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:02.186Z",
+            "modified": "2023-08-17T16:27:25.114Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'fce9de0a0acf2ba65e9e252a383d37b2984488b6a97d889ec43ab742160acce1' OR file:hashes.'SHA-1' = 'c301ab2886dd829dfb15168b385d2cf196cf0f4b' OR file:hashes.MD5 = '55ef8d41b73c0ccf96ffa89f215e3977']",
+            "name": "fce9de0a0acf2ba65e9e252a383d37b2984488b6a97d889ec43ab742160acce1",
+            "description": "Simple indicator of observable {fce9de0a0acf2ba65e9e252a383d37b2984488b6a97d889ec43ab742160acce1}",
+            "valid_from": "2023-08-17T16:08:02.155Z",
+            "valid_until": "2024-08-16T16:08:02.155Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "assembly",
+                "idle",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "a08454c0-da32-4114-b702-789420cc5bbd",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--22440ae4-c6e7-5f57-ba9d-569d789430db",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:58.130Z",
+            "modified": "2023-08-17T16:27:22.954Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'f7fa532ad074db4a39fd0a545278ea85319d08d8a69c820b081457c317c0459e' OR file:hashes.'SHA-1' = '58eb6ef1dc186c830fd0782a90fe23a0744778b3' OR file:hashes.MD5 = '6102a90d4e47de591003a2f8f76d7579']",
+            "name": "f7fa532ad074db4a39fd0a545278ea85319d08d8a69c820b081457c317c0459e",
+            "description": "Simple indicator of observable {f7fa532ad074db4a39fd0a545278ea85319d08d8a69c820b081457c317c0459e}",
+            "valid_from": "2023-08-17T16:07:58.105Z",
+            "valid_until": "2024-08-16T16:07:58.105Z",
+            "x_score": 24,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "5c9cebd8-ec17-4fdd-ab3e-7a1c1b7d33fa",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--98816461-4e79-5bb8-88a9-393b6c5d5a2b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:57.212Z",
+            "modified": "2023-08-17T16:27:22.493Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'f3bfd8ab9e79645babf0cb0138d51368fd452db584989c4709f613c93caf2bdc' OR file:hashes.'SHA-1' = 'b5d2d2cee428a8a18a897602de0a575f33b6af03' OR file:hashes.MD5 = 'efb383dfe9aa00b883ee7a35d2203769']",
+            "name": "f3bfd8ab9e79645babf0cb0138d51368fd452db584989c4709f613c93caf2bdc",
+            "description": "Simple indicator of observable {f3bfd8ab9e79645babf0cb0138d51368fd452db584989c4709f613c93caf2bdc}",
+            "valid_from": "2023-08-17T16:07:57.181Z",
+            "valid_until": "2024-08-16T16:07:57.181Z",
+            "x_score": 20,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "8b6b5c8a-d42d-416b-a4c1-55ec9aabd774",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--175b80ff-fa12-562a-8f37-9032694b6c67",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:48.339Z",
+            "modified": "2023-08-17T16:27:17.952Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'f08fdb0633d018c0245d071fa79cdc3915da75d3c6fc887a5ca6635c425f163a' OR file:hashes.'SHA-1' = '3c656f58ca8ad507ecc1e71fbe3f869c320c72ae' OR file:hashes.MD5 = '7f5d8984add0a92d3789151a30154d06']",
+            "name": "f08fdb0633d018c0245d071fa79cdc3915da75d3c6fc887a5ca6635c425f163a",
+            "description": "Simple indicator of observable {f08fdb0633d018c0245d071fa79cdc3915da75d3c6fc887a5ca6635c425f163a}",
+            "valid_from": "2023-08-17T16:07:48.311Z",
+            "valid_until": "2024-08-16T16:07:48.311Z",
+            "x_score": 17,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "1cfda67b-25db-4587-a838-4eabea8d0e43",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e174cf78-9210-5d5a-b133-a46c2b64c4b2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:53.092Z",
+            "modified": "2023-08-17T16:27:20.517Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'ebafb35fd9c7720718446a61a0a1a10d09bf148d26cdcd229c1d3d672835335c' OR file:hashes.'SHA-1' = '912e57f9082ccc91eee0d4680774d477b7b40fe7' OR file:hashes.MD5 = '8631a6094b01e95223a6420776b24bb6']",
+            "name": "ebafb35fd9c7720718446a61a0a1a10d09bf148d26cdcd229c1d3d672835335c",
+            "description": "Simple indicator of observable {ebafb35fd9c7720718446a61a0a1a10d09bf148d26cdcd229c1d3d672835335c}",
+            "valid_from": "2023-08-17T16:07:53.067Z",
+            "valid_until": "2024-08-16T16:07:53.067Z",
+            "x_score": 39,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "d61e6981-9828-4ecc-a0da-5b7dada7fe58",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b3d59956-cb8a-5285-9cc7-6d999b47a788",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:52.217Z",
+            "modified": "2023-08-17T16:27:20.055Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'e62f5fc4528e323cb17de1fa161ad55eb451996dec3b31914b00e102a9761a52' OR file:hashes.'SHA-1' = 'f15cf00e6f84ff7202aadd09aad7e71e5bbf1c4e' OR file:hashes.MD5 = 'e304a93c7febd7176b141e91ab5832d9']",
+            "name": "e62f5fc4528e323cb17de1fa161ad55eb451996dec3b31914b00e102a9761a52",
+            "description": "Simple indicator of observable {e62f5fc4528e323cb17de1fa161ad55eb451996dec3b31914b00e102a9761a52}",
+            "valid_from": "2023-08-17T16:07:52.194Z",
+            "valid_until": "2024-08-16T16:07:52.194Z",
+            "x_score": 35,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "e05d1c9b-16e2-4cab-8587-69cd63bb2ef1",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7f733a8d-d3c0-535a-9c7b-cd217da4fbc5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:47.596Z",
+            "modified": "2023-08-17T16:27:17.594Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'e521cad48d47d4c67705841b9c8fa265b3b0dba7de1ba674db3a63708ab63201' OR file:hashes.'SHA-1' = '200a22aad7d1f3e0bb6871e4a1a3f95333d40223' OR file:hashes.MD5 = '7cac6c1b967648a3c3dcc820e0239c5f']",
+            "name": "e521cad48d47d4c67705841b9c8fa265b3b0dba7de1ba674db3a63708ab63201",
+            "description": "Simple indicator of observable {e521cad48d47d4c67705841b9c8fa265b3b0dba7de1ba674db3a63708ab63201}",
+            "valid_from": "2023-08-17T16:07:47.564Z",
+            "valid_until": "2024-08-16T16:07:47.564Z",
+            "x_score": 16,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "0490b741-e638-4f74-80e9-26ade3cbaffb",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--6de4fc73-9dc2-585a-a5ac-bd9187c6b2c2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:01.519Z",
+            "modified": "2023-08-17T16:27:24.748Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'dd42c1521dbee54173be66a5f98a811e5b6ee54ad1878183c915b03b68b7c9bb' OR file:hashes.'SHA-1' = '739f7da2bf2f4fc9d61037c57f08361c4ec9425f' OR file:hashes.MD5 = 'e073541c17b90e7d640e10a3c36281fb']",
+            "name": "dd42c1521dbee54173be66a5f98a811e5b6ee54ad1878183c915b03b68b7c9bb",
+            "description": "Simple indicator of observable {dd42c1521dbee54173be66a5f98a811e5b6ee54ad1878183c915b03b68b7c9bb}",
+            "valid_from": "2023-08-17T16:08:01.494Z",
+            "valid_until": "2024-08-16T16:08:01.494Z",
+            "x_score": 40,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "44e3eb90-d761-487a-9b06-2428125df0e9",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b2d7792e-3c86-5931-936f-f78e38288018",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:49.207Z",
+            "modified": "2023-08-17T16:27:18.418Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'db81e91fc05991f71bfd5654cd60b9093c81d247ccd8b3478ab0ebef61efd2ad' OR file:hashes.'SHA-1' = 'd0ee8964babb55a15861aea83d57a287b7f3c62a' OR file:hashes.MD5 = '557698bcbe208a5b639b0629966ad521']",
+            "name": "db81e91fc05991f71bfd5654cd60b9093c81d247ccd8b3478ab0ebef61efd2ad",
+            "description": "Simple indicator of observable {db81e91fc05991f71bfd5654cd60b9093c81d247ccd8b3478ab0ebef61efd2ad}",
+            "valid_from": "2023-08-17T16:07:49.181Z",
+            "valid_until": "2024-08-16T16:07:49.181Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "assembly",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "b909e355-a4ae-4030-9e7b-adc19bd524bc",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b7705d39-c5d3-5cee-bf21-757242f96cf4",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:05.624Z",
+            "modified": "2023-08-17T16:27:26.878Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'd3eab2a134e7bd3f2e8767a6285b38d19cd3df421e8af336a7852b74f194802c' OR file:hashes.'SHA-1' = 'd32c651ee1d7434804618628a8271ab7d6dd7b87' OR file:hashes.MD5 = '17b4ec062c1e095f2fafbf2421209118']",
+            "name": "d3eab2a134e7bd3f2e8767a6285b38d19cd3df421e8af336a7852b74f194802c",
+            "description": "Simple indicator of observable {d3eab2a134e7bd3f2e8767a6285b38d19cd3df421e8af336a7852b74f194802c}",
+            "valid_from": "2023-08-17T16:08:05.597Z",
+            "valid_until": "2024-08-16T16:08:05.597Z",
+            "x_score": 43,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "6d5351b0-df3d-4c89-ba77-ddfe26c89847",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--cc7ad381-c269-5661-b24b-a21cbbd4a788",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:58.789Z",
+            "modified": "2023-08-17T16:27:23.302Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'd1afca36f67b24eae7f2884c27c812cddc7e02f00f64bb2f62b40b21ef431084' OR file:hashes.'SHA-1' = 'c168f0b1ad24c4c4d9563abbfb05a42a3704b7a1' OR file:hashes.MD5 = '08d8aad0e39a11a57aec7799698a90b1']",
+            "name": "d1afca36f67b24eae7f2884c27c812cddc7e02f00f64bb2f62b40b21ef431084",
+            "description": "Simple indicator of observable {d1afca36f67b24eae7f2884c27c812cddc7e02f00f64bb2f62b40b21ef431084}",
+            "valid_from": "2023-08-17T16:07:58.764Z",
+            "valid_until": "2024-08-16T16:07:58.764Z",
+            "x_score": 41,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "82d6fad1-ecd7-4339-b978-5a87920670f6",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--246d24c7-2169-5dd0-a5ee-fadc8acf9e31",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:51.993Z",
+            "modified": "2023-08-17T16:27:19.934Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'cfa604765b9d7a93765d46af78383978251486d9399e21b8e3da4590649c53e4' OR file:hashes.'SHA-1' = '718f5c8ad3bca319959c3c3656d0c6caa143ee4c' OR file:hashes.MD5 = '0e1dd492667ad6f245bd006a3bea2f46']",
+            "name": "cfa604765b9d7a93765d46af78383978251486d9399e21b8e3da4590649c53e4",
+            "description": "Simple indicator of observable {cfa604765b9d7a93765d46af78383978251486d9399e21b8e3da4590649c53e4}",
+            "valid_from": "2023-08-17T16:07:51.965Z",
+            "valid_until": "2024-08-16T16:07:51.965Z",
+            "x_score": 7,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "assembly",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "f2279e95-3df8-46d5-b0a3-197e0c40f482",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b2cbf0cb-c6d2-5518-9a7f-03ebf093d56c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:50.879Z",
+            "modified": "2023-08-17T16:27:19.243Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'c79ab271d2abd3ee8c21a8f6ad90226e398df1108b4d42dc551af435a124043c' OR file:hashes.'SHA-1' = '893196e29394876d1fff18dceeeff329a0c419f6' OR file:hashes.MD5 = '11057fe76ccd9d740dfe833c05cf1edc']",
+            "name": "c79ab271d2abd3ee8c21a8f6ad90226e398df1108b4d42dc551af435a124043c",
+            "description": "Simple indicator of observable {c79ab271d2abd3ee8c21a8f6ad90226e398df1108b4d42dc551af435a124043c}",
+            "valid_from": "2023-08-17T16:07:50.821Z",
+            "valid_until": "2024-08-16T16:07:50.821Z",
+            "x_score": 31,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "eef84541-6d96-41fc-bea8-1cac7d7b4355",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--aec4feea-6947-5ede-958c-b69fb2d7f2db",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:04.782Z",
+            "modified": "2023-08-17T16:27:26.534Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'c3cfbede0b561155062c2f44a9d44c79cdb78c05461ca50948892ff9a0678f3f' OR file:hashes.'SHA-1' = 'f99557ad39304809a2ad79063597342dee8ccfdf' OR file:hashes.MD5 = '98c4a460d9c433f30f85a4813f9285a2']",
+            "name": "c3cfbede0b561155062c2f44a9d44c79cdb78c05461ca50948892ff9a0678f3f",
+            "description": "Simple indicator of observable {c3cfbede0b561155062c2f44a9d44c79cdb78c05461ca50948892ff9a0678f3f}",
+            "valid_from": "2023-08-17T16:08:04.716Z",
+            "valid_until": "2024-08-16T16:08:04.716Z",
+            "x_score": 57,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "bf5ed763-bec8-4e8d-9bd1-0b876fcd2175",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--02745e6a-526c-58d0-ac89-74910dabcff5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:01.723Z",
+            "modified": "2023-08-17T16:27:24.863Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'c2046d64bcfbab5afcb87a75bf3110e0fa89b3e0f7029ff81a335911cf52f00a' OR file:hashes.'SHA-1' = '257d4793a2ff64199318089c507589e45acd6e03' OR file:hashes.MD5 = 'f07512934cfc5f56519e4d960507631d']",
+            "name": "c2046d64bcfbab5afcb87a75bf3110e0fa89b3e0f7029ff81a335911cf52f00a",
+            "description": "Simple indicator of observable {c2046d64bcfbab5afcb87a75bf3110e0fa89b3e0f7029ff81a335911cf52f00a}",
+            "valid_from": "2023-08-17T16:08:01.700Z",
+            "valid_until": "2024-08-16T16:08:01.700Z",
+            "x_score": 36,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "3cb1133f-db45-4140-8ae6-12501560a39d",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--97b916eb-2d44-5262-a47e-1c2a05191e1e",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:48.105Z",
+            "modified": "2023-08-17T16:27:17.832Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'c1261f57a0481eb5d37176702903025c5b01a166ea6a6d42e1c1bdc0e5a0b04b' OR file:hashes.'SHA-1' = '0552fee8779ccccc2e593648ecb3f8d1db231100' OR file:hashes.MD5 = '040c5f71b517a5ce86634b740c78d9b9']",
+            "name": "c1261f57a0481eb5d37176702903025c5b01a166ea6a6d42e1c1bdc0e5a0b04b",
+            "description": "Simple indicator of observable {c1261f57a0481eb5d37176702903025c5b01a166ea6a6d42e1c1bdc0e5a0b04b}",
+            "valid_from": "2023-08-17T16:07:48.080Z",
+            "valid_until": "2024-08-16T16:07:48.080Z",
+            "x_score": 54,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "f3558d92-2932-44ea-8f8c-f7452e70cc7c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--20517a97-7d14-5e7f-b2ac-b9c09188728b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:58.582Z",
+            "modified": "2023-08-17T16:27:23.187Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'c113e8a1c433b4c67ce9bce5dea4b470da95e914de4dc3c3d5a4f98bce2b7d6c' OR file:hashes.'SHA-1' = 'ac1c5b23c463bd770305525e39c6f854c2e56c7b' OR file:hashes.MD5 = 'da8bf3119670ba4f0d88d72da9d02a79']",
+            "name": "c113e8a1c433b4c67ce9bce5dea4b470da95e914de4dc3c3d5a4f98bce2b7d6c",
+            "description": "Simple indicator of observable {c113e8a1c433b4c67ce9bce5dea4b470da95e914de4dc3c3d5a4f98bce2b7d6c}",
+            "valid_from": "2023-08-17T16:07:58.560Z",
+            "valid_until": "2024-08-16T16:07:58.560Z",
+            "x_score": 32,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "c221a217-5432-42c6-a0d3-3a7fa3dd31ff",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--331e5390-5fdf-5ef0-b76d-d594a6a730d6",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:02.404Z",
+            "modified": "2023-08-17T16:27:25.250Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'b9e313e08b49d8d2ffe44cb6ec2192ee3a1c97b57c56f024c17d44db042fb9eb' OR file:hashes.'SHA-1' = '5971c309fb46d564dc6881f0edb1f122c4fa2952' OR file:hashes.MD5 = '2c292a48ffc4b8591b47a617597e64e9']",
+            "name": "b9e313e08b49d8d2ffe44cb6ec2192ee3a1c97b57c56f024c17d44db042fb9eb",
+            "description": "Simple indicator of observable {b9e313e08b49d8d2ffe44cb6ec2192ee3a1c97b57c56f024c17d44db042fb9eb}",
+            "valid_from": "2023-08-17T16:08:02.376Z",
+            "valid_until": "2024-08-16T16:08:02.376Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "09ef3f57-97f9-4349-b2dd-6a437f1b3414",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2da0034d-97a9-551b-b253-1cee95676c07",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:01.043Z",
+            "modified": "2023-08-17T16:27:24.463Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'b99ba2449a93ab298d2ec5cacd5099871bacf6a8376e0b080c7240c8055b1395' OR file:hashes.'SHA-1' = 'b13e639e9e11808db3790cd732586674fd34b640' OR file:hashes.MD5 = '63dcdc60c7bf1f7bf104bf032f5d0ca6']",
+            "name": "b99ba2449a93ab298d2ec5cacd5099871bacf6a8376e0b080c7240c8055b1395",
+            "description": "Simple indicator of observable {b99ba2449a93ab298d2ec5cacd5099871bacf6a8376e0b080c7240c8055b1395}",
+            "valid_from": "2023-08-17T16:08:01.020Z",
+            "valid_until": "2024-08-16T16:08:01.020Z",
+            "x_score": 25,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "f5bd13d1-fd26-4def-ba93-836770044d70",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--f1649676-4cdd-5d09-8e39-7a41fce18198",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:48.992Z",
+            "modified": "2023-08-17T16:27:18.302Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'b956c5e8ec6798582a68f24894c1e78b9b767aae4d5fb76b2cc71fc9c8befed8' OR file:hashes.'SHA-1' = 'f9bebf3db1ae93905297658ba8e3117424b1a912' OR file:hashes.MD5 = '27a4a33c133f2cebed83ba4b3e708904']",
+            "name": "b956c5e8ec6798582a68f24894c1e78b9b767aae4d5fb76b2cc71fc9c8befed8",
+            "description": "Simple indicator of observable {b956c5e8ec6798582a68f24894c1e78b9b767aae4d5fb76b2cc71fc9c8befed8}",
+            "valid_from": "2023-08-17T16:07:48.965Z",
+            "valid_until": "2024-08-16T16:07:48.965Z",
+            "x_score": 36,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "f1d05f65-3c1b-493b-a352-468a34b2d79c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7d7bed49-2a04-58d9-93e5-9a22b11e85ff",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:00.578Z",
+            "modified": "2023-08-17T16:27:24.231Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'b4f37f13a7e9c56ea95fa3792e11404eb3bdb878734f1ca394ceed344d22858f' OR file:hashes.'SHA-1' = 'e36641731397c60510b0d9bf4b2490a891419a42' OR file:hashes.MD5 = '39b93160b5a38bf1a2a5a05d678d0257']",
+            "name": "b4f37f13a7e9c56ea95fa3792e11404eb3bdb878734f1ca394ceed344d22858f",
+            "description": "Simple indicator of observable {b4f37f13a7e9c56ea95fa3792e11404eb3bdb878734f1ca394ceed344d22858f}",
+            "valid_from": "2023-08-17T16:08:00.541Z",
+            "valid_until": "2024-08-16T16:08:00.541Z",
+            "x_score": 40,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "61606ce3-f896-454e-8311-f45a55b2e337",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d385422e-e941-59f8-b337-39801cb6972f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:04.503Z",
+            "modified": "2023-08-17T16:27:26.421Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'b4c746e9a49c058ae3843799cdd6a3bb5fe14b413b9769e2b5a1f0f846cb9d37' OR file:hashes.'SHA-1' = '3e2d3cc0d7dc6d4c665ecd70ad7bd813b13f5143' OR file:hashes.MD5 = '143ceedb5361e842d641881f9c5f52a4']",
+            "name": "b4c746e9a49c058ae3843799cdd6a3bb5fe14b413b9769e2b5a1f0f846cb9d37",
+            "description": "Simple indicator of observable {b4c746e9a49c058ae3843799cdd6a3bb5fe14b413b9769e2b5a1f0f846cb9d37}",
+            "valid_from": "2023-08-17T16:08:04.463Z",
+            "valid_until": "2024-08-16T16:08:04.463Z",
+            "x_score": 12,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "assembly",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "7e60889c-d4ed-46d5-b1e2-54ef04b70541",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--770127f7-d0f9-5100-85ed-21f8f3ac6bac",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:49.940Z",
+            "modified": "2023-08-17T16:27:18.789Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'b1f3f1c06b1cc9a249403c2863afc132b2d6a07f137166bdd1e4863a0cece5b1' OR file:hashes.'SHA-1' = '0be83bfb7f3e556c12cf7ac129ae16519a604210' OR file:hashes.MD5 = '4e63f63074eb85e722b7795ec78aeaa3']",
+            "name": "b1f3f1c06b1cc9a249403c2863afc132b2d6a07f137166bdd1e4863a0cece5b1",
+            "description": "Simple indicator of observable {b1f3f1c06b1cc9a249403c2863afc132b2d6a07f137166bdd1e4863a0cece5b1}",
+            "valid_from": "2023-08-17T16:07:49.916Z",
+            "valid_until": "2024-08-16T16:07:49.916Z",
+            "x_score": 14,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "4e58a254-7a45-4bd7-a095-b715e4f692cb",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--90704959-41af-532c-b9f8-66bf55e0f693",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:54.200Z",
+            "modified": "2023-08-17T16:27:21.106Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'b1d1a972078d40777d88fb4cd6aef1a04f29c5dd916f30a6949b29f53a2d121c' OR file:hashes.'SHA-1' = 'ed24d28098e8ec3d5c568aff5d6dc2a3a1b1eb36' OR file:hashes.MD5 = '1838565637828e99876c58ed7b1139f9']",
+            "name": "b1d1a972078d40777d88fb4cd6aef1a04f29c5dd916f30a6949b29f53a2d121c",
+            "description": "Simple indicator of observable {b1d1a972078d40777d88fb4cd6aef1a04f29c5dd916f30a6949b29f53a2d121c}",
+            "valid_from": "2023-08-17T16:07:54.172Z",
+            "valid_until": "2024-08-16T16:07:54.172Z",
+            "x_score": 23,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "ad976a11-d7bb-4f00-a00e-aadff0e5067f",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--587f23d3-dd41-558a-8dc4-778a78661cf3",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:47.354Z",
+            "modified": "2023-08-17T16:27:17.467Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'b10db109b64b798f36c717b7a050c017cf4380c3cb9cfeb9acd3822a68201b5b' OR file:hashes.'SHA-1' = 'fc8d690855722250132c58891d096f8176ffe16f' OR file:hashes.MD5 = '9582e749395e954d5ad4b524f4a98dc8']",
+            "name": "b10db109b64b798f36c717b7a050c017cf4380c3cb9cfeb9acd3822a68201b5b",
+            "description": "Simple indicator of observable {b10db109b64b798f36c717b7a050c017cf4380c3cb9cfeb9acd3822a68201b5b}",
+            "valid_from": "2023-08-17T16:07:47.330Z",
+            "valid_until": "2024-08-16T16:07:47.330Z",
+            "x_score": 43,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "1a1bfd65-ca18-471d-b110-f12bab64155b",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d795d937-a0e2-5229-a491-717888d18061",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:52.434Z",
+            "modified": "2023-08-17T16:27:20.172Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'aeecc65ac8f0f6e10e95a898b60b43bf6ba9e2c0f92161956b1725d68482721d' OR file:hashes.'SHA-1' = '7e30c3aee2e4398ddd860d962e787e1261be38fb' OR file:hashes.MD5 = '06f53d457c530635b34aef0f04c59c7d']",
+            "name": "aeecc65ac8f0f6e10e95a898b60b43bf6ba9e2c0f92161956b1725d68482721d",
+            "description": "Simple indicator of observable {aeecc65ac8f0f6e10e95a898b60b43bf6ba9e2c0f92161956b1725d68482721d}",
+            "valid_from": "2023-08-17T16:07:52.409Z",
+            "valid_until": "2024-08-16T16:07:52.409Z",
+            "x_score": 54,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "c4682cd6-f0d1-4011-9fec-3f6815799ec4",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c6b7c090-4471-5740-800c-ffc57e1ecfe6",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:56.530Z",
+            "modified": "2023-08-17T16:27:22.157Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'ae148315cec7140be397658210173da372790aa38e67e7aa51597e3e746f2cb2' OR file:hashes.'SHA-1' = 'afc8fbf35cfcb3e2574d88f7424f2d440e517558' OR file:hashes.MD5 = '3f8ac847c484527b3ad1fcf9e7597704']",
+            "name": "ae148315cec7140be397658210173da372790aa38e67e7aa51597e3e746f2cb2",
+            "description": "Simple indicator of observable {ae148315cec7140be397658210173da372790aa38e67e7aa51597e3e746f2cb2}",
+            "valid_from": "2023-08-17T16:07:56.507Z",
+            "valid_until": "2024-08-16T16:07:56.507Z",
+            "x_score": 32,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "bda624fe-2790-4528-9ad7-ff3fb9559197",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b19b60ff-3492-5e31-ace2-b42cf1ec0863",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:50.615Z",
+            "modified": "2023-08-17T16:27:19.131Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'acdaac680e2194dd8fd06f937847440e7ab83ce1760eab028507ee8eba557291' OR file:hashes.'SHA-1' = '7e0ee516268014e2a3b0c80c6e2c7aea11b08282' OR file:hashes.MD5 = '2ef3de8af421dd73a72dd86a8ca50ec0']",
+            "name": "acdaac680e2194dd8fd06f937847440e7ab83ce1760eab028507ee8eba557291",
+            "description": "Simple indicator of observable {acdaac680e2194dd8fd06f937847440e7ab83ce1760eab028507ee8eba557291}",
+            "valid_from": "2023-08-17T16:07:50.588Z",
+            "valid_until": "2024-08-16T16:07:50.588Z",
+            "x_score": 40,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "e82cab63-4215-483b-803d-ac1454091045",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--a09cbc5f-7cb2-52f6-bc0b-aea15731c01f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:00.341Z",
+            "modified": "2023-08-17T16:27:24.110Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'ac232e7594ce8fbbe19fc74e34898c562fe9e8f46d4bfddc37aefeb26b85c02b' OR file:hashes.'SHA-1' = '9324d205e69bff9f8ceb85377aa78d5ab8e5a121' OR file:hashes.MD5 = '1c1bbe6042e773bc0365bffe1fd210d8']",
+            "name": "ac232e7594ce8fbbe19fc74e34898c562fe9e8f46d4bfddc37aefeb26b85c02b",
+            "description": "Simple indicator of observable {ac232e7594ce8fbbe19fc74e34898c562fe9e8f46d4bfddc37aefeb26b85c02b}",
+            "valid_from": "2023-08-17T16:08:00.314Z",
+            "valid_until": "2024-08-16T16:08:00.314Z",
+            "x_score": 28,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "525dd5e4-0d8d-4669-9f83-8f6da519ee19",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--05b87339-71b1-5888-87f0-2caa954554d1",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:03.772Z",
+            "modified": "2023-08-17T16:27:26.054Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'a9ea85481e178cd35ae323410d619e97f49139dcdb2e7da72126775a89a8464f' OR file:hashes.'SHA-1' = 'd96e0fd151c8d47f81777744a0a1d089fc8cc0da' OR file:hashes.MD5 = 'b0225e64b08d98286342a09c4327d773']",
+            "name": "a9ea85481e178cd35ae323410d619e97f49139dcdb2e7da72126775a89a8464f",
+            "description": "Simple indicator of observable {a9ea85481e178cd35ae323410d619e97f49139dcdb2e7da72126775a89a8464f}",
+            "valid_from": "2023-08-17T16:08:03.749Z",
+            "valid_until": "2024-08-16T16:08:03.749Z",
+            "x_score": 49,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "6a8a657a-da0f-4baf-9c4d-3afccf8ab495",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--3d27a7df-d1ee-5c97-a5e2-452342de0ed9",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:02.666Z",
+            "modified": "2023-08-17T16:27:25.413Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'a3cb53ddd4a5316cb02b7dc4ccd1f615755b46e86a88152a1f8fc59efe170497' OR file:hashes.'SHA-1' = 'a54bba523e803b5199a1d2b02ccdcd247c5515c4' OR file:hashes.MD5 = 'a13b63c95e0b90dd163de6408d580550']",
+            "name": "a3cb53ddd4a5316cb02b7dc4ccd1f615755b46e86a88152a1f8fc59efe170497",
+            "description": "Simple indicator of observable {a3cb53ddd4a5316cb02b7dc4ccd1f615755b46e86a88152a1f8fc59efe170497}",
+            "valid_from": "2023-08-17T16:08:02.640Z",
+            "valid_until": "2024-08-16T16:08:02.640Z",
+            "x_score": 46,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "fa694c3f-2a31-44a8-a92e-d878860a6b9d",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2c4b5509-2ac7-556e-b4f6-7d95cc25002f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:51.332Z",
+            "modified": "2023-08-17T16:27:19.485Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '9c5c9d35b7c2c448a610a739ff7b85139ea1ef39ecd9f51412892cd06fde4b1b' OR file:hashes.'SHA-1' = 'e301a55745c326de1758f095772bcf2e07945596' OR file:hashes.MD5 = '82b50e5f64e5f98193e230cc1ce2258a']",
+            "name": "9c5c9d35b7c2c448a610a739ff7b85139ea1ef39ecd9f51412892cd06fde4b1b",
+            "description": "Simple indicator of observable {9c5c9d35b7c2c448a610a739ff7b85139ea1ef39ecd9f51412892cd06fde4b1b}",
+            "valid_from": "2023-08-17T16:07:51.303Z",
+            "valid_until": "2024-08-16T16:07:51.303Z",
+            "x_score": 27,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "3f24b3ef-49b2-4640-9518-4a9f17bef7e1",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--714cfc1b-4853-5bad-972f-4b14f30df7f3",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:06.048Z",
+            "modified": "2023-08-17T16:27:27.108Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '96ebacf48656b804aed9979c2c4b651bbb1bc19878b56bdf76954d6eff8ad7ca' OR file:hashes.'SHA-1' = 'a5dce447929f43b478124323ab7b06d4212f3441' OR file:hashes.MD5 = 'fde6007d856a6f2cac5fd3f4c19a31c5']",
+            "name": "96ebacf48656b804aed9979c2c4b651bbb1bc19878b56bdf76954d6eff8ad7ca",
+            "description": "Simple indicator of observable {96ebacf48656b804aed9979c2c4b651bbb1bc19878b56bdf76954d6eff8ad7ca}",
+            "valid_from": "2023-08-17T16:08:06.023Z",
+            "valid_until": "2024-08-16T16:08:06.023Z",
+            "x_score": 39,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "31667e82-d270-4162-938f-97ea180bb789",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b2d81d03-1c5e-5901-aa51-f13839404fc8",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:51.771Z",
+            "modified": "2023-08-17T16:27:19.815Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '96e8b44ec061c49661bd192f279f7b7ba394d03495a2b46d3b37dcae0f4892f1' OR file:hashes.'SHA-1' = '667daf19ef0423b5778d72540ff72c3cd5598b38' OR file:hashes.MD5 = 'e43f74ad43abe487a2d462304e53fb6a']",
+            "name": "96e8b44ec061c49661bd192f279f7b7ba394d03495a2b46d3b37dcae0f4892f1",
+            "description": "Simple indicator of observable {96e8b44ec061c49661bd192f279f7b7ba394d03495a2b46d3b37dcae0f4892f1}",
+            "valid_from": "2023-08-17T16:07:51.745Z",
+            "valid_until": "2024-08-16T16:07:51.745Z",
+            "x_score": 7,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "assembly",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "ad96ac8b-e040-4d9b-96e6-4e801aa4e6c5",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--55c7aaa3-e9b8-5185-a71c-b20d476c642f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:02.921Z",
+            "modified": "2023-08-17T16:27:25.528Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '927e04371fa8b8d8a1de58533053c305bb73a8df8765132a932efd579011c375' OR file:hashes.'SHA-1' = '50e91cc5a2a341127047e3220884ec408e41df87' OR file:hashes.MD5 = 'd8d0f75070bdde0ea6019ecad86d0420']",
+            "name": "927e04371fa8b8d8a1de58533053c305bb73a8df8765132a932efd579011c375",
+            "description": "Simple indicator of observable {927e04371fa8b8d8a1de58533053c305bb73a8df8765132a932efd579011c375}",
+            "valid_from": "2023-08-17T16:08:02.897Z",
+            "valid_until": "2024-08-16T16:08:02.897Z",
+            "x_score": 21,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "c8145695-0a39-4ec4-a36f-034fd21cad41",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ad511e25-069c-5f08-8764-36c163fbae99",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:52.641Z",
+            "modified": "2023-08-17T16:27:20.283Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '91446c6d3c11074e6ff0ff42df825f9ffd5f852c2e6532d4b9d8de340fa32fb8' OR file:hashes.'SHA-1' = '9e54609b0dda9f0468dd4bf660cce057de8e4a15' OR file:hashes.MD5 = '1dd8b6a54027caf0022895d4f613b14c']",
+            "name": "91446c6d3c11074e6ff0ff42df825f9ffd5f852c2e6532d4b9d8de340fa32fb8",
+            "description": "Simple indicator of observable {91446c6d3c11074e6ff0ff42df825f9ffd5f852c2e6532d4b9d8de340fa32fb8}",
+            "valid_from": "2023-08-17T16:07:52.619Z",
+            "valid_until": "2024-08-16T16:07:52.619Z",
+            "x_score": 41,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "a727fa2e-1179-4a15-9350-10a362c43e64",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0229c0d3-8e88-569a-9a30-857e8667b40f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:56.274Z",
+            "modified": "2023-08-17T16:27:22.042Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '9120f929938cd629471c7714c75d75d30daae1f2e9135239ea5619d77574c1fe' OR file:hashes.'SHA-1' = '991101f3457cdea3f7b7620114aed4c8573084d3' OR file:hashes.MD5 = '38a6c7abaf8a2d8734e1c19225f7d48c']",
+            "name": "9120f929938cd629471c7714c75d75d30daae1f2e9135239ea5619d77574c1fe",
+            "description": "Simple indicator of observable {9120f929938cd629471c7714c75d75d30daae1f2e9135239ea5619d77574c1fe}",
+            "valid_from": "2023-08-17T16:07:56.252Z",
+            "valid_until": "2024-08-16T16:07:56.252Z",
+            "x_score": 36,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "d4567a0c-382c-403e-81ab-f59b91986fc4",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e707e484-3d79-56d9-8350-08e3afd9013c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:48.770Z",
+            "modified": "2023-08-17T16:27:18.185Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '8d53dc0857fa634414f84ad06d18092dedeb110689a08426f08cb1894c2212d4' OR file:hashes.'SHA-1' = '81afb4130c67536c257f333447902c4772f7f52d' OR file:hashes.MD5 = 'd92a7555ddec20bd545fc8ff8886593e']",
+            "name": "8d53dc0857fa634414f84ad06d18092dedeb110689a08426f08cb1894c2212d4",
+            "description": "Simple indicator of observable {8d53dc0857fa634414f84ad06d18092dedeb110689a08426f08cb1894c2212d4}",
+            "valid_from": "2023-08-17T16:07:48.745Z",
+            "valid_until": "2024-08-16T16:07:48.745Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "long-sleeps",
+                "idle",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "dcf0ee18-27a5-401e-9e41-1a9cce333c6c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c41b0bda-355e-554f-90bc-e7c20869420b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:04.229Z",
+            "modified": "2023-08-17T16:27:26.293Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '8b6eb2853ae9e5faff4afb08377525c9348571e01a0e50261c7557d662b158e1' OR file:hashes.'SHA-1' = '16fc83d528c9cf61283b790ef7efcfcbb55de374' OR file:hashes.MD5 = '90ce0fdcb032d99e025c9d0132158042']",
+            "name": "8b6eb2853ae9e5faff4afb08377525c9348571e01a0e50261c7557d662b158e1",
+            "description": "Simple indicator of observable {8b6eb2853ae9e5faff4afb08377525c9348571e01a0e50261c7557d662b158e1}",
+            "valid_from": "2023-08-17T16:08:04.203Z",
+            "valid_until": "2024-08-16T16:08:04.203Z",
+            "x_score": 3,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "long-sleeps",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "dcf19b7d-8941-4fb0-896b-1d3c3d61e74e",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ea60a484-02f2-53ee-84ac-86b686a7d58b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:54.980Z",
+            "modified": "2023-08-17T16:27:21.456Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '87269a95b1c0e724a1bfe87ddcb181eac402591581ee2d9b0f56dedbaac04ff8' OR file:hashes.'SHA-1' = 'b602ae1814b13e9d31bcebe4b567b4ea8de645b6' OR file:hashes.MD5 = 'b664e0c9f988e6ae446870e3ba7b156a']",
+            "name": "87269a95b1c0e724a1bfe87ddcb181eac402591581ee2d9b0f56dedbaac04ff8",
+            "description": "Simple indicator of observable {87269a95b1c0e724a1bfe87ddcb181eac402591581ee2d9b0f56dedbaac04ff8}",
+            "valid_from": "2023-08-17T16:07:54.902Z",
+            "valid_until": "2024-08-16T16:07:54.902Z",
+            "x_score": 44,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "6bb8d851-8e9b-487a-9b47-b9c9c57303ec",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--546547e4-24cd-52ee-89f8-00580be25e7e",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:55.579Z",
+            "modified": "2023-08-17T16:27:21.688Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '84b245fce9e936f1d0e15d9fca8a1e4df47c983111de66fcc0ad012a63478c8d' OR file:hashes.'SHA-1' = '85a7072d95b11290313823ffb5b4a4165f1bf504' OR file:hashes.MD5 = 'e5ea998a53cf1d3f37cdc2793a74a8f5']",
+            "name": "84b245fce9e936f1d0e15d9fca8a1e4df47c983111de66fcc0ad012a63478c8d",
+            "description": "Simple indicator of observable {84b245fce9e936f1d0e15d9fca8a1e4df47c983111de66fcc0ad012a63478c8d}",
+            "valid_from": "2023-08-17T16:07:55.513Z",
+            "valid_until": "2024-08-16T16:07:55.513Z",
+            "x_score": 11,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "long-sleeps",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "b46f73cf-6763-448d-acb4-9fc37caf910e",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--8add9b76-9693-50f7-9032-6381cb3c0f8a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:01.936Z",
+            "modified": "2023-08-17T16:27:24.981Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '83c121db96d99f0d99b9e7a2384386f3f6debcb01d977c4ddca5bcdf2c6a2daa' OR file:hashes.'SHA-1' = '11c8df3520dab6e75b38011fa984ec083d6e0f6e' OR file:hashes.MD5 = '9f7c1fffd565cb475bbe963aafab77ff']",
+            "name": "83c121db96d99f0d99b9e7a2384386f3f6debcb01d977c4ddca5bcdf2c6a2daa",
+            "description": "Simple indicator of observable {83c121db96d99f0d99b9e7a2384386f3f6debcb01d977c4ddca5bcdf2c6a2daa}",
+            "valid_from": "2023-08-17T16:08:01.914Z",
+            "valid_until": "2024-08-16T16:08:01.914Z",
+            "x_score": 31,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "54af4ac5-54f7-489d-ab4a-a7c75c647fa8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--513e622d-94bf-5c84-85f7-794db4e427bc",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:56.981Z",
+            "modified": "2023-08-17T16:27:22.386Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '7f7b9f40eea29cfefc7f02aa825a93c3c6f973442da68caf21a3caae92464127' OR file:hashes.'SHA-1' = 'cb5ee4d82abd519db9fdec34000c223f8027d614' OR file:hashes.MD5 = '1464e9f855a02a94f388013685ae3639']",
+            "name": "7f7b9f40eea29cfefc7f02aa825a93c3c6f973442da68caf21a3caae92464127",
+            "description": "Simple indicator of observable {7f7b9f40eea29cfefc7f02aa825a93c3c6f973442da68caf21a3caae92464127}",
+            "valid_from": "2023-08-17T16:07:56.952Z",
+            "valid_until": "2024-08-16T16:07:56.952Z",
+            "x_score": 11,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "long-sleeps",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "36a8f6ac-e66e-4bfa-9901-346d276db0d9",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--3e4103f3-20f5-5470-8842-fbe84b9bd403",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:56.757Z",
+            "modified": "2023-08-17T16:27:22.268Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '7e61498ec5f0780e0e37289c628001e76be88f647cad7a399759b6135be8210a' OR file:hashes.'SHA-1' = '960d475f590acd376b3ca75a6958ddc6a8428538' OR file:hashes.MD5 = '99b2d4e3c2f7e7496b166b41464e8d1a']",
+            "name": "7e61498ec5f0780e0e37289c628001e76be88f647cad7a399759b6135be8210a",
+            "description": "Simple indicator of observable {7e61498ec5f0780e0e37289c628001e76be88f647cad7a399759b6135be8210a}",
+            "valid_from": "2023-08-17T16:07:56.731Z",
+            "valid_until": "2024-08-16T16:07:56.731Z",
+            "x_score": 10,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "assembly",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "8bafa4a9-334f-495f-878e-f0126ad68a9c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--cca44523-abf8-534c-8749-f00d38d3f5aa",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:53.938Z",
+            "modified": "2023-08-17T16:27:20.988Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '745a3dcdda16b93fedac8d7eefd1df32a7255665b8e3ee71e1869dd5cd14d61c' OR file:hashes.'SHA-1' = '6eea04e4cddce7e5ef3720e575719200e838c22d' OR file:hashes.MD5 = 'a97a7d5a2501ccb2897ceedfbfb67ea9']",
+            "name": "745a3dcdda16b93fedac8d7eefd1df32a7255665b8e3ee71e1869dd5cd14d61c",
+            "description": "Simple indicator of observable {745a3dcdda16b93fedac8d7eefd1df32a7255665b8e3ee71e1869dd5cd14d61c}",
+            "valid_from": "2023-08-17T16:07:53.914Z",
+            "valid_until": "2024-08-16T16:07:53.914Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "98f01bfb-2f00-4665-85ce-ab65d712c3fd",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--84d9a508-3d66-56af-ba65-91d50b6ab015",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:03.562Z",
+            "modified": "2023-08-17T16:27:25.938Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '73162738fb3b9cdd3414609d3fe930184cdd3223d9c0d7cb56e4635eb4b2ab67' OR file:hashes.'SHA-1' = '95273abac3e42d4458b26e96bda96ffee9d15173' OR file:hashes.MD5 = 'a0c5d381e12be683db1569201432ab1e']",
+            "name": "73162738fb3b9cdd3414609d3fe930184cdd3223d9c0d7cb56e4635eb4b2ab67",
+            "description": "Simple indicator of observable {73162738fb3b9cdd3414609d3fe930184cdd3223d9c0d7cb56e4635eb4b2ab67}",
+            "valid_from": "2023-08-17T16:08:03.539Z",
+            "valid_until": "2024-08-16T16:08:03.539Z",
+            "x_score": 17,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "88309732-bdaf-4428-95f1-7aaf54fec818",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--14f056e1-3a05-521c-b8e5-5ba0205a5521",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:54.639Z",
+            "modified": "2023-08-17T16:27:21.337Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '6e75a9266e6bbfd194693daf468dd86d106817706c57b1aad95d7720ac1e19e3' OR file:hashes.'SHA-1' = '3d5dee1bbbb3eb5b7ce4d497ca23a19c6d35e540' OR file:hashes.MD5 = 'd2009a6341000735989db4ec8acdf5a0']",
+            "name": "6e75a9266e6bbfd194693daf468dd86d106817706c57b1aad95d7720ac1e19e3",
+            "description": "Simple indicator of observable {6e75a9266e6bbfd194693daf468dd86d106817706c57b1aad95d7720ac1e19e3}",
+            "valid_from": "2023-08-17T16:07:54.613Z",
+            "valid_until": "2024-08-16T16:07:54.613Z",
+            "x_score": 29,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "5ddbd377-1c63-454f-a93b-0be6a89c7dc3",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0c0e3989-33b8-5ec4-98cf-5e91d20ed392",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:55.277Z",
+            "modified": "2023-08-17T16:27:21.577Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '67136ab70c5e604c6817105b62b2ee8f8c5199a647242c0ddbf261064bb3ced3' OR file:hashes.'SHA-1' = 'b7d8f3713fd1b9a3fd8bd9c1891d52da096b895a' OR file:hashes.MD5 = 'a3e1a17dc2db79d461e0b12d4bfbf935']",
+            "name": "67136ab70c5e604c6817105b62b2ee8f8c5199a647242c0ddbf261064bb3ced3",
+            "description": "Simple indicator of observable {67136ab70c5e604c6817105b62b2ee8f8c5199a647242c0ddbf261064bb3ced3}",
+            "valid_from": "2023-08-17T16:07:55.218Z",
+            "valid_until": "2024-08-16T16:07:55.218Z",
+            "x_score": 39,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "c61b1ede-329a-455f-a30b-39d97a8f90c3",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5bfbc956-ac95-50f3-bf86-40947ea776fe",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:59.002Z",
+            "modified": "2023-08-17T16:27:23.419Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '6558ac814046ecf3da8c69affea28ce93524f93488518d847e4f03b9327acb44' OR file:hashes.'SHA-1' = '64ae7f0d34b57e44610c21f1f09a918b247609b0' OR file:hashes.MD5 = '3a04db80551c82874014bc84643d5ed3']",
+            "name": "6558ac814046ecf3da8c69affea28ce93524f93488518d847e4f03b9327acb44",
+            "description": "Simple indicator of observable {6558ac814046ecf3da8c69affea28ce93524f93488518d847e4f03b9327acb44}",
+            "valid_from": "2023-08-17T16:07:58.979Z",
+            "valid_until": "2024-08-16T16:07:58.979Z",
+            "x_score": 7,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "9484a94c-28a9-420f-ad39-d5d8152e2f1a",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--4b4c3679-4e79-504b-8097-30731b21b265",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:06.257Z",
+            "modified": "2023-08-17T16:27:27.237Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '5fc79a4499bafa3a881778ef51ce29ef015ee58a587e3614702e69da304395db' OR file:hashes.'SHA-1' = '9ded9cdfc2a6569b9a4428a63bc30e526dc8d324' OR file:hashes.MD5 = 'f385b60b233ef51599d048dc42a7433f']",
+            "name": "5fc79a4499bafa3a881778ef51ce29ef015ee58a587e3614702e69da304395db",
+            "description": "Simple indicator of observable {5fc79a4499bafa3a881778ef51ce29ef015ee58a587e3614702e69da304395db}",
+            "valid_from": "2023-08-17T16:08:06.234Z",
+            "valid_until": "2024-08-16T16:08:06.234Z",
+            "x_score": 29,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "01a74700-18e2-4b5f-8f41-2eb72d3bc1f9",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--8051a670-efce-57b9-88e6-463e524964a5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:53.730Z",
+            "modified": "2023-08-17T16:27:20.871Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '595153eb56030c0e466cda0becb1dc9560e38601c1e0803c46e7dfc53d1d2892' OR file:hashes.'SHA-1' = '84916c8002f1eddac1c4147f3b1c8217c6d824e8' OR file:hashes.MD5 = '9d98dcc540e9ebcfd41b8421d31bcf7f']",
+            "name": "595153eb56030c0e466cda0becb1dc9560e38601c1e0803c46e7dfc53d1d2892",
+            "description": "Simple indicator of observable {595153eb56030c0e466cda0becb1dc9560e38601c1e0803c46e7dfc53d1d2892}",
+            "valid_from": "2023-08-17T16:07:53.706Z",
+            "valid_until": "2024-08-16T16:07:53.706Z",
+            "x_score": 35,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "05d73c9a-07be-44d7-9289-dbbdcffed2cc",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--1df0651a-b230-556b-aa02-8aafc830cedd",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:58.362Z",
+            "modified": "2023-08-17T16:27:23.071Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '58fdee05cb962a13c5105476e8000c873061874aadbc5998887f0633c880296a' OR file:hashes.'SHA-1' = '3e86ba6c8e8e89262a01c1364f562ba0554f8e23' OR file:hashes.MD5 = 'd8a436194edac844f2a5785f36f2a389']",
+            "name": "58fdee05cb962a13c5105476e8000c873061874aadbc5998887f0633c880296a",
+            "description": "Simple indicator of observable {58fdee05cb962a13c5105476e8000c873061874aadbc5998887f0633c880296a}",
+            "valid_from": "2023-08-17T16:07:58.340Z",
+            "valid_until": "2024-08-16T16:07:58.340Z",
+            "x_score": 14,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "0fbcfb4b-910a-44c5-8a71-15a7463c7a00",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--55263d2c-aa31-5cb4-87b3-55af3ff93098",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:00.137Z",
+            "modified": "2023-08-17T16:27:23.996Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '54c7c153423250c8650efc0d610a12df683b2504e1a7a339dfd189eda25c98d4' OR file:hashes.'SHA-1' = '9812766a7b598cd53851901dcf360b2a2b248f48' OR file:hashes.MD5 = '584ca2c26d61e438a11a4c654eedfb1f']",
+            "name": "54c7c153423250c8650efc0d610a12df683b2504e1a7a339dfd189eda25c98d4",
+            "description": "Simple indicator of observable {54c7c153423250c8650efc0d610a12df683b2504e1a7a339dfd189eda25c98d4}",
+            "valid_from": "2023-08-17T16:08:00.113Z",
+            "valid_until": "2024-08-16T16:08:00.113Z",
+            "x_score": 22,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "c0ce4801-7f07-48fd-b997-05fde11072d9",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--edcf5de0-95ed-5a28-a108-21619696b0d0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:00.835Z",
+            "modified": "2023-08-17T16:27:24.343Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '541eab9e348c40d510db914387068c6bfdf46a6ff84364fe63f6e114af8d79cf' OR file:hashes.'SHA-1' = '19c36a672d575d84f7f522a98829eb65343dc81f' OR file:hashes.MD5 = '9b9ff0d65523923a70acc5b24de1921f']",
+            "name": "541eab9e348c40d510db914387068c6bfdf46a6ff84364fe63f6e114af8d79cf",
+            "description": "Simple indicator of observable {541eab9e348c40d510db914387068c6bfdf46a6ff84364fe63f6e114af8d79cf}",
+            "valid_from": "2023-08-17T16:08:00.813Z",
+            "valid_until": "2024-08-16T16:08:00.813Z",
+            "x_score": 29,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "2c0a7c28-cd2f-4661-98aa-95d6aaa0dce2",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--688deca3-1edc-5320-a92e-308effc2cb56",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:51.555Z",
+            "modified": "2023-08-17T16:27:19.594Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '53121c9c5164d8680ae1b88d95018a553dff871d7b4d6e06bd69cbac047fe00f' OR file:hashes.'SHA-1' = '80be5cc29883239e6abde934580f41390d1f9678' OR file:hashes.MD5 = 'fa0496efa0bb3deb75aab724e6a1d861']",
+            "name": "53121c9c5164d8680ae1b88d95018a553dff871d7b4d6e06bd69cbac047fe00f",
+            "description": "Simple indicator of observable {53121c9c5164d8680ae1b88d95018a553dff871d7b4d6e06bd69cbac047fe00f}",
+            "valid_from": "2023-08-17T16:07:51.533Z",
+            "valid_until": "2024-08-16T16:07:51.533Z",
+            "x_score": 33,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "c78e4fbb-3052-473c-b42f-dacbb4b7b0d4",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0aab96fd-8915-5e36-af96-80a7f475c56e",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:03.136Z",
+            "modified": "2023-08-17T16:27:25.647Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '43c1ee0925ecd533e0b108c82b08a3819b371182e93910a0322617a8acf26646' OR file:hashes.'SHA-1' = 'd091166ce05c96bbe598ab3e5e96d9e1a13f3fc3' OR file:hashes.MD5 = '09b942d8c9d57e4f1d6b42ea91f9820d']",
+            "name": "43c1ee0925ecd533e0b108c82b08a3819b371182e93910a0322617a8acf26646",
+            "description": "Simple indicator of observable {43c1ee0925ecd533e0b108c82b08a3819b371182e93910a0322617a8acf26646}",
+            "valid_from": "2023-08-17T16:08:03.112Z",
+            "valid_until": "2024-08-16T16:08:03.112Z",
+            "x_score": 20,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "090f21e6-ebf8-4bba-869e-be50b51281ca",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e522749a-b312-5423-a5bf-2ebcbd959f51",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:03.992Z",
+            "modified": "2023-08-17T16:27:26.178Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '42beac1265e0efc220ed63526f5b475c70621573920968a457e87625d66973af' OR file:hashes.'SHA-1' = '2d08ebd5d90cbd8fa347edf02d485ea28e464c96' OR file:hashes.MD5 = '93fee469deb1888bdb26404eba6b6e40']",
+            "name": "42beac1265e0efc220ed63526f5b475c70621573920968a457e87625d66973af",
+            "description": "Simple indicator of observable {42beac1265e0efc220ed63526f5b475c70621573920968a457e87625d66973af}",
+            "valid_from": "2023-08-17T16:08:03.963Z",
+            "valid_until": "2024-08-16T16:08:03.963Z",
+            "x_score": 11,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "long-sleeps",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "839ca6bf-9cbf-436b-add1-a88a790c384a",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c8c7d5a3-3bed-5adf-b26c-14e0a591be77",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:49.678Z",
+            "modified": "2023-08-17T16:27:18.658Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '3fff407bc45b879a1770643e09bb99f67cdcfe0e4f7f158a4e6df02299bac27e' OR file:hashes.'SHA-1' = '5078099c6b5e1f4821078555508de0dce90e5e1c' OR file:hashes.MD5 = '396004185b4af246cf5089b14bdc0f2b']",
+            "name": "3fff407bc45b879a1770643e09bb99f67cdcfe0e4f7f158a4e6df02299bac27e",
+            "description": "Simple indicator of observable {3fff407bc45b879a1770643e09bb99f67cdcfe0e4f7f158a4e6df02299bac27e}",
+            "valid_from": "2023-08-17T16:07:49.634Z",
+            "valid_until": "2024-08-16T16:07:49.634Z",
+            "x_score": 3,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "48914765-3277-446d-83b4-807b0ef758df",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--8cbcccc7-bef9-50a9-b624-425687ee17aa",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:50.382Z",
+            "modified": "2023-08-17T16:27:19.011Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '3f6e3e7747e0b1815eb2a46d79ebd8e3cb9ccdc7032d52274bc0e60642e9b31e' OR file:hashes.'SHA-1' = 'e83395c70bded24f2e31df0826b3944e34ac7066' OR file:hashes.MD5 = 'ecf842dc8424711e367e97fbaa228955']",
+            "name": "3f6e3e7747e0b1815eb2a46d79ebd8e3cb9ccdc7032d52274bc0e60642e9b31e",
+            "description": "Simple indicator of observable {3f6e3e7747e0b1815eb2a46d79ebd8e3cb9ccdc7032d52274bc0e60642e9b31e}",
+            "valid_from": "2023-08-17T16:07:50.350Z",
+            "valid_until": "2024-08-16T16:07:50.350Z",
+            "x_score": 29,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "7453d097-7ecd-4463-80dc-94c218dcbc7c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--f3a249da-8d9d-5578-a778-86d0cc9ac30b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:56.076Z",
+            "modified": "2023-08-17T16:27:21.918Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '3dffb7f05788d981efb12013d7fadf74fdf8f39fa74f04f72be482847c470a53' OR file:hashes.'SHA-1' = '94d3c528287ffef9d98005c9e84a7413bde27b98' OR file:hashes.MD5 = '68776eb50dfd471628c5dbdd7102b20c']",
+            "name": "3dffb7f05788d981efb12013d7fadf74fdf8f39fa74f04f72be482847c470a53",
+            "description": "Simple indicator of observable {3dffb7f05788d981efb12013d7fadf74fdf8f39fa74f04f72be482847c470a53}",
+            "valid_from": "2023-08-17T16:07:56.053Z",
+            "valid_until": "2024-08-16T16:07:56.053Z",
+            "x_score": 34,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "bf5652e7-58be-4e9f-95a2-becccdca4334",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--78335f04-8579-5bbb-b0ad-b083c924a63a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:05.039Z",
+            "modified": "2023-08-17T16:27:26.643Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '396dce335b16111089a07ecb2d69827f258420685c2d9f3ea9e1deee4bff9561' OR file:hashes.'SHA-1' = '8eca01d131993fe54218b2bbd9d8a14469d31487' OR file:hashes.MD5 = '4272b7fce5c1be5bca5f2b7d552e5213']",
+            "name": "396dce335b16111089a07ecb2d69827f258420685c2d9f3ea9e1deee4bff9561",
+            "description": "Simple indicator of observable {396dce335b16111089a07ecb2d69827f258420685c2d9f3ea9e1deee4bff9561}",
+            "valid_from": "2023-08-17T16:08:05.010Z",
+            "valid_until": "2024-08-16T16:08:05.010Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "long-sleeps",
+                "idle",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "e466b781-dce2-4778-8459-a3b389db7c08",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--584cc2df-a028-516d-b41e-89d987b334fb",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:50.163Z",
+            "modified": "2023-08-17T16:27:18.899Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '394ce0385276acc6f6c173a3dde6694881130278bfb646be94234cc7798fd9a9' OR file:hashes.'SHA-1' = 'ad556af16c1386fef112f795d6890e1adc7bf1a9' OR file:hashes.MD5 = '23e4ac5e7db3d5a898ea32d27e8b7661']",
+            "name": "394ce0385276acc6f6c173a3dde6694881130278bfb646be94234cc7798fd9a9",
+            "description": "Simple indicator of observable {394ce0385276acc6f6c173a3dde6694881130278bfb646be94234cc7798fd9a9}",
+            "valid_from": "2023-08-17T16:07:50.141Z",
+            "valid_until": "2024-08-16T16:07:50.141Z",
+            "x_score": 37,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "ea9995ee-6513-4326-963f-8326bc716a32",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--bf5a4e68-4051-5476-aa8c-fbd06e2a8d15",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:57.656Z",
+            "modified": "2023-08-17T16:27:22.727Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '384408659efa1f87801aa494d912047c26259cd29b08de990058e6b45619d91a' OR file:hashes.'SHA-1' = '9a8eccb54db4ec661260bfdc656ee61404f3f5ac' OR file:hashes.MD5 = '8f6fd811546baa58c6e1c2f150b2efa1']",
+            "name": "384408659efa1f87801aa494d912047c26259cd29b08de990058e6b45619d91a",
+            "description": "Simple indicator of observable {384408659efa1f87801aa494d912047c26259cd29b08de990058e6b45619d91a}",
+            "valid_from": "2023-08-17T16:07:57.627Z",
+            "valid_until": "2024-08-16T16:07:57.627Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "assembly",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "4143a7bf-96c5-4ae9-9bfd-88ea9531fe33",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5883ff7d-8c26-5d36-813a-2e149934e932",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:48.548Z",
+            "modified": "2023-08-17T16:27:18.062Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '37b6fce45f6bb52041832eaf9c6d02cbc33a3ef2ca504adb88e19107d2a7aeaa' OR file:hashes.'SHA-1' = '5cc08116e4fc78d9abadecb9d4fab6ca92658800' OR file:hashes.MD5 = 'c5ee82ecb5f33d643f14ebb8966154ba']",
+            "name": "37b6fce45f6bb52041832eaf9c6d02cbc33a3ef2ca504adb88e19107d2a7aeaa",
+            "description": "Simple indicator of observable {37b6fce45f6bb52041832eaf9c6d02cbc33a3ef2ca504adb88e19107d2a7aeaa}",
+            "valid_from": "2023-08-17T16:07:48.526Z",
+            "valid_until": "2024-08-16T16:07:48.526Z",
+            "x_score": 41,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "773b4b5e-f42d-4274-8f0d-11dd9c91557a",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--3db6873b-7e8e-5227-8516-b37c34c60fa6",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:05.380Z",
+            "modified": "2023-08-17T16:27:26.757Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '356efe6b10911d7daaffed64278ba713ab51f7130d1c15f3ca86d17d65849fa5' OR file:hashes.'SHA-1' = '4403dffe98ee1274ffaf26b5b4f49812dd5e7547' OR file:hashes.MD5 = '56a92ebe34a191e3bf1d512808e30eb7']",
+            "name": "356efe6b10911d7daaffed64278ba713ab51f7130d1c15f3ca86d17d65849fa5",
+            "description": "Simple indicator of observable {356efe6b10911d7daaffed64278ba713ab51f7130d1c15f3ca86d17d65849fa5}",
+            "valid_from": "2023-08-17T16:08:05.311Z",
+            "valid_until": "2024-08-16T16:08:05.311Z",
+            "x_score": 7,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "59755acc-5e1b-4b32-83fe-77196cdf06b6",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--dcc30746-0d18-53d4-a630-c6a06cf8a102",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:59.450Z",
+            "modified": "2023-08-17T16:27:23.654Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '343728792ed1e40173f1e9c5f3af894feacd470a9cdc72e4f62c0dc9cbf63fc1' OR file:hashes.'SHA-1' = 'f210a395702956eda87bb9085e9c90976e2441f9' OR file:hashes.MD5 = '151da7f07f73979bc32eac873ea9928b']",
+            "name": "343728792ed1e40173f1e9c5f3af894feacd470a9cdc72e4f62c0dc9cbf63fc1",
+            "description": "Simple indicator of observable {343728792ed1e40173f1e9c5f3af894feacd470a9cdc72e4f62c0dc9cbf63fc1}",
+            "valid_from": "2023-08-17T16:07:59.421Z",
+            "valid_until": "2024-08-16T16:07:59.421Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "long-sleeps",
+                "idle",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "13f33e14-93c1-4236-9e9c-7ae709ebf004",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--eaf06b22-59f9-54d6-86b0-fcd9ef86441d",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:59.231Z",
+            "modified": "2023-08-17T16:27:23.533Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '315217b860ab46c6205b36e49dfaa927545b90037373279723c3dec165dfaf11' OR file:hashes.'SHA-1' = 'a715807889192bf6cbf57a9aa03070f6292f3938' OR file:hashes.MD5 = 'f620aadaf2be3be67037807def3e48d5']",
+            "name": "315217b860ab46c6205b36e49dfaa927545b90037373279723c3dec165dfaf11",
+            "description": "Simple indicator of observable {315217b860ab46c6205b36e49dfaa927545b90037373279723c3dec165dfaf11}",
+            "valid_from": "2023-08-17T16:07:59.207Z",
+            "valid_until": "2024-08-16T16:07:59.207Z",
+            "x_score": 30,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "db7a7b10-da71-45e5-9e88-8a35e759f1e8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5efdcdda-de31-55d2-b96a-5000aebf17b6",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:54.425Z",
+            "modified": "2023-08-17T16:27:21.224Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '307fc7ebde82f660950101ea7b57782209545af593d2c1115c89f328de917dbb' OR file:hashes.'SHA-1' = 'a5cf37a1630e1f1e0519402e8de020f7c5ddf526' OR file:hashes.MD5 = '7419448dd97bb803982eea63ffe81e88']",
+            "name": "307fc7ebde82f660950101ea7b57782209545af593d2c1115c89f328de917dbb",
+            "description": "Simple indicator of observable {307fc7ebde82f660950101ea7b57782209545af593d2c1115c89f328de917dbb}",
+            "valid_from": "2023-08-17T16:07:54.395Z",
+            "valid_until": "2024-08-16T16:07:54.395Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "assembly",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "62f52628-7c07-4e6f-bc67-40fd507d4014",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--fd98a1da-5201-50b8-9b62-d2983852d3b2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:52.860Z",
+            "modified": "2023-08-17T16:27:20.400Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '30628bcb1db7252bf710c1d37f9718ac37a8e2081a2980bead4f21336d2444bc' OR file:hashes.'SHA-1' = '8300460835d7ae34a3393fc443b8b4cff6caa45b' OR file:hashes.MD5 = '37baf88ab01426a7877d7b2d4b219ebd']",
+            "name": "30628bcb1db7252bf710c1d37f9718ac37a8e2081a2980bead4f21336d2444bc",
+            "description": "Simple indicator of observable {30628bcb1db7252bf710c1d37f9718ac37a8e2081a2980bead4f21336d2444bc}",
+            "valid_from": "2023-08-17T16:07:52.838Z",
+            "valid_until": "2024-08-16T16:07:52.838Z",
+            "x_score": 51,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "c5e8fc66-9cd2-4a45-bcd1-af7b25c3b2ee",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--98d21fb5-73af-52bb-b426-dd268f71cfe0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:59.665Z",
+            "modified": "2023-08-17T16:27:23.766Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '1d058302d1e747714cac899d0150dcc35bea54cc6e995915284c3a64a76aacb1' OR file:hashes.'SHA-1' = 'f2404d409e9e29df0ef000e9fd102356a694fbad' OR file:hashes.MD5 = '652be4643474fdbf2d6590ce12870f5f']",
+            "name": "1d058302d1e747714cac899d0150dcc35bea54cc6e995915284c3a64a76aacb1",
+            "description": "Simple indicator of observable {1d058302d1e747714cac899d0150dcc35bea54cc6e995915284c3a64a76aacb1}",
+            "valid_from": "2023-08-17T16:07:59.639Z",
+            "valid_until": "2024-08-16T16:07:59.639Z",
+            "x_score": 30,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "32fac780-8771-4c11-bc67-af6e76d61b88",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c2608534-5d40-5562-802f-33dceda53209",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:49.433Z",
+            "modified": "2023-08-17T16:27:18.544Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '1be3397c2a85b4b9a5a111b9a4e53d382df47a0a09065639d9e66e0b55fe36fc' OR file:hashes.'SHA-1' = '71a41adc467c98828466d0d69c391689f36c0c50' OR file:hashes.MD5 = '47d8e78bbff7ceb6258ba287c45ec173']",
+            "name": "1be3397c2a85b4b9a5a111b9a4e53d382df47a0a09065639d9e66e0b55fe36fc",
+            "description": "Simple indicator of observable {1be3397c2a85b4b9a5a111b9a4e53d382df47a0a09065639d9e66e0b55fe36fc}",
+            "valid_from": "2023-08-17T16:07:49.404Z",
+            "valid_until": "2024-08-16T16:07:49.404Z",
+            "x_score": 10,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "assembly",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "7fe05c3a-2e4b-41bd-946e-ba0ce580ea6f",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--942fef2d-7977-54f4-9d0e-0068af0fbac3",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:59.914Z",
+            "modified": "2023-08-17T16:27:23.881Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '1a50c358fa4b725c6e0e26eee3646de26ba38e951f3fe414f4bf73532af62455' OR file:hashes.'SHA-1' = 'ab60ff0cb16508a08553d48014a9f0d0e06a6752' OR file:hashes.MD5 = '3806f6777b8610f87664df097dd6f79b']",
+            "name": "1a50c358fa4b725c6e0e26eee3646de26ba38e951f3fe414f4bf73532af62455",
+            "description": "Simple indicator of observable {1a50c358fa4b725c6e0e26eee3646de26ba38e951f3fe414f4bf73532af62455}",
+            "valid_from": "2023-08-17T16:07:59.892Z",
+            "valid_until": "2024-08-16T16:07:59.892Z",
+            "x_score": 54,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "868b350b-de9b-43ac-9b7a-4453cc0421d5",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7937322a-69a0-51ec-a792-6d007c62f6c6",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:55.851Z",
+            "modified": "2023-08-17T16:27:21.803Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '19b0db9a9a08ee113d667d924992a29cd31c05f89582953eff5a52ad8f533f4b' OR file:hashes.'SHA-1' = 'cd6c771aad268a91732d637241b1d7f2ad771c83' OR file:hashes.MD5 = 'f5113b85b6548d2b33b153a5462acc8a']",
+            "name": "19b0db9a9a08ee113d667d924992a29cd31c05f89582953eff5a52ad8f533f4b",
+            "description": "Simple indicator of observable {19b0db9a9a08ee113d667d924992a29cd31c05f89582953eff5a52ad8f533f4b}",
+            "valid_from": "2023-08-17T16:07:55.824Z",
+            "valid_until": "2024-08-16T16:07:55.824Z",
+            "x_score": 1,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "long-sleeps",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "c376c5c5-1d40-40f4-9fe8-2c1c0d999e7e",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d049b49d-8793-5eeb-bb30-7e1e89e65c2e",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:47.859Z",
+            "modified": "2023-08-17T16:27:17.717Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '13c7f28044fdb1db2289036129b58326f294e76e011607ca8d4c5adc2ddddb16' OR file:hashes.'SHA-1' = '433a49abccaf1fd7e5d2743ecf537f1de9f21ae5' OR file:hashes.MD5 = 'de1d392b7aa1a203b6fdcbe3322f73ef']",
+            "name": "13c7f28044fdb1db2289036129b58326f294e76e011607ca8d4c5adc2ddddb16",
+            "description": "Simple indicator of observable {13c7f28044fdb1db2289036129b58326f294e76e011607ca8d4c5adc2ddddb16}",
+            "valid_from": "2023-08-17T16:07:47.829Z",
+            "valid_until": "2024-08-16T16:07:47.829Z",
+            "x_score": 24,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "77374f7a-3c36-44e2-9e5e-ac83a422adb7",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--8ff98e97-93c7-58f3-92f1-5d80597021e7",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:05.833Z",
+            "modified": "2023-08-17T16:27:26.995Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '1358156c01b035f474ed12408a9e6a77fe01af8df70c08995393cbb7d1e1f8a6' OR file:hashes.'SHA-1' = 'c7e21614f140c8f226702db999d569e04695f475' OR file:hashes.MD5 = '36edc1e752337df7801eaeb5ace02e6a']",
+            "name": "1358156c01b035f474ed12408a9e6a77fe01af8df70c08995393cbb7d1e1f8a6",
+            "description": "Simple indicator of observable {1358156c01b035f474ed12408a9e6a77fe01af8df70c08995393cbb7d1e1f8a6}",
+            "valid_from": "2023-08-17T16:08:05.812Z",
+            "valid_until": "2024-08-16T16:08:05.812Z",
+            "x_score": 26,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "28ed4ad3-0df4-43ca-9f2f-a0658c170d4c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5938b6d2-25d1-5c88-ba5a-751bf7016e6f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:51.116Z",
+            "modified": "2023-08-17T16:27:19.365Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '113c9e7760da82261d77426d9c41bc108866c45947111dbae5cd3093d69e0f1d' OR file:hashes.'SHA-1' = '6d5ac6ba442859a8caf90361a7e5e30bca811d16' OR file:hashes.MD5 = '14f37fcd2dd8d220cd37a5e6331aeadb']",
+            "name": "113c9e7760da82261d77426d9c41bc108866c45947111dbae5cd3093d69e0f1d",
+            "description": "Simple indicator of observable {113c9e7760da82261d77426d9c41bc108866c45947111dbae5cd3093d69e0f1d}",
+            "valid_from": "2023-08-17T16:07:51.088Z",
+            "valid_until": "2024-08-16T16:07:51.088Z",
+            "x_score": 10,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "long-sleeps",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "700f93fb-30a4-4975-b9c6-2f993c6f4c70",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--8e272f4e-0681-5e45-9c20-9b2d57dbe521",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:53.521Z",
+            "modified": "2023-08-17T16:27:20.754Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '0f07c23f7fe5ff918ee596a7f1df320ed6e7783ff91b68c636531aba949a6f33' OR file:hashes.'SHA-1' = '0c76a28a43912030079fdf3434db17f7aa7c7621' OR file:hashes.MD5 = '0f6d5971fa4cb1ac6b0052ec596f6eb3']",
+            "name": "0f07c23f7fe5ff918ee596a7f1df320ed6e7783ff91b68c636531aba949a6f33",
+            "description": "Simple indicator of observable {0f07c23f7fe5ff918ee596a7f1df320ed6e7783ff91b68c636531aba949a6f33}",
+            "valid_from": "2023-08-17T16:07:53.497Z",
+            "valid_until": "2024-08-16T16:07:53.497Z",
+            "x_score": 7,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "86e83cc4-1e31-4f06-b931-286be8ec750a",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--069c958f-9f87-53cb-b031-00f65f943607",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:03.351Z",
+            "modified": "2023-08-17T16:27:25.822Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '0bfd54fd65514d61e34936ce598e5fee4151615079e1d4d0d21b15e9230dd41d' OR file:hashes.'SHA-1' = 'ab98590c956365aad3affe1a1e7367bcaa75fe98' OR file:hashes.MD5 = '7cd905c51ccd0d16bf702b6c657fa03e']",
+            "name": "0bfd54fd65514d61e34936ce598e5fee4151615079e1d4d0d21b15e9230dd41d",
+            "description": "Simple indicator of observable {0bfd54fd65514d61e34936ce598e5fee4151615079e1d4d0d21b15e9230dd41d}",
+            "valid_from": "2023-08-17T16:08:03.330Z",
+            "valid_until": "2024-08-16T16:08:03.330Z",
+            "x_score": 24,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "886ca0a1-1ab9-4cb4-9284-755106006242",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--1792c43c-be17-5059-bbab-60ded3472ff2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:57.428Z",
+            "modified": "2023-08-17T16:27:22.611Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '06cd6391b5fcf529168dc851f27bf3626f20e038a9c0193a60b406ad1ece6958' OR file:hashes.'SHA-1' = 'a466b99c0b3b420fa45d99aafa23e97ee877cda9' OR file:hashes.MD5 = '5bba770335aef19ccd47f18c406f9fb3']",
+            "name": "06cd6391b5fcf529168dc851f27bf3626f20e038a9c0193a60b406ad1ece6958",
+            "description": "Simple indicator of observable {06cd6391b5fcf529168dc851f27bf3626f20e038a9c0193a60b406ad1ece6958}",
+            "valid_from": "2023-08-17T16:07:57.402Z",
+            "valid_until": "2024-08-16T16:07:57.402Z",
+            "x_score": 7,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890",
+                "pedll",
+                "detect-debug-environment",
+                "long-sleeps",
+                "idle",
+                "64bits"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "4cbe4bf8-cfdc-4eae-b53e-1569648e6b54",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--214639e2-a82c-57e5-94b8-d2a341bdb5b5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:07:57.889Z",
+            "modified": "2023-08-17T16:27:22.839Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '02b1bd89e9190ff5edfa998944fd6048d32a3bde3a72d413e8af538d9ad770b4' OR file:hashes.'SHA-1' = '1ad4914aa94c78788c87e7d3a47c3a4345977521' OR file:hashes.MD5 = '76e2dd0cf9167d3c332262572d89e7cb']",
+            "name": "02b1bd89e9190ff5edfa998944fd6048d32a3bde3a72d413e8af538d9ad770b4",
+            "description": "Simple indicator of observable {02b1bd89e9190ff5edfa998944fd6048d32a3bde3a72d413e8af538d9ad770b4}",
+            "valid_from": "2023-08-17T16:07:57.860Z",
+            "valid_until": "2024-08-16T16:07:57.860Z",
+            "x_score": 49,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "7407710b-28b6-42ad-bec4-f26559894b3d",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--04497b48-9d2e-5045-871f-9f9a822ed3fa",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-08-17T16:08:01.289Z",
+            "modified": "2023-08-17T16:27:24.569Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '028da30664cb9f1baba47fdaf2d12d991dcf80514f5549fa51c38e62016c1710' OR file:hashes.'SHA-1' = '278914a2aa0347b211852a0e32af90ca81211b9b' OR file:hashes.MD5 = '6f0ff50cee88cff23b5061f33e154691']",
+            "name": "028da30664cb9f1baba47fdaf2d12d991dcf80514f5549fa51c38e62016c1710",
+            "description": "Simple indicator of observable {028da30664cb9f1baba47fdaf2d12d991dcf80514f5549fa51c38e62016c1710}",
+            "valid_from": "2023-08-17T16:08:01.261Z",
+            "valid_until": "2024-08-16T16:08:01.261Z",
+            "x_score": 44,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "blister",
+                "ref7890"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs - BLISTER revisited",
+                    "url": "https://security-labs.elastic.co/article/revisiting-blister-new-developments-of-the-blister-loader"
+                }
+            ],
+            "x_id": "66317503-fa5e-45cc-a72c-044aeab962aa",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
