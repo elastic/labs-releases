@@ -3,8 +3,14 @@ requires = ["setuptools"]
 
 [project]
 name = "nightMARE"
-version = "0.0.2"
-dependencies = ["unicorn", "lief", "capstone", "construct", "yara-python"]
+version = "0.5.0"
+dependencies = [
+    "unicorn",
+    "lief",
+    "capstone",
+    "construct",
+    "yara-python",
+    "requests",
+    "smda",
+]
 requires-python = ">=3.10"
-
-
