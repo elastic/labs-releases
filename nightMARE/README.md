@@ -15,10 +15,7 @@ Example usage: https://www.elastic.co/security-labs/unpacking-icedid
 
 | Module                        | Description                    |
 | ----------------------------- | ------------------------------ |
-<<<<<<< HEAD
 | `nightmare.malware.blister`   | Implement BLISTER algorithms   |
-=======
->>>>>>> 16897e6de86fdca361f74a602f54aa6b40ca40d9
 | `nightmare.malware.icedid`    | Implement ICEDID algorithms    |
 | `nightmare.malware.lobshot`   | Implement LOBSHOT algorithms   |
 | `nightmare.malware.nighthawk` | Implement NIGHTHAWK algorithms |
