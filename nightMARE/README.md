@@ -13,9 +13,19 @@ Example usage: https://www.elastic.co/security-labs/unpacking-icedid
 
 ## Malware modules
 
-| Module                   | Description                 |
-| ------------------------ | --------------------------- |
-| `nightmare.malware.icedid` | Implement ICEDID algorithms |
+| Module                        | Description                    |
+| ----------------------------- | ------------------------------ |
+<<<<<<< HEAD
+| `nightmare.malware.blister`   | Implement BLISTER algorithms   |
+=======
+>>>>>>> 16897e6de86fdca361f74a602f54aa6b40ca40d9
+| `nightmare.malware.icedid`    | Implement ICEDID algorithms    |
+| `nightmare.malware.lobshot`   | Implement LOBSHOT algorithms   |
+| `nightmare.malware.nighthawk` | Implement NIGHTHAWK algorithms |
+| `nightmare.malware.xorddos`   | Implement XORDDOS algorithms   |
+
+
+## Install
 
 To install nightMARE, you'll need Python 3.10+. From the `labs-releases/` root directory:
 
