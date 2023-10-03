@@ -1,0 +1,238 @@
+{
+    "type": "bundle",
+    "id": "bundle--1fcba003-1010-45a3-b20d-f4cc18acfd4b",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2023-08-29T20:22:46.811Z",
+            "x_organization_type": "vendor",
+            "x_reliability": "A",
+            "x_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--4feb3078-6c96-530f-86d9-fb6db9d58932",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-10-02T16:39:48.383Z",
+            "modified": "2023-10-02T16:41:12.261Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'ce4dfda471f2d3fa4e000f9e3839c3d9fbf2d93ea7f89101161ce97faceadf9a' OR file:hashes.'SHA-1' = '9d3ad90b5c35aa869c1898bee8632315fcd436e9' OR file:hashes.MD5 = '7893f51d76a621ac124cf13ec2e9c521']",
+            "name": "ce4dfda471f2d3fa4e000f9e3839c3d9fbf2d93ea7f89101161ce97faceadf9a",
+            "description": "Simple indicator of observable {ce4dfda471f2d3fa4e000f9e3839c3d9fbf2d93ea7f89101161ce97faceadf9a}",
+            "valid_from": "2023-10-02T16:39:48.357Z",
+            "valid_until": "2024-10-01T16:39:48.357Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref5961",
+                "eagerbee",
+                "pgp"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Introducing the REF5961 Intrusion Set",
+                    "url": "https://www.elastic.co/security-labs/introducing-the-ref5961-intrusion-set"
+                }
+            ],
+            "x_id": "12d88735-5177-45ab-ab81-2997cbfb9197",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c1141380-bc68-5a78-80f1-9f9cb1826e8e",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-10-02T16:39:48.131Z",
+            "modified": "2023-10-02T16:41:12.145Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '29c90ac124b898b2ff2a4897921d5f5cc251396e8176fc8d6fa475df89d9274d']",
+            "name": "29c90ac124b898b2ff2a4897921d5f5cc251396e8176fc8d6fa475df89d9274d",
+            "description": "Simple indicator of observable {29c90ac124b898b2ff2a4897921d5f5cc251396e8176fc8d6fa475df89d9274d}",
+            "valid_from": "2023-10-02T16:39:48.105Z",
+            "valid_until": "2024-10-01T16:39:48.105Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref5961",
+                "downtown"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Introducing the REF5961 Intrusion Set",
+                    "url": "https://www.elastic.co/security-labs/introducing-the-ref5961-intrusion-set"
+                }
+            ],
+            "x_id": "567c7971-2de2-4aa1-a80b-4395410dc719",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e45a874b-a7e8-5809-9ea7-1aa3bcecc649",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-10-02T16:39:47.896Z",
+            "modified": "2023-10-02T16:41:12.024Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '45.90.58.103']",
+            "name": "45.90.58.103",
+            "description": "Simple indicator of observable {45.90.58.103}",
+            "valid_from": "2023-10-02T16:39:47.874Z",
+            "valid_until": "2023-11-01T16:39:47.874Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref5961",
+                "rudebird"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Introducing the REF5961 Intrusion Set",
+                    "url": "https://www.elastic.co/security-labs/introducing-the-ref5961-intrusion-set"
+                }
+            ],
+            "x_id": "9b2521bb-e83c-4aa0-a9d7-4ae2757e0946",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c0645dc7-54a4-5cec-8caf-9156ab8a50fe",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-10-02T16:39:47.625Z",
+            "modified": "2023-10-02T16:41:11.914Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '185.82.217.164']",
+            "name": "185.82.217.164",
+            "description": "Simple indicator of observable {185.82.217.164}",
+            "valid_from": "2023-10-02T16:39:47.596Z",
+            "valid_until": "2023-11-01T16:39:47.596Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "c2 server",
+                "ref5961",
+                "eagerbee"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Introducing the REF5961 Intrusion Set",
+                    "url": "https://www.elastic.co/security-labs/introducing-the-ref5961-intrusion-set"
+                }
+            ],
+            "x_id": "bb91b780-193a-4eb2-ab4a-e4d3ca57c8ca",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0ce2190a-e47b-5720-a1e0-fc37b4590789",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-10-02T16:39:47.369Z",
+            "modified": "2023-10-02T16:41:11.795Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '185.195.237.123']",
+            "name": "185.195.237.123",
+            "description": "Simple indicator of observable {185.195.237.123}",
+            "valid_from": "2023-10-02T16:39:47.339Z",
+            "valid_until": "2023-11-01T16:39:47.339Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref5961",
+                "rudebird"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Introducing the REF5961 Intrusion Set",
+                    "url": "https://www.elastic.co/security-labs/introducing-the-ref5961-intrusion-set"
+                }
+            ],
+            "x_id": "482a4f32-0d46-4c85-ac29-53f554b3ada1",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--42437ed1-af0f-5696-91a7-8f32e59b5f0a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-10-02T16:39:47.111Z",
+            "modified": "2023-10-02T16:41:11.590Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '195.123.245.79']",
+            "name": "195.123.245.79",
+            "description": "Simple indicator of observable {195.123.245.79}",
+            "valid_from": "2023-10-02T16:39:47.079Z",
+            "valid_until": "2023-11-01T16:39:47.079Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "c2 server",
+                "ref5961",
+                "eagerbee"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Introducing the REF5961 Intrusion Set",
+                    "url": "https://www.elastic.co/security-labs/introducing-the-ref5961-intrusion-set"
+                }
+            ],
+            "x_id": "e132353f-390f-4fb4-be0c-6f799428f491",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
