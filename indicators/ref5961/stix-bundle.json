@@ -28,6 +28,32 @@
             }
         },
         {
+            "id": "file--83a8ac2c-d46f-5973-b028-ed4c8946040d",
+            "spec_version": "2.1",
+            "name": "BrLogAPI.dll",
+            "hashes": {
+                "SHA-256": "e14ee3e2ce0010110c409f119d56f6151fdca64e20d902412db46406ed89009a"
+            },
+            "labels": [
+                "loader",
+                "pedll",
+                "bloodalchemy"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Disclosing the BLOODALCHEMY backdoor",
+                    "url": "https://www.elastic.co/security-labs/disclosing-the-bloodalchemy-backdoor"
+                }
+            ],
+            "x_id": "11fa768b-dbc6-49e1-9e63-033ef2832dd3",
+            "x_type": "StixFile",
+            "type": "file",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
             "id": "indicator--4feb3078-6c96-530f-86d9-fb6db9d58932",
             "spec_version": "2.1",
             "revoked": false,
