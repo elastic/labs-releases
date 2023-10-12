@@ -4,5 +4,6 @@ Indicators for the REF5691 intrusion set, disclosing three new malware families 
 
 Instructions are in the root [indicators](../README.md) directory
 
-Reference: https://www.elastic.co/security-labs/introducing-the-ref5961-intrusion-set 
-Reference: https://www.elastic.co/security-labs/disclosing-the-bloodalchemy-backdoor 
+References: 
+* https://www.elastic.co/security-labs/introducing-the-ref5961-intrusion-set  
+* https://www.elastic.co/security-labs/disclosing-the-bloodalchemy-backdoor 
