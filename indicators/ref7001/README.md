@@ -6,4 +6,4 @@ This research is for the KANDYKORN, SUGARLOADER, and HLOADER malware families.
 
 Instructions are in the root [indicators](../README.md) directory
 
-Reference: https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn-at-crypto-exchanges
+Reference: https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn
