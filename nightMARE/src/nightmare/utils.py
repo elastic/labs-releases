@@ -29,6 +29,13 @@ def download_json(url: str, *args, **kwargs) -> dict[str, typing.Any]:
     )
 
 
+def get_data(data: bytes, offset: int, size: int = 0) -> bytes:
+    if size:
+        return data[offset : offset + size]
+    else:
+        return data[offset:]
+
+
 def get_section_content(pe: lief.PE.Binary, section_name: str) -> None | bytes:
     """
     The function get the section content from a lief._lief.PE.Binary object
