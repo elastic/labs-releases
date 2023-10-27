@@ -33,7 +33,7 @@ $$> ./venv/script/activate
 
 ## ghostpulse_payload_extractor.py
 
-Extracts payload and configuration from BLISTER loader.
+Extracts payload and configuration from GHOSTPULSE loader.
 
 ### Usage
 
