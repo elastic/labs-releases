@@ -31,7 +31,7 @@ $$> ./venv/script/activate
 (venv) $$> pip install <path-to-esl-repository>/nightMARE
 ```
 
-## blister_payload_extractor.py
+## ghostpulse_payload_extractor.py
 
 Extracts payload and configuration from BLISTER loader.
 
