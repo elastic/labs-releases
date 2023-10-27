@@ -8,7 +8,7 @@ The extractor takes as input the encrypted file shipped with GHOSTPULSE which co
 
 GHOSTPULSE research is published here:
 
-- <insert link>
+- https://www.elastic.co/security-labs/ghostpulse-haunts-victims-using-defense-evasion-bag-of-tricks
 
 ## Description
 
