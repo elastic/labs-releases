@@ -1,0 +1,2693 @@
+{
+    "type": "bundle",
+    "id": "bundle--966542e8-d644-4ed0-a214-3389ab9836d9",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2023-08-29T20:22:46.811Z",
+            "x_organization_type": "vendor",
+            "x_reliability": "A",
+            "x_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--72c3fafe-9e3f-5477-ac8c-5ade8bb4b13a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-10-24T18:51:40.184Z",
+            "modified": "2023-10-24T18:59:46.023Z",
+            "pattern_type": "stix",
+            "pattern": "[cryptographic-key:value = 'D9F936CE628C3E5D9B3695694D1CDE79E470E938064D98FBF4EF980A5558D1C90C7E650C2362A21B914ABD173ABA5C0E5837C47B89F74C5B23A7294CC1CFD11B']",
+            "name": "D9F936CE628C3E5D9B3695694D1CDE79E470E938064D98FBF4EF980A5558D1C90C7E650C2362A21B914ABD173ABA5C0E5837C47B89F74C5B23A7294CC1CFD11B",
+            "description": "Simple indicator of observable {D9F936CE628C3E5D9B3695694D1CDE79E470E938064D98FBF4EF980A5558D1C90C7E650C2362A21B914ABD173ABA5C0E5837C47B89F74C5B23A7294CC1CFD11B}",
+            "valid_from": "2023-10-24T18:51:40.159Z",
+            "valid_until": "2024-10-23T18:51:40.159Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Cryptographic-Key",
+            "labels": [
+                "sugarloader",
+                "kandykorn",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "b19d34d2-7643-4162-ad49-1b94451be67d",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--19b9017a-f34c-5ad5-8ff1-7255f2900861",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-10-24T18:51:26.329Z",
+            "modified": "2023-10-24T18:59:45.917Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '3ea2ead8f3cec030906dcbffe3efd5c5d77d5d375d4a54cca03bfe8a6cb59940' OR file:hashes.'SHA-1' = 'd28830d87fc71091f003818ef08ff0b723b3f358' OR file:hashes.MD5 = '9ca5df575e5bd60035202dabd67b7af2']",
+            "name": "3ea2ead8f3cec030906dcbffe3efd5c5d77d5d375d4a54cca03bfe8a6cb59940",
+            "description": "Simple indicator of observable {3ea2ead8f3cec030906dcbffe3efd5c5d77d5d375d4a54cca03bfe8a6cb59940}",
+            "valid_from": "2023-10-24T18:51:26.303Z",
+            "valid_until": "2024-10-23T18:51:26.303Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "macho",
+                "dprk",
+                "lazarus group",
+                "sugarloader",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "6d23364a-32dd-4fdf-8266-c550a27cf88a",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7327327a-db4d-5f62-89eb-a51b213bd298",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-10-24T18:51:25.673Z",
+            "modified": "2023-10-24T18:59:45.803Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '2360a69e5fd7217e977123c81d3dbb60bf4763a9dae6949bc1900234f7762df1' OR file:hashes.'SHA-1' = '43f987c15ae67b1183c4c442dc3b784faf2df090' OR file:hashes.MD5 = '470275eaf344be97f9950c4c42a783ef']",
+            "name": "2360a69e5fd7217e977123c81d3dbb60bf4763a9dae6949bc1900234f7762df1",
+            "description": "Simple indicator of observable {2360a69e5fd7217e977123c81d3dbb60bf4763a9dae6949bc1900234f7762df1}",
+            "valid_from": "2023-10-24T18:51:25.610Z",
+            "valid_until": "2024-10-23T18:51:25.610Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "multi-arch",
+                "arm",
+                "64bits",
+                "macho",
+                "dprk",
+                "lazarus group",
+                "hloader",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "b352f2c9-39b6-4fb3-a2ba-cf2c1e849b00",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--6fe72356-f0ec-555c-8361-e8d426716bcd",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:34.720Z",
+            "modified": "2023-10-24T18:59:45.643Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://192.119.64.43/user/deposit/desjardins?y5gCOULlzB=']",
+            "name": "http://192.119.64.43/user/deposit/desjardins?y5gCOULlzB=",
+            "description": "Simple indicator of observable {http://192.119.64.43/user/deposit/desjardins?y5gCOULlzB=}",
+            "valid_from": "2023-10-24T18:51:39.949Z",
+            "valid_until": "2023-12-23T18:51:39.949Z",
+            "x_score": 6,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "7225d2ef-ca00-4dce-9e0a-31814bbb8f85",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--8e9892af-cdb6-5245-b57f-c348ca7750af",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:34.680Z",
+            "modified": "2023-10-24T18:59:45.534Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://floriventuresfund.linkpc.net/']",
+            "name": "http://floriventuresfund.linkpc.net/",
+            "description": "Simple indicator of observable {http://floriventuresfund.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:39.725Z",
+            "valid_until": "2023-12-23T18:51:39.725Z",
+            "x_score": 10,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "b77f9bc5-25a7-49a1-b7e1-660833a25729",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--4308fcb4-2f66-5d4c-9884-52558c4abb30",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:34.590Z",
+            "modified": "2023-10-24T18:59:45.437Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://floriventuresfinance.linkpc.net/']",
+            "name": "https://floriventuresfinance.linkpc.net/",
+            "description": "Simple indicator of observable {https://floriventuresfinance.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:39.504Z",
+            "valid_until": "2023-12-23T18:51:39.504Z",
+            "x_score": 7,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "750841d2-d417-4d23-af49-5c2f2b10ece2",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--6d7cb65f-4e24-5c6f-ac1d-6eda95d8dca1",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:34.346Z",
+            "modified": "2023-10-24T18:59:45.333Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://tp-globa.xyz/OdhLca1mLUp/lZ5rZPxWsh/7yZKYQI43S/fP7savDX6c/bfC/']",
+            "name": "https://tp-globa.xyz/OdhLca1mLUp/lZ5rZPxWsh/7yZKYQI43S/fP7savDX6c/bfC/",
+            "description": "Simple indicator of observable {https://tp-globa.xyz/OdhLca1mLUp/lZ5rZPxWsh/7yZKYQI43S/fP7savDX6c/bfC/}",
+            "valid_from": "2023-10-24T18:51:39.274Z",
+            "valid_until": "2023-12-23T18:51:39.274Z",
+            "x_score": 6,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "0b8e8f0e-5b83-435e-a86d-b0fa636060db",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7cb2db33-031c-568d-ba65-5c01735f340f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:34.312Z",
+            "modified": "2023-10-24T18:59:45.219Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://floriventuresend.linkpc.net/']",
+            "name": "http://floriventuresend.linkpc.net/",
+            "description": "Simple indicator of observable {http://floriventuresend.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:39.077Z",
+            "valid_until": "2023-12-23T18:51:39.077Z",
+            "x_score": 12,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/3e85e5bfbb36a41f200c780a45d3894753ba27d31f7b29d2ead00e4b45ba8bc7"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "a16a1890-8ebc-45e8-945d-e4f2233d1998",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9009fd83-478e-5b02-88e4-75de8c9639de",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:34.244Z",
+            "modified": "2023-10-24T18:59:45.107Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://bitscrunch.publicvm.com/']",
+            "name": "http://bitscrunch.publicvm.com/",
+            "description": "Simple indicator of observable {http://bitscrunch.publicvm.com/}",
+            "valid_from": "2023-10-24T18:51:38.877Z",
+            "valid_until": "2023-12-23T18:51:38.877Z",
+            "x_score": 4,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "a7b4e5ac-a041-45e4-8a35-96b18cb2139c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5c2339f8-f30e-5d7e-9c5f-ec193fd22e3f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:34.117Z",
+            "modified": "2023-10-24T18:59:44.953Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://bitscrunnch.run.place/']",
+            "name": "https://bitscrunnch.run.place/",
+            "description": "Simple indicator of observable {https://bitscrunnch.run.place/}",
+            "valid_from": "2023-10-24T18:51:38.679Z",
+            "valid_until": "2023-12-23T18:51:38.679Z",
+            "x_score": 14,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/48e5091eeecc814c4de3176c7a24b72e160414836774a5efb1382ddbbedf31ec"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "9e68aecb-9364-4342-8488-25f2feb710ad",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d79a8230-23bc-5c9b-9300-f10abda1c236",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.938Z",
+            "modified": "2023-10-24T18:59:44.851Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://exodus.linkpc.net/']",
+            "name": "http://exodus.linkpc.net/",
+            "description": "Simple indicator of observable {http://exodus.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:38.495Z",
+            "valid_until": "2023-12-23T18:51:38.495Z",
+            "x_score": 10,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "9ceffa18-396e-4908-9721-575240739c1f",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e95a6ba3-26e6-5bf3-8062-2858597dc25a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.923Z",
+            "modified": "2023-10-24T18:59:44.742Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://192.119.64.43/user/deposit/bmo?3zralwychvhorma=']",
+            "name": "http://192.119.64.43/user/deposit/bmo?3zralwychvhorma=",
+            "description": "Simple indicator of observable {http://192.119.64.43/user/deposit/bmo?3zralwychvhorma=}",
+            "valid_from": "2023-10-24T18:51:38.299Z",
+            "valid_until": "2023-12-23T18:51:38.299Z",
+            "x_score": 2,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "097d6a45-e57a-4359-b19d-a2ef5f87da18",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b517d789-9c75-5cc7-81b7-710e2cfcdf78",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.803Z",
+            "modified": "2023-10-24T18:59:44.623Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://floriventurescapital.linkpc.net/']",
+            "name": "http://floriventurescapital.linkpc.net/",
+            "description": "Simple indicator of observable {http://floriventurescapital.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:37.913Z",
+            "valid_until": "2023-12-23T18:51:37.913Z",
+            "x_score": 11,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/56b5f6f84e7bfed50347c7b042cf9b1e87b0f9d94ec10ad86d408917f9298be1"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "acfac6b2-848c-4568-8aa1-4dce83112748",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--38206e90-c19a-5609-82b7-804214cf4b39",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.797Z",
+            "modified": "2023-10-24T18:59:44.518Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://longjourneyfund.publicvm.com/']",
+            "name": "https://longjourneyfund.publicvm.com/",
+            "description": "Simple indicator of observable {https://longjourneyfund.publicvm.com/}",
+            "valid_from": "2023-10-24T18:51:38.108Z",
+            "valid_until": "2023-12-23T18:51:38.108Z",
+            "x_score": 4,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "3977ba85-bd6b-410f-90a0-0bc92f7c7401",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--3458e711-7e9a-565c-8e6a-beb43a12dad6",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.766Z",
+            "modified": "2023-10-24T18:59:44.406Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://192.119.64.43/user/deposit/scotia?yRIbDNd6JxuD=']",
+            "name": "http://192.119.64.43/user/deposit/scotia?yRIbDNd6JxuD=",
+            "description": "Simple indicator of observable {http://192.119.64.43/user/deposit/scotia?yRIbDNd6JxuD=}",
+            "valid_from": "2023-10-24T18:51:37.343Z",
+            "valid_until": "2023-12-23T18:51:37.343Z",
+            "x_score": 5,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "8ac5ebf1-8964-4008-b182-ce3f9f953733",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9c45fa5e-fcc7-519b-abd8-0aaea48596de",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.735Z",
+            "modified": "2023-10-24T18:59:44.252Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://bitscrunnch.linkpc.net/']",
+            "name": "https://bitscrunnch.linkpc.net/",
+            "description": "Simple indicator of observable {https://bitscrunnch.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:37.733Z",
+            "valid_until": "2023-12-23T18:51:37.733Z",
+            "x_score": 11,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/eee86acec817857b6d11471bdec8968189db937fa7b27206ea510883f054c8be"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "4a5e4479-fd8d-42c2-b878-e568519a9128",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--befd60f8-cf20-5dfd-a884-858931a26ea9",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.641Z",
+            "modified": "2023-10-24T18:59:44.134Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://longjourneycapital.publicvm.com/']",
+            "name": "https://longjourneycapital.publicvm.com/",
+            "description": "Simple indicator of observable {https://longjourneycapital.publicvm.com/}",
+            "valid_from": "2023-10-24T18:51:37.532Z",
+            "valid_until": "2023-12-23T18:51:37.532Z",
+            "x_score": 4,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "6d007a5e-d97c-47e1-bb68-1d58b21209cc",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7212a1fb-c9d3-5273-85eb-8529eaff1cef",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.571Z",
+            "modified": "2023-10-24T18:59:44.020Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://192.119.64.43/']",
+            "name": "http://192.119.64.43/",
+            "description": "Simple indicator of observable {http://192.119.64.43/}",
+            "valid_from": "2023-10-24T18:51:37.151Z",
+            "valid_until": "2023-12-23T18:51:37.151Z",
+            "x_score": 1,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "b0251e61-75de-4909-a742-23e0f2d04f22",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--12b7840e-a4f8-5bc1-967a-6b0ffc25e16e",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.540Z",
+            "modified": "2023-10-24T18:59:43.913Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://global-pro.xyz/Ob90fYYcKHh/wJoLTNgmSn/b3tL91N4nS/fP7savDX6c/bfC']",
+            "name": "http://global-pro.xyz/Ob90fYYcKHh/wJoLTNgmSn/b3tL91N4nS/fP7savDX6c/bfC",
+            "description": "Simple indicator of observable {http://global-pro.xyz/Ob90fYYcKHh/wJoLTNgmSn/b3tL91N4nS/fP7savDX6c/bfC}",
+            "valid_from": "2023-10-24T18:51:36.968Z",
+            "valid_until": "2023-12-23T18:51:36.968Z",
+            "x_score": 1,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "9a789a94-0a55-453f-bf34-b6ca870aa81e",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--72c48034-5f1d-5903-8df0-b6415e8c8d9f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.371Z",
+            "modified": "2023-10-24T18:59:43.807Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://jobdescription.linkpc.net/']",
+            "name": "http://jobdescription.linkpc.net/",
+            "description": "Simple indicator of observable {http://jobdescription.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:36.782Z",
+            "valid_until": "2023-12-23T18:51:36.782Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "243bcf96-ad80-419b-ad41-b582b7799d30",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--22f37392-5093-590b-b843-b9199ef0684c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.269Z",
+            "modified": "2023-10-24T18:59:43.699Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://jobintro.linkpc.net/']",
+            "name": "http://jobintro.linkpc.net/",
+            "description": "Simple indicator of observable {http://jobintro.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:36.582Z",
+            "valid_until": "2023-12-23T18:51:36.582Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/261805f5849944d300b3c6a5889a445142e360eaf2b3724fd63cf3c93e79abe9"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "fde9a072-5209-4240-9ded-91c526c58368",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9907a573-c253-5efa-be1c-c9a8fc0ef4cf",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.266Z",
+            "modified": "2023-10-24T18:59:43.593Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://jobdescription.linkpc.net/']",
+            "name": "https://jobdescription.linkpc.net/",
+            "description": "Simple indicator of observable {https://jobdescription.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:36.400Z",
+            "valid_until": "2023-12-23T18:51:36.400Z",
+            "x_score": 9,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "1479f86c-6673-4ce0-8e82-1d405d4c089d",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--83d20f7d-d542-59e4-aa03-f3a8d60630cc",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.089Z",
+            "modified": "2023-10-24T18:59:43.493Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://coupang-network.pics/']",
+            "name": "https://coupang-network.pics/",
+            "description": "Simple indicator of observable {https://coupang-network.pics/}",
+            "valid_from": "2023-10-24T18:51:35.957Z",
+            "valid_until": "2023-12-23T18:51:35.957Z",
+            "x_score": 4,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "4a0fdc9e-4ae0-40b1-86c1-363b003a350c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--86d26120-d10a-5e52-a5c4-fe2e2694693b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:33.074Z",
+            "modified": "2023-10-24T18:59:43.383Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://jobintro.linkpc.net/']",
+            "name": "https://jobintro.linkpc.net/",
+            "description": "Simple indicator of observable {https://jobintro.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:36.156Z",
+            "valid_until": "2023-12-23T18:51:36.156Z",
+            "x_score": 14,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/ded8a4a75622fa1456697cc4285785494a6b9b21bec1d0c8ab82afd6ee72324f"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "3d89d400-43a2-4fee-a3ab-dd101d34ba26",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--46d413c1-36fc-5874-b906-a015b7253c5e",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:32.919Z",
+            "modified": "2023-10-24T18:59:43.280Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://tp-globa.xyz/']",
+            "name": "http://tp-globa.xyz/",
+            "description": "Simple indicator of observable {http://tp-globa.xyz/}",
+            "valid_from": "2023-10-24T18:51:35.742Z",
+            "valid_until": "2023-12-23T18:51:35.742Z",
+            "x_score": 2,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "124a6360-18ff-4b5c-8611-3b951ccdf7c0",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d1c715de-c149-5259-91fe-28a200ae6dfc",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:32.915Z",
+            "modified": "2023-10-24T18:59:43.167Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://docsenddata.linkpc.net/']",
+            "name": "https://docsenddata.linkpc.net/",
+            "description": "Simple indicator of observable {https://docsenddata.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:35.543Z",
+            "valid_until": "2023-12-23T18:51:35.543Z",
+            "x_score": 11,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/0bfc5ea2b8852fb20b9746e9385cf1bc39974acbc7bcdbf5588719cd23223070"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "12849289-8f2d-4baa-bfce-7757d5ff8475",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--370da152-b4da-52cc-a6c9-060a30ada06e",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:32.886Z",
+            "modified": "2023-10-24T18:59:43.049Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://bitscrunnch.linkpc.net/']",
+            "name": "http://bitscrunnch.linkpc.net/",
+            "description": "Simple indicator of observable {http://bitscrunnch.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:34.950Z",
+            "valid_until": "2023-12-23T18:51:34.950Z",
+            "x_score": 8,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "909859d1-ab52-48b6-b8f7-915dcc138100",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--4d7b44a6-564d-5d7d-87a5-a7d30a4b55d0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:32.834Z",
+            "modified": "2023-10-24T18:59:42.945Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://docsenddata.linkpc.net/']",
+            "name": "http://docsenddata.linkpc.net/",
+            "description": "Simple indicator of observable {http://docsenddata.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:35.346Z",
+            "valid_until": "2023-12-23T18:51:35.346Z",
+            "x_score": 17,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/2ed1dff3d8f0b095e0b0681b21c19839ad075b5d44adac89761a1c6872a65bdd"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "b155f137-8db9-4816-954f-72e90124ab3b",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9e3e07f3-66fc-5e68-9f91-4734d7764dd1",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:32.718Z",
+            "modified": "2023-10-24T18:59:42.838Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://longjourneyfund.publicvm.com/']",
+            "name": "http://longjourneyfund.publicvm.com/",
+            "description": "Simple indicator of observable {http://longjourneyfund.publicvm.com/}",
+            "valid_from": "2023-10-24T18:51:35.142Z",
+            "valid_until": "2023-12-23T18:51:35.142Z",
+            "x_score": 8,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "731efec2-ef5d-4110-bb10-efd44cd810af",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--aca8a8a6-b459-509e-bf38-822b34f2801b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:32.520Z",
+            "modified": "2023-10-24T18:59:42.735Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://tp-globa.xyz/OdhLca1mLUp/lZ5rZPxWsh/7yZKYQI43S/fP7savDX6c/bfC']",
+            "name": "http://tp-globa.xyz/OdhLca1mLUp/lZ5rZPxWsh/7yZKYQI43S/fP7savDX6c/bfC",
+            "description": "Simple indicator of observable {http://tp-globa.xyz/OdhLca1mLUp/lZ5rZPxWsh/7yZKYQI43S/fP7savDX6c/bfC}",
+            "valid_from": "2023-10-24T18:51:34.748Z",
+            "valid_until": "2023-12-23T18:51:34.748Z",
+            "x_score": 3,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "e13dc2d3-0a8d-45b3-bbdb-1e855e8d1cd1",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--f749fde9-5af9-5ca5-9afe-f5d594a3f6c4",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:32.478Z",
+            "modified": "2023-10-24T18:59:42.632Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://floriventuresend.linkpc.net/']",
+            "name": "https://floriventuresend.linkpc.net/",
+            "description": "Simple indicator of observable {https://floriventuresend.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:34.537Z",
+            "valid_until": "2023-12-23T18:51:34.537Z",
+            "x_score": 8,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "d45e8c4c-de27-4d87-a862-18823f3b0791",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--4285cdf5-ec19-5e2e-b190-6aca7e6ff678",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:32.403Z",
+            "modified": "2023-10-24T18:59:42.517Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://bitscrunch.publicvm.com/']",
+            "name": "https://bitscrunch.publicvm.com/",
+            "description": "Simple indicator of observable {https://bitscrunch.publicvm.com/}",
+            "valid_from": "2023-10-24T18:51:34.327Z",
+            "valid_until": "2023-12-23T18:51:34.327Z",
+            "x_score": 6,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "1534204f-3cc4-415a-953f-9c205d856358",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--53c8ecdb-5d17-59b7-9089-9e26e4b86f65",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:32.027Z",
+            "modified": "2023-10-24T18:59:42.416Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://global-pro.xyz/']",
+            "name": "http://global-pro.xyz/",
+            "description": "Simple indicator of observable {http://global-pro.xyz/}",
+            "valid_from": "2023-10-24T18:51:34.131Z",
+            "valid_until": "2023-12-23T18:51:34.131Z",
+            "x_score": 2,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "b02cf4a2-a767-4bf4-b971-d62e064e48c8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--dd20a5c3-62f2-50b2-984e-2e3fa06f3065",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:32.026Z",
+            "modified": "2023-10-24T18:59:42.311Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://floriventuresfund.linkpc.net/']",
+            "name": "https://floriventuresfund.linkpc.net/",
+            "description": "Simple indicator of observable {https://floriventuresfund.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:33.942Z",
+            "valid_until": "2023-12-23T18:51:33.942Z",
+            "x_score": 6,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "8f2379b4-8e5b-4468-9140-6d9de37617ce",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9806c447-0125-564d-bf6b-92b0059e1425",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.975Z",
+            "modified": "2023-10-24T18:59:42.207Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://floriventuresfinance.linkpc.net/']",
+            "name": "http://floriventuresfinance.linkpc.net/",
+            "description": "Simple indicator of observable {http://floriventuresfinance.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:33.752Z",
+            "valid_until": "2023-12-23T18:51:33.752Z",
+            "x_score": 8,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "61b37f53-c294-4357-892e-25a16b4bf143",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2468d566-5abc-56fd-bfb8-8a9efa98f1f3",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.931Z",
+            "modified": "2023-10-24T18:59:42.095Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://datasend.linkpc.net/']",
+            "name": "https://datasend.linkpc.net/",
+            "description": "Simple indicator of observable {https://datasend.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:33.557Z",
+            "valid_until": "2023-12-23T18:51:33.557Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/427cdec6c77f402a7833e1ba5a236e22f84d4193bf89a7a75106ea0d36121a93"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "456ac13a-5c3e-413d-9f73-ceb6d3cb349a",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--524b5783-c107-51e3-a7c6-92172e52de73",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.893Z",
+            "modified": "2023-10-24T18:59:41.985Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://192.119.64.43/']",
+            "name": "https://192.119.64.43/",
+            "description": "Simple indicator of observable {https://192.119.64.43/}",
+            "valid_from": "2023-10-24T18:51:33.146Z",
+            "valid_until": "2023-12-23T18:51:33.146Z",
+            "x_score": 1,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "baa7e128-a73d-44da-aabb-be0cd9f58ef7",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--39eabd6d-cb9e-5f2c-90df-0e93b73d08ce",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.865Z",
+            "modified": "2023-10-24T18:59:41.882Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://docsendinfo.linkpc.net/']",
+            "name": "https://docsendinfo.linkpc.net/",
+            "description": "Simple indicator of observable {https://docsendinfo.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:33.359Z",
+            "valid_until": "2023-12-23T18:51:33.359Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/11ae748e8920af3d7148fd954d693033ad7504e4db92ae815c6331e844a4fb0e"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "759279b3-ba71-4f16-b5a3-cfa6648f2cc5",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5fd41baf-4558-5940-832a-5c6e3ff66d87",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.842Z",
+            "modified": "2023-10-24T18:59:41.780Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://bitscrunnch.run.place/']",
+            "name": "http://bitscrunnch.run.place/",
+            "description": "Simple indicator of observable {http://bitscrunnch.run.place/}",
+            "valid_from": "2023-10-24T18:51:32.942Z",
+            "valid_until": "2023-12-23T18:51:32.942Z",
+            "x_score": 14,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/10d6eb9da5ba5314752fb8850c98395772ed1751bfaab28fa1df459c1f0d83e0"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "b1a30911-10c9-4696-8fb3-dd53a2302bc8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d60372b2-6111-5901-90fd-e01634c720c4",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.820Z",
+            "modified": "2023-10-24T18:59:41.633Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://datasend.linkpc.net/']",
+            "name": "http://datasend.linkpc.net/",
+            "description": "Simple indicator of observable {http://datasend.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:32.743Z",
+            "valid_until": "2023-12-23T18:51:32.743Z",
+            "x_score": 17,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/56916a3aa18bd17b8ff67d5999ec8d4c7c6894a7778343593c6ce00e69f376bd"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "84274aba-b2db-4d2a-9c46-83184f114e2b",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--581ef848-ede5-5c94-a3de-85dc44b19736",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.687Z",
+            "modified": "2023-10-24T18:59:41.516Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://longjourneyventure.publicvm.com/']",
+            "name": "https://longjourneyventure.publicvm.com/",
+            "description": "Simple indicator of observable {https://longjourneyventure.publicvm.com/}",
+            "valid_from": "2023-10-24T18:51:32.545Z",
+            "valid_until": "2023-12-23T18:51:32.545Z",
+            "x_score": 4,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "426da393-b135-4065-82eb-4d22df9f989c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c144bf72-25f2-567c-a5cf-1fbe3b0f6a12",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.598Z",
+            "modified": "2023-10-24T18:59:41.414Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://floriventuresfinance.linkpc.net/OrxkBJVPJmd/mGbL0Oxu12/ZaMINJPm3S/HOJIzrj_6c/77bgHY=']",
+            "name": "https://floriventuresfinance.linkpc.net/OrxkBJVPJmd/mGbL0Oxu12/ZaMINJPm3S/HOJIzrj_6c/77bgHY=",
+            "description": "Simple indicator of observable {https://floriventuresfinance.linkpc.net/OrxkBJVPJmd/mGbL0Oxu12/ZaMINJPm3S/HOJIzrj_6c/77bgHY=}",
+            "valid_from": "2023-10-24T18:51:32.355Z",
+            "valid_until": "2023-12-23T18:51:32.355Z",
+            "x_score": 4,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "6f64247a-86e8-4d34-84cd-20014e1d91e8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c95d833a-3df4-50a9-a759-1fa1c248de57",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.331Z",
+            "modified": "2023-10-24T18:59:41.308Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://global-pro.xyz/Ob90fYYcKHh/wJoLTNgmSn/b3tL91N4nS/fP7savDX6c/bfC/']",
+            "name": "https://global-pro.xyz/Ob90fYYcKHh/wJoLTNgmSn/b3tL91N4nS/fP7savDX6c/bfC/",
+            "description": "Simple indicator of observable {https://global-pro.xyz/Ob90fYYcKHh/wJoLTNgmSn/b3tL91N4nS/fP7savDX6c/bfC/}",
+            "valid_from": "2023-10-24T18:51:32.158Z",
+            "valid_until": "2023-12-23T18:51:32.158Z",
+            "x_score": 2,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "9641014c-33c4-4700-84eb-58deeb70b729",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--32e9e909-e4c3-58c4-849a-4935d039059f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.279Z",
+            "modified": "2023-10-24T18:59:41.201Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://docsendinfo.linkpc.net/']",
+            "name": "http://docsendinfo.linkpc.net/",
+            "description": "Simple indicator of observable {http://docsendinfo.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:31.936Z",
+            "valid_until": "2023-12-23T18:51:31.936Z",
+            "x_score": 17,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/40070edddbd358a989dda9236990f7640410beb9babab7687a406ff43614ed15"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "6a49ac09-3208-4b6d-897b-f1c6f6c41b71",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--f56dfc84-8a41-5b43-8bfb-ed2cfbfdca0d",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.276Z",
+            "modified": "2023-10-24T18:59:41.091Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://bitscrunch.linkpc.net/']",
+            "name": "http://bitscrunch.linkpc.net/",
+            "description": "Simple indicator of observable {http://bitscrunch.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:31.708Z",
+            "valid_until": "2023-12-23T18:51:31.708Z",
+            "x_score": 16,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/38d08ecc9a3a01acc70e0ebfc088cd1c7a87cc22c287af5bde91444448b6c55c"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "ed18d129-9624-473c-80b8-3b6f2fcaeb79",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2fdcbd41-acee-5991-9d5c-50062595ab3a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.212Z",
+            "modified": "2023-10-24T18:59:40.985Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://exodus.linkpc.net/']",
+            "name": "https://exodus.linkpc.net/",
+            "description": "Simple indicator of observable {https://exodus.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:31.514Z",
+            "valid_until": "2023-12-23T18:51:31.514Z",
+            "x_score": 10,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "79488434-919e-4db5-a52e-777d41defb4e",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--991fc9e2-37b4-58f5-a1e2-5c489949c1b2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.190Z",
+            "modified": "2023-10-24T18:59:40.873Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://floriventurescapital.linkpc.net/OtNEbYsGBzx/lOo6qIEn23/Y6XGpx9+/0KHOJIzrj_/6c77bgHY=']",
+            "name": "https://floriventurescapital.linkpc.net/OtNEbYsGBzx/lOo6qIEn23/Y6XGpx9+/0KHOJIzrj_/6c77bgHY=",
+            "description": "Simple indicator of observable {https://floriventurescapital.linkpc.net/OtNEbYsGBzx/lOo6qIEn23/Y6XGpx9+/0KHOJIzrj_/6c77bgHY=}",
+            "valid_from": "2023-10-24T18:51:31.319Z",
+            "valid_until": "2023-12-23T18:51:31.319Z",
+            "x_score": 2,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "5cbbdd5a-9086-48fc-8e6e-62a60d39da1c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7af749b3-3a00-528c-bb02-669a5e3839da",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.079Z",
+            "modified": "2023-10-24T18:59:40.762Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://bitscrunch.linkpc.net/']",
+            "name": "https://bitscrunch.linkpc.net/",
+            "description": "Simple indicator of observable {https://bitscrunch.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:31.118Z",
+            "valid_until": "2023-12-23T18:51:31.118Z",
+            "x_score": 16,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/bba3046ccfff32eaa3a54383982bc04b20e4c690f18068286dfb67bc0d117ce3"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "07c650c1-0451-4f3b-8c0d-e9440c8b8a20",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9ef6df20-8af2-5181-9bf4-75856e7c2bb8",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.011Z",
+            "modified": "2023-10-24T18:59:40.651Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://floriventurescapital.linkpc.net/']",
+            "name": "https://floriventurescapital.linkpc.net/",
+            "description": "Simple indicator of observable {https://floriventurescapital.linkpc.net/}",
+            "valid_from": "2023-10-24T18:51:30.904Z",
+            "valid_until": "2023-12-23T18:51:30.904Z",
+            "x_score": 4,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "2b12231a-39c8-4291-a7da-65b1b52ea796",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ed8b69fc-a16b-5017-a392-269b58deba9a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:31.003Z",
+            "modified": "2023-10-24T18:59:40.548Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'https://global-pro.xyz/']",
+            "name": "https://global-pro.xyz/",
+            "description": "Simple indicator of observable {https://global-pro.xyz/}",
+            "valid_from": "2023-10-24T18:51:30.705Z",
+            "valid_until": "2023-12-23T18:51:30.705Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "ac1a5c3e-ce9b-413f-9c62-efe4e35e21ba",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e5befb61-14b2-5c55-b4b0-edf42ce34ead",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.985Z",
+            "modified": "2023-10-24T18:59:40.440Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://global-pro.xyz/Ocd1b89tKDI/dHoS3Jw23q/pnuI9sG43S/HOJI1tTjNe/rw=']",
+            "name": "http://global-pro.xyz/Ocd1b89tKDI/dHoS3Jw23q/pnuI9sG43S/HOJI1tTjNe/rw=",
+            "description": "Simple indicator of observable {http://global-pro.xyz/Ocd1b89tKDI/dHoS3Jw23q/pnuI9sG43S/HOJI1tTjNe/rw=}",
+            "valid_from": "2023-10-24T18:51:30.457Z",
+            "valid_until": "2023-12-23T18:51:30.457Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "37ba471c-8e9e-42d7-bea1-e86f78e6cf67",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--12481376-6d69-5158-a4f4-ba3d2e2916e3",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.723Z",
+            "modified": "2023-10-24T18:59:40.326Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'floriventuresfund.linkpc.net']",
+            "name": "floriventuresfund.linkpc.net",
+            "description": "Simple indicator of observable {floriventuresfund.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:30.200Z",
+            "valid_until": "2024-10-23T18:51:30.200Z",
+            "x_score": 12,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/floriventuresfund.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "47085a97-bbe9-49b4-b6ef-ae3c4ebe7aa8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--799d0aef-3989-5506-91f8-91543560a7d7",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.484Z",
+            "modified": "2023-10-24T18:59:40.106Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'longjourneycapital.publicvm.com']",
+            "name": "longjourneycapital.publicvm.com",
+            "description": "Simple indicator of observable {longjourneycapital.publicvm.com}",
+            "valid_from": "2023-10-24T18:51:29.725Z",
+            "valid_until": "2024-10-23T18:51:29.725Z",
+            "x_score": 10,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "e16e9b63-370a-4594-b230-58138aa303e0",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--aad9588b-c9cd-5644-aa6b-0d15e48fada0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.484Z",
+            "modified": "2023-10-24T18:59:40.215Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'jobdescription.linkpc.net']",
+            "name": "jobdescription.linkpc.net",
+            "description": "Simple indicator of observable {jobdescription.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:29.942Z",
+            "valid_until": "2024-10-23T18:51:29.942Z",
+            "x_score": 11,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/jobdescription.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "f751e30c-3d16-47fd-9352-aa48f5295afb",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--54bf0f2a-a3ec-5797-8ff2-76f74e73a611",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.409Z",
+            "modified": "2023-10-24T18:59:39.958Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'docsenddata.linkpc.net']",
+            "name": "docsenddata.linkpc.net",
+            "description": "Simple indicator of observable {docsenddata.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:29.523Z",
+            "valid_until": "2024-10-23T18:51:29.523Z",
+            "x_score": 17,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/docsenddata.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "26c8dc27-ec56-408e-8023-4283e4edde62",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ca9df9a6-9694-56f3-857f-50c651caabaf",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.288Z",
+            "modified": "2023-10-24T18:59:39.853Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'longjourneyventure.publicvm.com']",
+            "name": "longjourneyventure.publicvm.com",
+            "description": "Simple indicator of observable {longjourneyventure.publicvm.com}",
+            "valid_from": "2023-10-24T18:51:29.282Z",
+            "valid_until": "2024-10-23T18:51:29.282Z",
+            "x_score": 10,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "dc356e73-73a6-4ed1-81c9-9c9cce4bc078",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--4c5a4cdf-5fdc-5206-845f-10f0904ec32f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.280Z",
+            "modified": "2023-10-24T18:59:39.744Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'docsendinfo.linkpc.net']",
+            "name": "docsendinfo.linkpc.net",
+            "description": "Simple indicator of observable {docsendinfo.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:28.893Z",
+            "valid_until": "2024-10-23T18:51:28.893Z",
+            "x_score": 17,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/docsendinfo.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "689176cb-afa5-4805-afa0-7aa4d3650fbf",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--40495222-bd3a-59db-9a14-b28fe4363639",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.183Z",
+            "modified": "2023-10-24T18:59:39.621Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'datasend.linkpc.net']",
+            "name": "datasend.linkpc.net",
+            "description": "Simple indicator of observable {datasend.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:29.078Z",
+            "valid_until": "2024-10-23T18:51:29.078Z",
+            "x_score": 17,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/datasend.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "37f05d2f-a344-4722-87cb-6724516eb741",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--3dba2512-d3ed-55fc-aaa4-8d82bb22f6f6",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.136Z",
+            "modified": "2023-10-24T18:59:39.507Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'bitscrunch.publicvm.com']",
+            "name": "bitscrunch.publicvm.com",
+            "description": "Simple indicator of observable {bitscrunch.publicvm.com}",
+            "valid_from": "2023-10-24T18:51:28.506Z",
+            "valid_until": "2024-10-23T18:51:28.506Z",
+            "x_score": 8,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "03ed9a0a-1b3d-468c-8aa5-9b550097b0ff",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e21c6a48-b3e9-51c2-8dda-799e8ce3cabf",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.108Z",
+            "modified": "2023-10-24T18:59:39.404Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'coupang-network.pics']",
+            "name": "coupang-network.pics",
+            "description": "Simple indicator of observable {coupang-network.pics}",
+            "valid_from": "2023-10-24T18:51:28.698Z",
+            "valid_until": "2024-10-23T18:51:28.698Z",
+            "x_score": 7,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "6f13a38c-56c8-4670-9e36-d2cf8051116e",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--36fbefb3-c795-5f64-8a23-1a9fcda1a2bd",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:30.022Z",
+            "modified": "2023-10-24T18:59:39.268Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'bitscrunnch.linkpc.net']",
+            "name": "bitscrunnch.linkpc.net",
+            "description": "Simple indicator of observable {bitscrunnch.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:28.312Z",
+            "valid_until": "2024-10-23T18:51:28.312Z",
+            "x_score": 15,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/bitscrunnch.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "dd3f1761-d24e-48cb-ba90-c23dd3dc7d69",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c9dc32e6-79a2-5918-a928-612b0bba2b60",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:29.874Z",
+            "modified": "2023-10-24T18:59:39.155Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'floriventuresend.linkpc.net']",
+            "name": "floriventuresend.linkpc.net",
+            "description": "Simple indicator of observable {floriventuresend.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:28.116Z",
+            "valid_until": "2024-10-23T18:51:28.116Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/floriventuresend.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "b2f54d3e-a9cf-4ff4-b06a-8b81f42f6f78",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e6a35606-9479-58c2-ad5c-eabf6386aac3",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:29.489Z",
+            "modified": "2023-10-24T18:59:39.048Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'floriventuresfinance.linkpc.net']",
+            "name": "floriventuresfinance.linkpc.net",
+            "description": "Simple indicator of observable {floriventuresfinance.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:27.925Z",
+            "valid_until": "2024-10-23T18:51:27.925Z",
+            "x_score": 10,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "5628a9c0-1916-404b-b091-9ecb94e8dd42",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9d4e4c72-9280-5ab4-aca2-edd140b93ebd",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:29.293Z",
+            "modified": "2023-10-24T18:59:38.932Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'bitscrunch.linkpc.net']",
+            "name": "bitscrunch.linkpc.net",
+            "description": "Simple indicator of observable {bitscrunch.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:27.515Z",
+            "valid_until": "2024-10-23T18:51:27.515Z",
+            "x_score": 16,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/bitscrunch.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "317971cf-c760-48b9-9879-1fd194efac0a",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2c4c4a02-c6aa-541d-8b67-e5e23f0b7964",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:29.261Z",
+            "modified": "2023-10-24T18:59:38.823Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'global-pro.xyz']",
+            "name": "global-pro.xyz",
+            "description": "Simple indicator of observable {global-pro.xyz}",
+            "valid_from": "2023-10-24T18:51:27.321Z",
+            "valid_until": "2024-10-23T18:51:27.321Z",
+            "x_score": 3,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "5a2b2fcb-7baf-4a1b-a429-2fbb618378e1",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--abccab40-6baa-54ed-9509-a194ca97f4e4",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:29.213Z",
+            "modified": "2023-10-24T18:59:38.719Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'floriventurescapital.linkpc.net']",
+            "name": "floriventurescapital.linkpc.net",
+            "description": "Simple indicator of observable {floriventurescapital.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:26.915Z",
+            "valid_until": "2024-10-23T18:51:26.915Z",
+            "x_score": 14,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/floriventurescapital.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "709bbc18-09bb-4ca6-a5c3-aed43fbf8358",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--366d0aea-20c7-55ed-90f6-f598b2775adb",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:29.201Z",
+            "modified": "2023-10-24T18:59:38.605Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'longjourneyfund.publicvm.com']",
+            "name": "longjourneyfund.publicvm.com",
+            "description": "Simple indicator of observable {longjourneyfund.publicvm.com}",
+            "valid_from": "2023-10-24T18:51:27.743Z",
+            "valid_until": "2024-10-23T18:51:27.743Z",
+            "x_score": 10,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "3857a3f9-8ba5-4403-8a43-b12ae2902c1e",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--82c6b4ba-3ddb-5590-bc2b-871411aa8cc4",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:29.139Z",
+            "modified": "2023-10-24T18:59:38.500Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'exodus.linkpc.net']",
+            "name": "exodus.linkpc.net",
+            "description": "Simple indicator of observable {exodus.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:27.126Z",
+            "valid_until": "2024-10-23T18:51:27.126Z",
+            "x_score": 12,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/exodus.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "c1384427-6397-4f91-873d-7e73a994ccb3",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2fca6d4f-5c6d-5c97-b5f0-f46d464add52",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:29.070Z",
+            "modified": "2023-10-24T18:59:38.397Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'jobintro.linkpc.net']",
+            "name": "jobintro.linkpc.net",
+            "description": "Simple indicator of observable {jobintro.linkpc.net}",
+            "valid_from": "2023-10-24T18:51:26.505Z",
+            "valid_until": "2024-10-23T18:51:26.505Z",
+            "x_score": 16,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/jobintro.linkpc.net"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "df05fec1-22f5-4253-bb49-841c190d9aa1",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--bc5f20c1-ca69-5973-b0f2-4c9c659ff8d5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:39:29.035Z",
+            "modified": "2023-10-24T18:59:38.284Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'bitscrunnch.run.place']",
+            "name": "bitscrunnch.run.place",
+            "description": "Simple indicator of observable {bitscrunnch.run.place}",
+            "valid_from": "2023-10-24T18:51:26.720Z",
+            "valid_until": "2024-10-23T18:51:26.720Z",
+            "x_score": 15,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/bitscrunnch.run.place"
+                },
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "9ddb8fe6-33ad-4e2c-9b4b-fc3ed9268569",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7045a435-408c-577c-ab36-4d3db23ae868",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:37:52.947Z",
+            "modified": "2023-10-24T18:59:38.151Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '23.254.226.90']",
+            "name": "23.254.226.90",
+            "description": "Simple indicator of observable {23.254.226.90}",
+            "valid_from": "2023-10-24T18:51:25.892Z",
+            "valid_until": "2023-11-23T18:51:25.892Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "f8f1ad01-3546-4f18-beae-edba61c1d513",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--3fffdc9e-db31-55b5-b307-59710d13a09f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:37:52.751Z",
+            "modified": "2023-10-24T18:59:38.035Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://tp-globa.xyz//OdhLca1mLUp/lZ5rZPxWsh/7yZKYQI43S/fP7savDX6c/bfC']",
+            "name": "http://tp-globa.xyz//OdhLca1mLUp/lZ5rZPxWsh/7yZKYQI43S/fP7savDX6c/bfC",
+            "description": "Simple indicator of observable {http://tp-globa.xyz//OdhLca1mLUp/lZ5rZPxWsh/7yZKYQI43S/fP7savDX6c/bfC}",
+            "valid_from": "2023-10-24T18:51:26.093Z",
+            "valid_until": "2023-12-23T18:51:26.093Z",
+            "x_score": 3,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "9b8ee56a-d6a5-4443-a340-9d1502306f09",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--18c29a3a-ce2c-5f95-ae94-17e252329a63",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:37:52.737Z",
+            "modified": "2023-10-24T18:59:37.931Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'tp-globa.xyz']",
+            "name": "tp-globa.xyz",
+            "description": "Simple indicator of observable {tp-globa.xyz}",
+            "valid_from": "2023-10-24T18:51:25.393Z",
+            "valid_until": "2024-10-23T18:51:25.393Z",
+            "x_score": 3,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "483b3115-34ab-47a3-bbf3-b97f196725bf",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9989206f-1eee-53c9-b6a3-b9a0697613a3",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-24T18:37:52.724Z",
+            "modified": "2023-10-24T18:59:37.806Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '192.119.64.43']",
+            "name": "192.119.64.43",
+            "description": "Simple indicator of observable {192.119.64.43}",
+            "valid_from": "2023-10-24T18:51:25.119Z",
+            "valid_until": "2023-11-23T18:51:25.119Z",
+            "x_score": 2,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "dprk",
+                "lazarus group",
+                "ref7001"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL",
+                    "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+                }
+            ],
+            "x_id": "01354288-b8a7-4c0f-b8f4-11717809e309",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
