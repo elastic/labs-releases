@@ -4,10 +4,11 @@
 
 Elastic Security Labs has observed a campaign to compromise users with signed MSIX application packages to gain initial access. The campaign leverages a stealthy loader we call GHOSTPULSE which decrypts and injects its final payload to evade detection.
 
+The extractor takes as input the encrypted file shipped with GHOSTPULSE which contains it's different stages and the final payload.
+
 GHOSTPULSE research is published here:
 
-- 
-- 
+- <insert link>
 
 ## Description
 
