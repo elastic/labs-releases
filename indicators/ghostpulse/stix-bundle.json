@@ -1,0 +1,280 @@
+{
+    "type": "bundle",
+    "id": "bundle--02297c1b-5564-4439-96d1-607171418524",
+    "objects": [
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--ea631685-2960-5ae9-89df-b2e4a1c28329",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-26T17:57:26.271Z",
+            "modified": "2023-10-27T16:25:48.806Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '0c01324555494c35c6bbd8babd09527bfc49a2599946f3540bb3380d7bec7a20' OR file:hashes.'SHA-1' = '378c34e1f5a74af34dde5ca39ec5ecca9f6aee09' OR file:hashes.MD5 = '6fd57a5a4753b7fbaf9282587f8b4998']",
+            "name": "0c01324555494c35c6bbd8babd09527bfc49a2599946f3540bb3380d7bec7a20",
+            "description": "Downloaded from Virustotal using hash 0c01324555494c35c6bbd8babd09527bfc49a2599946f3540bb3380d7bec7a20",
+            "valid_from": "2023-10-26T17:57:27.339Z",
+            "valid_until": "2024-10-25T17:57:27.339Z",
+            "x_score": 20,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8207"
+            ],
+            "external_references": [
+                {
+                    "source_name": "GHOSTPULSE steals treats using defense evasion tricks",
+                    "url": "https://www.elastic.co/security-labs/ghostpulse-steals-treats-using-defense-evasion-tricks"
+                }
+            ],
+            "x_id": "43e02778-1734-424a-84ce-73fb7952e0ed",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0e7d936d-f1c9-55ec-936c-ea9f245ce649",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-26T17:57:26.034Z",
+            "modified": "2023-10-27T16:25:48.695Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '4283563324c083f243cf9335662ecc9f1ae102d619302c79095240f969d9d356' OR file:hashes.'SHA-1' = 'c775114fb52e72865c00c2bf254ee3aa4a9f512b' OR file:hashes.MD5 = '6f60bccc47c7cd68041c5f06acf2aacd']",
+            "name": "4283563324c083f243cf9335662ecc9f1ae102d619302c79095240f969d9d356",
+            "description": "Downloaded from Virustotal using hash 4283563324c083f243cf9335662ecc9f1ae102d619302c79095240f969d9d356",
+            "valid_from": "2023-10-26T17:57:27.126Z",
+            "valid_until": "2024-10-25T17:57:27.126Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "detect-debug-environment",
+                "long-sleeps",
+                "contains-pe",
+                "ref8207",
+                "checks-network-adapters",
+                "zip"
+            ],
+            "external_references": [
+                {
+                    "source_name": "GHOSTPULSE steals treats using defense evasion tricks",
+                    "url": "https://www.elastic.co/security-labs/ghostpulse-steals-treats-using-defense-evasion-tricks"
+                }
+            ],
+            "x_id": "003e5711-966e-4fb2-985d-72ec460f9b3d",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e46e50cc-f0fc-573b-a381-66aaf785629b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-26T17:57:25.133Z",
+            "modified": "2023-10-27T16:25:48.582Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'eb2addefd7538cbd6c8eb42b70cafe82ff2a8210e885537cd94d410937681c61' OR file:hashes.'SHA-1' = 'b00fbecca04e3bd80b07e39958d62a981e216a04' OR file:hashes.MD5 = '4c9b0e70492b81fd0160351cca4bc819']",
+            "name": "eb2addefd7538cbd6c8eb42b70cafe82ff2a8210e885537cd94d410937681c61",
+            "description": "Downloaded from Virustotal using hash eb2addefd7538cbd6c8eb42b70cafe82ff2a8210e885537cd94d410937681c61",
+            "valid_from": "2023-10-26T17:57:26.917Z",
+            "valid_until": "2024-10-25T17:57:26.917Z",
+            "x_score": 42,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8207"
+            ],
+            "external_references": [
+                {
+                    "source_name": "GHOSTPULSE steals treats using defense evasion tricks",
+                    "url": "https://www.elastic.co/security-labs/ghostpulse-steals-treats-using-defense-evasion-tricks"
+                }
+            ],
+            "x_id": "bd6bc768-45e0-4440-b500-8396639ec29f",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--fa0c4a64-52b9-5551-85b7-13f6a432affd",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-26T17:57:24.870Z",
+            "modified": "2023-10-27T16:25:48.471Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '49e6a11453786ef9e396a9b84aeb8632f395477abc38f1862e44427982e8c7a9' OR file:hashes.'SHA-1' = 'b95ec4d6ff5f4610a994f17b71e98df617601854' OR file:hashes.MD5 = 'b7ac60ad0d11e265e54a5de42bd2a879']",
+            "name": "49e6a11453786ef9e396a9b84aeb8632f395477abc38f1862e44427982e8c7a9",
+            "description": "Downloaded from Virustotal using hash 49e6a11453786ef9e396a9b84aeb8632f395477abc38f1862e44427982e8c7a9",
+            "valid_from": "2023-10-26T17:57:26.455Z",
+            "valid_until": "2024-10-25T17:57:26.455Z",
+            "x_score": 2,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "contains-pe",
+                "tar",
+                "ref8207"
+            ],
+            "external_references": [
+                {
+                    "source_name": "GHOSTPULSE steals treats using defense evasion tricks",
+                    "url": "https://www.elastic.co/security-labs/ghostpulse-steals-treats-using-defense-evasion-tricks"
+                }
+            ],
+            "x_id": "70c3332d-568b-434f-a641-72bc486723be",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--507c95c8-7a84-55dc-93d1-504be2dd3cce",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-26T17:57:24.569Z",
+            "modified": "2023-10-27T16:25:48.352Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'ee4c788dd4a173241b60d4830db128206dcfb68e79c68796627c6d6355c1d1b8' OR file:hashes.'SHA-1' = '3b5c94bff4dcf49f69a1ee0e63566c83fe601e8a' OR file:hashes.MD5 = '2f5287832bd305decdb65f23bf160ee5']",
+            "name": "ee4c788dd4a173241b60d4830db128206dcfb68e79c68796627c6d6355c1d1b8",
+            "description": "Downloaded from Virustotal using hash ee4c788dd4a173241b60d4830db128206dcfb68e79c68796627c6d6355c1d1b8",
+            "valid_from": "2023-10-26T17:57:26.701Z",
+            "valid_until": "2024-10-25T17:57:26.701Z",
+            "x_score": 35,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8207"
+            ],
+            "external_references": [
+                {
+                    "source_name": "GHOSTPULSE steals treats using defense evasion tricks",
+                    "url": "https://www.elastic.co/security-labs/ghostpulse-steals-treats-using-defense-evasion-tricks"
+                }
+            ],
+            "x_id": "b8bdcad3-fd54-45ef-a59d-1205c3bc85b8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--06c1c8ae-2390-5445-acfa-0e55e3774257",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-26T17:39:23.410Z",
+            "modified": "2023-10-27T16:25:48.220Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '78.24.180.93']",
+            "name": "78.24.180.93",
+            "description": "Simple indicator of observable {78.24.180.93}",
+            "valid_from": "2023-10-26T17:57:25.606Z",
+            "valid_until": "2023-11-25T17:57:25.606Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref8207"
+            ],
+            "external_references": [
+                {
+                    "source_name": "GHOSTPULSE steals treats using defense evasion tricks",
+                    "url": "https://www.elastic.co/security-labs/ghostpulse-steals-treats-using-defense-evasion-tricks"
+                }
+            ],
+            "x_id": "e11cfd97-625a-4dc7-9e92-5989ff6ad594",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--58544db5-fb72-5dac-a322-5617d402bbb1",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-26T17:39:23.374Z",
+            "modified": "2023-10-27T16:25:48.106Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'manojsinghnegi.com']",
+            "name": "manojsinghnegi.com",
+            "description": "Simple indicator of observable {manojsinghnegi.com}",
+            "valid_from": "2023-10-26T17:57:25.803Z",
+            "valid_until": "2024-10-25T17:57:25.803Z",
+            "x_score": 1,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "ref8207"
+            ],
+            "external_references": [
+                {
+                    "source_name": "GHOSTPULSE steals treats using defense evasion tricks",
+                    "url": "https://www.elastic.co/security-labs/ghostpulse-steals-treats-using-defense-evasion-tricks"
+                }
+            ],
+            "x_id": "24eaa0c9-6c96-460f-99cb-fa1f1d2bfedc",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--aff966fe-4cf6-5acd-8ecb-271720f36365",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-10-26T17:39:23.298Z",
+            "modified": "2023-10-27T16:25:47.920Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'manojsinghnegi.com/2.tar.gpg']",
+            "name": "manojsinghnegi.com/2.tar.gpg",
+            "description": "Simple indicator of observable {manojsinghnegi.com/2.tar.gpg}",
+            "valid_from": "2023-10-26T17:57:25.319Z",
+            "valid_until": "2023-12-25T17:57:25.319Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "ref8207"
+            ],
+            "external_references": [
+                {
+                    "source_name": "GHOSTPULSE steals treats using defense evasion tricks",
+                    "url": "https://www.elastic.co/security-labs/ghostpulse-steals-treats-using-defense-evasion-tricks"
+                }
+            ],
+            "x_id": "3c15f0dc-c8e1-4f3c-ae02-2e53b21b9291",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
