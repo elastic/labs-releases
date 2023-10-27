@@ -15,7 +15,7 @@ BLISTER research is published here:
 
 | Path               | Description                             |
 | ------------------ | --------------------------------------- |
-| [`blister_payload_extractor.py.py`](blister_payload_extractor.py)    | Decrypt BLISTER payload with configuration |
+| [`blister_payload_extractor.py`](blister_payload_extractor.py)    | Decrypt BLISTER payload with configuration |
 
 ## Requirements
 
