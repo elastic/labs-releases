@@ -38,7 +38,7 @@ Extracts payload and configuration from GHOSTPULSE loader.
 ### Usage
 
 ```text
-(venv) $$> python blister_payload_extractor.py -h
+(venv) $$> python ghostpulse_payload_extractor.py -h
 usage: GHOSTPULSE payload extractor [-h] (-f FILE | -d DIRECTORY) -o OUTDIR
 
 options:
