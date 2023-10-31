@@ -1,4 +1,4 @@
-## ELASTIC catches DPRK passing out KANDYKORN at crypto exchanges
+## ELASTIC catches DPRK passing out KANDYKORN
 
 DPRK's attempts to evade international sanctions have resulted in widespread targeting of cryptocurrency exchanges and infrastructure, leveraging both custom and open source tooling.
 
