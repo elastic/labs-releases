@@ -9,4 +9,6 @@ These tools are operated by Elastic Security Labs' [nightMARE](../nightMARE) lib
 | Tool                | Description                                                |
 | ------------------- | ---------------------------------------------------------- |
 | [`blister`](blister/) | Tools to aid in the analysis of the BLISTER malware family. |
+| [`ghostpulse`](ghostpulse/) | Tools to aid in the analysis of the GHOSTPULSE malware family. |
+| [`guloader`](guloader/) | Tools to aid in the analysis of the GULOADER malware family. |
 | [`icedid`](icedid/) | Tools to aid in the analysis of the ICEDID malware family. |
