@@ -1,5 +1,6 @@
 import idaapi
 import pathlib
+import re
 
 XOR_KEY = 0xB8
 
