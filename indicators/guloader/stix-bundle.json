@@ -1,0 +1,115 @@
+{
+    "type": "bundle",
+    "id": "bundle--966542e8-d644-4ed0-a214-3389ab9836d9",
+    "objects": [
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:WHITE",
+            "definition": {
+                "tlp": "white"
+            }
+        },
+        {
+            "id": "indicator--ea731685-2960-5ae9-89df-b2e4a1c28329",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-12-06T17:57:26.271Z",
+            "modified": "2023-12-06T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '6ae7089aa6beaa09b1c3aa3ecf28a884d8ca84f780aab39902223721493b1f99' OR file:hashes.'SHA-1' = '6526c781106b303b7f21861e8bcc255d4f356143' OR file:hashes.MD5 = '9b40ae8c6dc8f35af3535a7b30c51d80']",
+            "name": "6ae7089aa6beaa09b1c3aa3ecf28a884d8ca84f780aab39902223721493b1f99",
+            "description": "Downloaded from Virustotal using hash 6ae7089aa6beaa09b1c3aa3ecf28a884d8ca84f780aab39902223721493b1f99",
+            "valid_from": "2023-12-06T17:57:26.271Z",
+            "valid_until": "2024-12-06T17:57:26.271Z",
+            "x_score": 20,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "guloader"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Getting Gooey with GuLoader:  Deobfuscating the Downloader",
+                    "url": "https://www.elastic.co/security-labs/getting-gooey-with-guloader-downloader"
+                }
+            ],
+            "x_id": "43e03778-1734-424a-84ce-73fb7952e0ed",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--aff966fe-4cf6-5acd-8ecb-271720f36365",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-12-06T17:57:26.271Z",
+            "modified": "2023-12-06T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = '101.99.75.183/MfoGYZkxZIl205.bin']",
+            "name": "101.99.75.183/MfoGYZkxZIl205.bin",
+            "description": "Simple indicator of observable {101.99.75.183/MfoGYZkxZIl205.bin}",
+            "valid_from": "2023-12-06T17:57:26.271Z",
+            "valid_until": "2024-12-06T17:57:26.271Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "guloader",
+                "downloader"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Getting Gooey with GuLoader:  Deobfuscating the Downloader",
+                    "url": "https://www.elastic.co/security-labs/getting-gooey-with-guloader-downloader"
+                }
+            ],
+            "x_id": "3c15g0dc-c8e1-4f3c-ae02-2e53b21b9291",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7046a435-408c-577c-ab36-4d3db23ae868",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2023-12-06T17:57:26.271Z",
+            "modified": "2023-12-06T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '101.99.75.183']",
+            "name": "101.99.75.183",
+            "description": "Simple indicator of observable {101.99.75.183}",
+            "valid_from": "2023-12-06T17:57:26.271Z",
+            "valid_until": "2024-12-06T17:57:26.271Z",
+            "x_score": 0,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "guloader",
+                "c2 server"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Getting Gooey with GuLoader:  Deobfuscating the Downloader",
+                    "url": "https://www.elastic.co/security-labs/getting-gooey-with-guloader-downloader"
+                }
+            ],
+            "x_id": "f8f1bd01-3546-4f18-beae-edba61c1d513",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
