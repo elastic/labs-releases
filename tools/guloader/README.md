@@ -6,7 +6,7 @@ Elastic Security Labs wrote IDAPython script used to fix control flow graph (CFG
 
 GULOADER research is published here:
 
-- https://www.elastic.co/security-labs/
+- https://www.elastic.co/security-labs/getting-gooey-with-guloader-downloader
 
 ## Description
 
