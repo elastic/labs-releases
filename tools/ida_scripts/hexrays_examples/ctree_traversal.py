@@ -18,8 +18,8 @@ def explore_ctree(item):
         print(f"item address: {hex(item.ea)}, item opname: {item.opname}, item op: {get_op_name(item.op)}")
         if item.is_expr():
             if item.op == ida_hexrays.cot_asg:
-                explore_ctree(item.x) # left side
-                explore_ctree(item.y) # right side
+                explore_ctree(item.x) # left node
+                explore_ctree(item.y) # right node
 
             elif item.op == ida_hexrays.cot_call:
                 explore_ctree(item.x)
