@@ -4,3 +4,6 @@
 
 This directory contains IDA scripts and plugins written by Elastic Security Labs team.
 
+| Directory                | Description                                                |
+| ------------------- | ---------------------------------------------------------- |
+| [`hexrays_examples`](hexrays_examples/) | Python code snippet related to the following [blogpost](). |
