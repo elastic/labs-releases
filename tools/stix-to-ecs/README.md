@@ -225,7 +225,11 @@ curl -u username https://elasticsearch:port/stix2ecs/_search?pretty
 
 If you’re using Kibana, you can [create a Data View](https://www.elastic.co/guide/en/kibana/current/data-views.html) for your stix2ecs index to view the ingested indicators.
 
+![image1](https://github.com/elastic/labs-releases/assets/7442091/0a4c1597-4d8d-4ae1-9eb0-f89731304c2f)
+
 Finally, you can use this as an indicator source for [Indicator Match rules](https://www.elastic.co/guide/en/security/current/prebuilt-rule-1-0-2-threat-intel-indicator-match.html).
+
+![image2](https://github.com/elastic/labs-releases/assets/7442091/3aa7815a-84a3-4863-ae01-0692ee0b9191)
 
 ## Author
 Cyril Francois (@cyril-t-f)
