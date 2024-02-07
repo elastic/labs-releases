@@ -1,0 +1,149 @@
+{
+    "type": "bundle",
+    "id": "bundle--a0cd5eb7-4ff3-4667-8fe3-516635ed0580",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2023-08-29T20:22:46.811Z",
+            "x_opencti_organization_type": "vendor",
+            "x_opencti_reliability": "A",
+            "x_opencti_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_opencti_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--880a5585-572c-5cd7-bf81-266fa637c16f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-12-06T16:42:14.622Z",
+            "modified": "2023-12-06T16:42:15.759Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://101.99.75.183/MfoGYZkxZIl205.bin']",
+            "name": "http://101.99.75.183/MfoGYZkxZIl205.bin",
+            "description": "Simple indicator of observable {http://101.99.75.183/MfoGYZkxZIl205.bin}",
+            "valid_from": "2023-12-06T16:42:14.595Z",
+            "valid_until": "2024-02-04T16:42:14.595Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "Url",
+            "labels": [
+                "guloader",
+                "downloader"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Getting Gooey with GuLoader:  Deobfuscating the Downloader",
+                    "url": "https://www.elastic.co/security-labs/getting-gooey-with-guloader-downloader"
+                },
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/b5d4eedea5f072d3fb53343d3102ce5d55a48b40226ded87a8661236cdc89caa"
+                }
+            ],
+            "x_opencti_id": "6c1a607b-eb1e-4e7c-b479-ecef81bd483f",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--8d8e9edd-6973-5031-882c-6339d4b7f286",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-12-06T16:40:47.204Z",
+            "modified": "2023-12-13T21:28:07.989Z",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "pattern": "[ipv4-addr:value = '101.99.75.183']",
+            "name": "101.99.75.183",
+            "description": "Simple indicator of observable {101.99.75.183}",
+            "valid_from": "2023-12-06T16:40:47.177Z",
+            "valid_until": "2024-01-05T16:40:47.177Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "c2 server",
+                "guloader"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Getting Gooey with GuLoader:  Deobfuscating the Downloader",
+                    "url": "https://www.elastic.co/security-labs/getting-gooey-with-guloader-downloader"
+                },
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/ip-address/101.99.75.183"
+                }
+            ],
+            "x_opencti_id": "ded1707d-7923-47b7-9b63-9afc678e2415",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--50798081-aa11-50b2-97b9-1d1f6f17373d",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 85,
+            "created": "2023-12-06T16:39:12.880Z",
+            "modified": "2023-12-13T21:18:47.310Z",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "pattern": "[file:hashes.'SHA-256' = '6ae7089aa6beaa09b1c3aa3ecf28a884d8ca84f780aab39902223721493b1f99']",
+            "name": "6ae7089aa6beaa09b1c3aa3ecf28a884d8ca84f780aab39902223721493b1f99",
+            "description": "Simple indicator of observable {6ae7089aa6beaa09b1c3aa3ecf28a884d8ca84f780aab39902223721493b1f99}",
+            "valid_from": "2023-12-06T16:39:12.832Z",
+            "valid_until": "2024-12-05T16:39:12.832Z",
+            "x_opencti_score": 69,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "guloader"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Getting Gooey with GuLoader:  Deobfuscating the Downloader",
+                    "url": "https://www.elastic.co/security-labs/getting-gooey-with-guloader-downloader"
+                },
+                {
+                    "source_name": "VirusTotal",
+                    "description": "PE32 executable (GUI) Intel 80386, for MS Windows, Nullsoft Installer self-extracting archive",
+                    "url": "https://www.virustotal.com/gui/file/6ae7089aa6beaa09b1c3aa3ecf28a884d8ca84f780aab39902223721493b1f99"
+                }
+            ],
+            "x_opencti_id": "8613619f-bb05-4c79-af8e-8c384f763250",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
