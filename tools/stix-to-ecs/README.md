@@ -4,6 +4,8 @@
 
 This project will take a STIX 2.x formatted JSON document and create an ECS version. There are three output options: STDOUT as JSON, an NDJSON file, and/or directly to an Elasticsearch cluster.
 
+Elastic Security Labs [publication](https://www.elastic.co/security-labs/stixy-situations-ecsaping-your-threat-data) on the tool.
+
 ## Prerequisites
 
 Python >3.10 and the `stix2`, `elasticsearch`, and `getpass` modules. 
