@@ -1,0 +1,463 @@
+{
+    "type": "bundle",
+    "id": "bundle--0f3cb032-b481-4fd6-aec5-b25682fd3eed",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2023-08-29T20:22:46.811Z",
+            "x_opencti_organization_type": "vendor",
+            "x_opencti_reliability": "A",
+            "x_opencti_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_opencti_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--541fed41-a8ee-5e61-a7ca-b374b2802e69",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-02-22T16:37:00.336Z",
+            "modified": "2024-02-22T17:05:05.209Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '2f66fb872c9699e04e54e5eaef982784b393a5ea260129a1e2484dd273a5a88b' OR file:hashes.'SHA-1' = '2697445c68a1ee39253b218179ef4894d8f13049' OR file:hashes.MD5 = '81ffb7bb281eaeb432860d09112548cd']",
+            "name": "2f66fb872c9699e04e54e5eaef982784b393a5ea260129a1e2484dd273a5a88b",
+            "description": "Zip archive holding obfuscated Javascript",
+            "valid_from": "2024-02-22T17:04:24.262Z",
+            "valid_until": "2025-02-21T17:04:24.262Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "235fbc13-0663-44fd-8cdc-2ce8fae32630",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--3fb4f705-39eb-5459-a3d3-76b7cefae515",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-02-22T16:33:46.429Z",
+            "modified": "2024-02-22T17:05:05.104Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '158.220.80.167']",
+            "name": "158.220.80.167",
+            "description": "PIKABOT C2 Server",
+            "valid_from": "2024-02-22T17:04:27.536Z",
+            "valid_until": "2024-03-23T17:04:27.536Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "ce41ee0d-1b9d-4f10-85db-5c05de534f19",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--6d70d3f6-ecd2-58d0-8643-f4e9c8d6de2b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-02-22T16:33:21.092Z",
+            "modified": "2024-02-22T17:05:04.997Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '104.129.55.103']",
+            "name": "104.129.55.103",
+            "description": "PIKABOT C2 Server",
+            "valid_from": "2024-02-22T17:04:27.327Z",
+            "valid_until": "2024-03-23T17:04:27.327Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "f7bb93ab-97e5-4c5f-85e1-c888519564bb",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ed00b9ad-1f7c-5f3e-ab55-584d802346be",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-02-22T16:32:50.628Z",
+            "modified": "2024-02-22T17:05:04.895Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '158.220.80.157']",
+            "name": "158.220.80.157",
+            "description": "PIKABOT C2 server",
+            "valid_from": "2024-02-22T17:04:27.123Z",
+            "valid_until": "2024-03-23T17:04:27.123Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "8cc1f037-4a4a-42c5-9b33-8e0d9932f19e",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--fe31bb79-fcde-5e9a-bd08-72a899d65114",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-02-22T16:32:15.020Z",
+            "modified": "2024-02-22T17:05:04.788Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '65.20.66.218']",
+            "name": "65.20.66.218",
+            "description": "PIKABOT C2 server",
+            "valid_from": "2024-02-22T17:04:26.755Z",
+            "valid_until": "2024-03-23T17:04:26.755Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "d6bfcea2-bed1-448f-8ace-fd67882fb8c8",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--f39664ec-e889-565e-a97e-b80ad721179f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-02-22T16:31:33.373Z",
+            "modified": "2024-02-22T17:05:04.688Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '95.179.191.137']",
+            "name": "95.179.191.137",
+            "description": "PIKABOT C2 server",
+            "valid_from": "2024-02-22T17:04:26.362Z",
+            "valid_until": "2024-03-23T17:04:26.362Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "cloud",
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "afbed766-f1b0-477f-9ea0-3c32ccdf1166",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ade65a5e-2ec6-5485-81e3-fe25b6c30961",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-02-22T16:31:02.992Z",
+            "modified": "2024-02-22T17:05:04.581Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '37.60.242.85']",
+            "name": "37.60.242.85",
+            "description": "PIKABOT C2 server",
+            "valid_from": "2024-02-22T17:04:25.958Z",
+            "valid_until": "2024-03-23T17:04:25.958Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "self-signed",
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "b43b7b0e-4c37-4cc9-813e-05fe1439d9d0",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d90e8c92-1315-5847-b22f-d013fac0fd77",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-02-22T16:28:47.902Z",
+            "modified": "2024-02-22T17:05:04.475Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '104.129.55.104']",
+            "name": "104.129.55.104",
+            "description": "PIKABOT C2 server",
+            "valid_from": "2024-02-22T17:04:25.563Z",
+            "valid_until": "2024-03-23T17:04:25.563Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "b4f26f1c-4f06-4764-9b64-92459e2e709c",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--13d3deab-9187-5132-9b2a-b6b18709f722",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-02-22T16:28:00.832Z",
+            "modified": "2024-02-22T17:05:04.364Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '85.239.243.155']",
+            "name": "85.239.243.155",
+            "description": "PIKABOT C2 server",
+            "valid_from": "2024-02-22T17:04:25.323Z",
+            "valid_until": "2024-03-23T17:04:25.323Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "self-signed",
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "fdcdf107-056c-41b9-bf32-65e5ca8c7614",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e6e1e577-8a8d-59ea-9ef8-c9adf6023c31",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-02-22T16:27:04.625Z",
+            "modified": "2024-02-22T17:05:04.256Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '139.84.237.229']",
+            "name": "139.84.237.229",
+            "description": "PIKABOT C2 Server",
+            "valid_from": "2024-02-22T17:04:25.094Z",
+            "valid_until": "2024-03-23T17:04:25.094Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "de9a0fe6-5a53-4fa7-afc6-9581e2844a1a",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--391d7463-dfa7-599b-88e4-1c43ab1a9072",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-02-22T16:24:09.369Z",
+            "modified": "2024-02-22T17:05:04.148Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'ca5fb5814ec62c8f04936740aabe2664b3c7d036203afbd8425cd67cf1f4b79d']",
+            "name": "ca5fb5814ec62c8f04936740aabe2664b3c7d036203afbd8425cd67cf1f4b79d",
+            "description": "Pikabot loader",
+            "valid_from": "2024-02-22T16:24:09.332Z",
+            "valid_until": "2025-02-21T16:24:09.332Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "3d6c8125-931c-4fa7-8173-f484a797442e",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--adc13b37-f43e-52d9-853c-2b57932173c7",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-02-22T16:23:07.322Z",
+            "modified": "2024-02-22T17:05:04.032Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'gloverstech.com']",
+            "name": "gloverstech.com",
+            "description": "Simple indicator of observable {gloverstech.com}",
+            "valid_from": "2024-02-22T17:04:24.530Z",
+            "valid_until": "2025-02-21T17:04:24.530Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "Domain-Name",
+            "labels": [
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "0c49cb6c-42b2-4a3a-be75-59c5fa6773b2",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--88f1ec06-d2ad-54da-94d0-1aac6641dae9",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-02-22T16:21:23.471Z",
+            "modified": "2024-02-22T17:05:03.917Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'entrevientos.com.ar']",
+            "name": "entrevientos.com.ar",
+            "description": "Domain hosting the zip archive file from link within email",
+            "valid_from": "2024-02-22T17:04:23.877Z",
+            "valid_until": "2025-02-21T17:04:23.877Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "Domain-Name",
+            "labels": [
+                "pikabot"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "4a68feb8-f742-4475-989a-22f092793feb",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
