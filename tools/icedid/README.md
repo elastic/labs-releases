@@ -12,17 +12,17 @@ A tutorial is available here: <https://www.elastic.co/security-labs/unpacking-ic
 
 | Path               | Description                             | OS compatibility                |
 | ------------------ | --------------------------------------- | ------------------------------- |
-| [`decrypt_file.py`](decrypt_file.py)    | Decrypt ICEDID encrypted file           | Windows and others (not tested) |
-| [`decompress_file.py`](decompress_file.py) | Decompress ICEDID compressed file       | Windows only                    |
-| [`rebuild_pe.py`](rebuild_pe.py)      | Rebuild PE from ICEDID custom PE format | Windows and others (not tested) |
+| decrypt_file.py    | Decrypt ICEDID encrypted file           | Windows and others (not tested) |
+| decompress_file.py | Decompress ICEDID compressed file       | Windows only                    |
+| rebuild_pe.py      | Rebuild PE from ICEDID custom PE format | Windows and others (not tested) |
 
 
 | Path                                       | Description                                              | OS compatibility                |
 | ------------------------------------------ | -------------------------------------------------------- | ------------------------------- |
-| [`gzip-variant/extract_gzip.py`](gzip-variant/extract_gzip.py)               | Extract binaries from ICEDID fake GZip file              | Windows and others (not tested) |
-| [`gzip-variant/extract_payloads_from_core.py`](gzip-variant/extract_payloads_from_core.py) | Extract payloads from the **rebuilt** ICEDID core binary | Windows and others (not tested) |
-| [`gzip-variant/load_core.py`](gzip-variant/load_core.py)                  | Natively Load and execute core **custom PE** binary      | Windows only                    |
-| [`gzip-variant/rebuild_pe.py`](gzip-variant/rebuild_pe.py)                 | Rebuild a PE from ICEDID custom PE file                  | Windows and others (not tested) |
+| gzip-variant/extract_gzip.py               | Extract binaries from ICEDID fake GZip file              | Windows and others (not tested) |
+| gzip-variant/extract_payloads_from_core.py | Extract payloads from the **rebuilt** ICEDID core binary | Windows and others (not tested) |
+| gzip-variant/load_core.py                  | Natively Load and execute core **custom PE** binary      | Windows only                    |
+| gzip-variant/rebuild_pe.py                 | Rebuild a PE from ICEDID custom PE file                  | Windows and others (not tested) |
 
 
 ## Requirements
@@ -48,7 +48,7 @@ $$> ./venv/script/activate
 
 ## decompress_file.py
 
-Decompresses ICEDID's compressed data using Windows LZNT1 decompression algorithm.
+Decompress ICEDID's compressed data using Windows LZNT1 decompression algorithm.
 
 ### Usage
 
@@ -100,6 +100,8 @@ options:
   -o OFFSET, --offset OFFSET
                         Offset to real data, skip possible garbage
 ```
+
+
 
 ## gzip-variant/extract_gzip.py
 

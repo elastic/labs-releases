@@ -1,6 +1,5 @@
 import idaapi
 import pathlib
-import re
 
 XOR_KEY = 0xB8
 
@@ -16,15 +15,21 @@ def get_addresses_from_tinytracer(file: pathlib.Path) -> list | None:
     addrs = list()
     with open(file, "r") as file:
         for line in file:
-            try:
-                match = re.search(r'([0-9a-fA-F]+)\+([0-9a-fA-F]+);', line)
-                if match:
-                    result_address = int(match.group(1), 16) + int(match.group(2), 16)
-                    addrs.append(result_address)
+            parts = line.strip().split(";")
+            if len(parts) >= 2:
+                addresses = parts[0].split("+")
+                if len(addresses) == 2:
+                    try:
+                        address1, address2 = map(lambda x: int(''.join(c for c in x if c.isdigit() or c in 'abcdefABCDEF'), 16), addresses)
+                        result_address = int(hex(address1 + address2),16)
+                        addrs.append(result_address)
+                    except ValueError as e:
+                        print(f"Error processing line: {line.strip()}. {e}")
                 else:
-                    print(f"Invalid line format: {line.strip()}")
-            except ValueError as e:
-                print(f"Error processing line: {line.strip()}. {e}")
+                    print(f"Invalid format for addresses in line: {line.strip()}")
+            else:
+                print(f"Invalid line format: {line.strip()}")
+
     return addrs 
 
 def main(file_path):

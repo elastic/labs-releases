@@ -19,6 +19,7 @@ Example usage: https://www.elastic.co/security-labs/unpacking-icedid
 | `nightmare.malware.icedid`    | Implement ICEDID algorithms    |
 | `nightmare.malware.lobshot`   | Implement LOBSHOT algorithms   |
 | `nightmare.malware.nighthawk` | Implement NIGHTHAWK algorithms |
+| `nightmare.malware.remcos`    | Implement Remcos algorithms    |
 | `nightmare.malware.xorddos`   | Implement XORDDOS algorithms   |
 
 
