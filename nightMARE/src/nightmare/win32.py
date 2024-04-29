@@ -51,25 +51,43 @@ class IMAGE_IMPORT_DESCRIPTOR(ctypes.Structure):
     ]
 
 
-GetLastError = ctypes.windll.Kernel32.GetLastError
-GetLastError.restype = ctypes.c_uint32
-GetLastError.argtypes = []
+def get_GetLastError() -> ctypes._NamedFuncPointer:
+    GetLastError = ctypes.windll.Kernel32.GetLastError
+    GetLastError.restype = ctypes.c_uint32
+    GetLastError.argtypes = []
 
-GetProcAddress = ctypes.windll.Kernel32.GetProcAddress
-GetProcAddress.restype = ctypes.c_void_p
-GetProcAddress.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
 
-LoadLibraryA = ctypes.windll.Kernel32.LoadLibraryA
-LoadLibraryA.restype = ctypes.c_void_p
-LoadLibraryA.argtypes = [ctypes.c_char_p]
+def get_GetProcAddress() -> ctypes._NamedFuncPointer:
+    GetProcAddress = ctypes.windll.Kernel32.GetProcAddress
+    GetProcAddress.restype = ctypes.c_void_p
+    GetProcAddress.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
 
-VirtualAlloc = ctypes.windll.Kernel32.VirtualAlloc
-VirtualAlloc.restype = ctypes.c_void_p
-VirtualAlloc.argtypes = [
-    ctypes.c_void_p,
-    ctypes.c_size_t,
-    ctypes.c_uint32,
-    ctypes.c_uint32,
-]
 
-RtlDecompressBuffer = ctypes.windll.Ntdll.RtlDecompressBuffer
+def get_LoadLibraryA() -> ctypes._NamedFuncPointer:
+    LoadLibraryA = ctypes.windll.Kernel32.LoadLibraryA
+    LoadLibraryA.restype = ctypes.c_void_p
+    LoadLibraryA.argtypes = [ctypes.c_char_p]
+
+
+def get_VirtualAlloc() -> ctypes._NamedFuncPointer:
+    VirtualAlloc = ctypes.windll.Kernel32.VirtualAlloc
+    VirtualAlloc.restype = ctypes.c_void_p
+    VirtualAlloc.argtypes = [
+        ctypes.c_void_p,
+        ctypes.c_size_t,
+        ctypes.c_uint32,
+        ctypes.c_uint32,
+    ]
+
+
+def get_RtlDecompressBuffer() -> ctypes._NamedFuncPointer:
+    RtlDecompressBuffer = ctypes.windll.Ntdll.RtlDecompressBuffer
+    RtlDecompressBuffer.restype = ctypes.c_long
+    RtlDecompressBuffer.argtypes = [
+        ctypes.c_ushort,
+        ctypes.c_void_p,
+        ctypes.c_ulong,
+        ctypes.c_void_p,
+        ctypes.c_ulong,
+        ctypes.c_void_p,
+    ]

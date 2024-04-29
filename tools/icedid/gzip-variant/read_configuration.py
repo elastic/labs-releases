@@ -15,7 +15,7 @@ def parse_arguments() -> argparse.Namespace:
 def main() -> None:
     args = parse_arguments()
     with args.input.open("rb") as f:
-        x = configuration.Configuration(f.read())
+        x = configuration.GzipVariantConfiguration(f.read())
 
     print("=" * 80)
     print("Configuration")

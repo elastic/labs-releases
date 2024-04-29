@@ -19,7 +19,7 @@ def main() -> None:
     with args.input.open("rb") as input:
         data = input.read()
 
-    if not (decrypted_data := crypto.decrypt(data)):
+    if not (decrypted_data := crypto.decrypt_0(data)):
         raise RuntimeError("Failed to decrypt data")
 
     with args.output.open("wb") as output:

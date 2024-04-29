@@ -22,7 +22,7 @@ def parse_arguments() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def find_browser_hook_payloads(pe: lief.PE.Binary, address) -> list[tuple[int, int]]:
+def find_browser_hook_payloads(pe: lief.Binary, address) -> list[tuple[int, int]]:
     cs = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)
     cs.detail = True
 
@@ -45,7 +45,7 @@ def find_browser_hook_payloads(pe: lief.PE.Binary, address) -> list[tuple[int, i
     return result
 
 
-def get_browser_hook_payloads(pe: lief.PE.Binary, address: int) -> list[bytes]:
+def get_browser_hook_payloads(pe: lief.Binary, address: int) -> list[bytes]:
     result = list()
 
     payloads_info = find_browser_hook_payloads(pe, address)
@@ -56,7 +56,7 @@ def get_browser_hook_payloads(pe: lief.PE.Binary, address: int) -> list[bytes]:
 
     for i, (payload_address, payload_size) in enumerate(payloads_info):
         if not (
-            payload := crypto.decrypt(
+            payload := crypto.decrypt_0(
                 bytes(
                     pe.get_content_from_virtual_address(payload_address, payload_size)
                 )
