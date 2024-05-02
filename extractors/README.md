@@ -6,16 +6,17 @@ This directory contains configuration extractor tools that can be used to collec
 
 In each directory, you'll find all the components needed to run the configuration extractors.
 
-| Component | Description |
-| ------ | ----------- |
-| `README.md` | Brief description of the extractor family |
-| `requirements.txt` | The Python requirements file for the extractor |
-| `[malware]_config_extractor.py` | The Python configuration extractor |
+| Component                       | Description                               |
+| ------------------------------- | ----------------------------------------- |
+| `README.md`                     | Brief description of the extractor family |
+| `[malware]_config_extractor.py` | The Python configuration extractor        |
 
 To run the extractors, you'll need Python 3.10+ and the dependent libraries in the `requirements.txt` file in the respective directory:
 
 ```
-python -m pip install -r requirements.txt
+virtualenv venv
+./venv/script/activate
+pip install <path-to-esl-repository>/nightMARE
 ```
 
 Once you have the requirements installed, you'll run the extractor against an individual binary or a directory containing multiple samples.
