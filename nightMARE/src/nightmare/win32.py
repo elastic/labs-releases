@@ -1,6 +1,7 @@
 # coding: utf-8
 
 import ctypes
+import typing
 
 MEM_COMMIT = 0x1000
 MEM_RESERVE = 0x2000
@@ -51,25 +52,28 @@ class IMAGE_IMPORT_DESCRIPTOR(ctypes.Structure):
     ]
 
 
-def get_GetLastError() -> ctypes._NamedFuncPointer:
+def get_GetLastError() -> typing.Callable:
     GetLastError = ctypes.windll.Kernel32.GetLastError
     GetLastError.restype = ctypes.c_uint32
     GetLastError.argtypes = []
+    return GetLastError
 
 
-def get_GetProcAddress() -> ctypes._NamedFuncPointer:
+def get_GetProcAddress() -> typing.Callable:
     GetProcAddress = ctypes.windll.Kernel32.GetProcAddress
     GetProcAddress.restype = ctypes.c_void_p
     GetProcAddress.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
+    return GetProcAddress
 
 
-def get_LoadLibraryA() -> ctypes._NamedFuncPointer:
+def get_LoadLibraryA() -> typing.Callable:
     LoadLibraryA = ctypes.windll.Kernel32.LoadLibraryA
     LoadLibraryA.restype = ctypes.c_void_p
     LoadLibraryA.argtypes = [ctypes.c_char_p]
+    return LoadLibraryA
 
 
-def get_VirtualAlloc() -> ctypes._NamedFuncPointer:
+def get_VirtualAlloc() -> typing.Callable:
     VirtualAlloc = ctypes.windll.Kernel32.VirtualAlloc
     VirtualAlloc.restype = ctypes.c_void_p
     VirtualAlloc.argtypes = [
@@ -78,9 +82,10 @@ def get_VirtualAlloc() -> ctypes._NamedFuncPointer:
         ctypes.c_uint32,
         ctypes.c_uint32,
     ]
+    return VirtualAlloc
 
 
-def get_RtlDecompressBuffer() -> ctypes._NamedFuncPointer:
+def get_RtlDecompressBuffer() -> typing.Callable:
     RtlDecompressBuffer = ctypes.windll.Ntdll.RtlDecompressBuffer
     RtlDecompressBuffer.restype = ctypes.c_long
     RtlDecompressBuffer.argtypes = [
@@ -91,3 +96,4 @@ def get_RtlDecompressBuffer() -> ctypes._NamedFuncPointer:
         ctypes.c_ulong,
         ctypes.c_void_p,
     ]
+    return RtlDecompressBuffer

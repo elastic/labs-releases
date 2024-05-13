@@ -13,14 +13,15 @@ Example usage: https://www.elastic.co/security-labs/unpacking-icedid
 
 ## Malware modules
 
-| Module                        | Description                    |
-| ----------------------------- | ------------------------------ |
-| `nightmare.malware.blister`   | Implement BLISTER algorithms   |
-| `nightmare.malware.icedid`    | Implement ICEDID algorithms    |
-| `nightmare.malware.lobshot`   | Implement LOBSHOT algorithms   |
-| `nightmare.malware.nighthawk` | Implement NIGHTHAWK algorithms |
-| `nightmare.malware.remcos`    | Implement Remcos algorithms    |
-| `nightmare.malware.xorddos`   | Implement XORDDOS algorithms   |
+| Module                            | Description                      |
+| --------------------------------- | -------------------------------- |
+| `nightmare.malware.blister`       | Implement BLISTER algorithms     |
+| `nightmare.malware.icedid`        | Implement ICEDID algorithms      |
+| `nightmare.malware.latrodectus`   | Implement LATRODECTUS algorithms |
+| `nightmare.malware.lobshot`       | Implement LOBSHOT algorithms     |
+| `nightmare.malware.nighthawk`     | Implement NIGHTHAWK algorithms   |
+| `nightmare.malware.remcos`        | Implement Remcos algorithms      |
+| `nightmare.malware.xorddos`       | Implement XORDDOS algorithms     |
 
 
 ## Install
