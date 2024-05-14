@@ -80,7 +80,7 @@ def get_section_content(pe: lief.PE.Binary, section_name: str) -> None | bytes:
         return None
 
 
-def resolve_json_key_chain(j: dict[str, typing.Any], key_chain: str) -> typing.Any:
+def resolve_key_chain(j: dict[str, typing.Any], key_chain: str) -> typing.Any:
     o: typing.Any = j
 
     try:
@@ -90,7 +90,7 @@ def resolve_json_key_chain(j: dict[str, typing.Any], key_chain: str) -> typing.A
             else:
                 o = o[key]
         return o
-    except KeyError | IndexError:
+    except Exception:
         return None
 
 
