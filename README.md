@@ -1,39 +1,28 @@
 <img width="1440" alt="Elastic Security Labs Banner Image" src="https://user-images.githubusercontent.com/7442091/234121634-fd2518cf-70cb-4eee-8134-393c1f712bac.png">
 
-## Elastic Security Labs - nightMARE
+## Elastic Security Labs - Releases
 
-This directory contains the night**MARE** (Malware Analysis & Reverse Engineering) library. nightMARE is a central module that will allow for an efficient and logical approach to automating various reverse engineering functions. 
+This repository is the home to tools, configuration extractors, and other contributions to the infosec, threat hunting, malware researcher, and intelligence analysis community. At Elastic, we believe that being open and transparent is critical for the success of us and our users. Check out our [blog post](https://www.elastic.co/blog/continued-leadership-in-open-and-transparent-security) if you are interested in additional background.
 
-The nightMARE library is born from the need to refactor our code base into reusable bricks. We want to concentrate logics and dependencies into a single library in order to speed up tool developement for members of the Elastic Security Labs team.
+## Directory
 
-By open sourcing our library to the community we hope that it'll contribute to our battle against threats.
+Below you will find the sections we have opened in this repository:
 
-**Please note that this library is still young and under developement. Pull requests are welcome.**  
-Example usage: https://www.elastic.co/security-labs/unpacking-icedid
+| Folder                       | Description                                           |
+| ---------------------------- | ----------------------------------------------------- |
+| [`extractors/`](extractors/) | Malware configuration extractors, organized by family |
+| [`indicators/`](indicators/) | Research atomic indicators, organized by family       |
+| [`nightMARE/`](nightMARE/)   | Malware reverse engineering and analysis library      |
+| [`tools/`](tools/)           | Tools released for community use                      |
 
-## Malware modules
+## Questions? Problems? Suggestions?
 
-| Module                             | Description                         |
-| ---------------------------------- | ----------------------------------- |
-| `nightmare.malware.blister`        | Implement BLISTER algorithms        |
-| `nightmare.malware.ghostpulse`     | Implement GHOSTPULSE algorithms     |
-| `nightmare.malware.icedid`         | Implement ICEDID algorithms         |
-| `nightmare.malware.latrodectus`    | Implement LATRODECTUS algorithms    |
-| `nightmare.malware.lobshot`        | Implement LOBSHOT algorithms        |
-| `nightmare.malware.nighthawk`      | Implement NIGHTHAWK algorithms      |
-| `nightmare.malware.redlinestealer` | Implement REDLINESTEALER algorithms |
-| `nightmare.malware.remcos`         | Implement REMCOS algorithms         |
-| `nightmare.malware.xorddos`        | Implement XORDDOS algorithms        |
+If you would like you to provide feedback or contribute to this repository, please familiarize yourself with the applicable artifact’s readme and [open an issue](https://github.com/elastic/labs-releases/issues/new/choose) using one of the provided templates.
 
+You can also reach us in our [Slack Workspace](https://www.elastic.co/blog/join-our-elastic-stack-workspace-on-slack) or in the [Security Discuss](https://discuss.elastic.co/c/security/) forum.
 
-## Install
+## License
 
-To install nightMARE, you'll need Python 3.10+. From the `labs-releases/` root directory:
+Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one or more contributor license agreements. Licensed under the Elastic License 2.0; you may not use these artifacts except in compliance with the Elastic License 2.0
 
-```
-# Windows
-python -m pip install .\nightMARE
-
-# Linux/macOS
-python -m pip install ./nightMARE
-```
+Contributors must sign a [Contributor License Agreement](https://www.elastic.co/contributor-agreement) before contributing code to any Elastic repositories.
