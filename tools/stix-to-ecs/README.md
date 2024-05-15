@@ -2,9 +2,12 @@
 
 # STIX 2 ECS
 
+Version: `0.2.0`
+
 This project will take a STIX 2.x formatted JSON document and create an ECS version. There are three output options: STDOUT as JSON, an NDJSON file, and/or directly to an Elasticsearch cluster.
 
-Elastic Security Labs [publication](https://www.elastic.co/security-labs/stixy-situations-ecsaping-your-threat-data) on the tool.
+## Author
+Cyril Francois (@cyril-t-f)
 
 ## Prerequisites
 
@@ -27,8 +30,7 @@ python -m pip install -r requirements.txt
 The input is a STIX 2.x JSON document (or a folder of JSON documents); the output defaults to STDOUT, with an option to create an NDJSON file and/or send to an Elasticsearch cluster.
 
 ```bash
-usage: stix_to_ecs.py [-h] -i INPUT [-o OUTPUT] [-e] [--index INDEX] \
-[--url URL] [--user USER] [-p PROVIDER] [-r]
+usage: .\stix_to_ecs.py [-h] -i INPUT [-o OUTPUT] [-e] [--index INDEX] [--url URL] [--user USER] [-p PROVIDER] [-r] [-c CONFIGURATION]
 ```
 
 By default, the ECS file is named the same as the STIX file, but with `.ecs.ndjson` appended.
@@ -37,17 +39,17 @@ By default, the ECS file is named the same as the STIX file, but with `.ecs.ndjs
 
 The script has several options, the only mandatory options are `-i` for the input and `-o` for the output directory.
 
-| Option | Description |
-| - | - |
-| -h | displays the help menu |
-| -i | specifies the input STIX document (mandatory) |
-| -o | specifies the output ECS document (mandatory) |
-| -p | defines the ECS provider field (optional) |
-| -r | recursive mode to convert multiple STIX documents (optional) |
-| -e | specifies the Elasticsearch output mode (optional) |
-| --index | defines the Elasticsearch Index, requires `-e` (optional) |
-| --url | defines the Elasticsearch URL, requires `-e` (optional) |
-| --user | defines the Elasticsearch username, requires `-e` (optional) |
+| Option              | Description                                                                                                            |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| -h, --help          | displays the help menu                                                                                                 |
+| -i, --input         | specifies the input STIX document (mandatory)                                                                          |
+| -o, --output        | specifies the output ECS document (mandatory)                                                                          |
+| -p, --provider      | defines the ECS provider field (optional)                                                                              |
+| -r, --recursive     | recursive mode to convert multiple STIX documents (optional)                                                           |
+| -e, --elastic       | specifies the Elasticsearch output mode (optional)                                                                     |
+| -c, --configuration | specifies the Json configuration file with the required information to connect to the Elastic cluster `-e` (optionnal) |
+| --cloud-id          | defines the Elasticsearch cloud-id, requires `-e` (optional)                                                           |
+| --index             | defines the Elasticsearch index, requires `-e` (optional)                                                              |
 
 ### Examples
 
@@ -172,8 +174,21 @@ curl -u username -X PUT "https://elasticsearch:port/stix2ecs?pretty"
 Next, define the Elasticsearch output options.
 
 ```bash
-python stix_to_ecs.py -i test-inputs/cisa_sample_stix.json -e --url https://elasticsearch:port \
---user username --index stix2ecs
+python stix_to_ecs.py -i test-inputs/cisa_sample_stix.json -e --cloud-id your-cloud-id --index stix2ecs
+```
+
+Or use the configuration file.
+```json
+// configuration.json
+{
+    "cloud_id": "your-cloud-id", 
+    "api_key": "your-api-key", 
+    "index": "stix2ecs"
+}
+```
+
+```bash
+python .\stix_to_ecs.py -i .\test-inputs\cisa_sample_stix.jso -e -c .\configuration.jsonn
 ```
 
 If you’re storing the data in Elasticsearch for use in another platform, you can view the indicators using cURL.
@@ -232,6 +247,3 @@ If you’re using Kibana, you can [create a Data View](https://www.elastic.co/gu
 Finally, you can use this as an indicator source for [Indicator Match rules](https://www.elastic.co/guide/en/security/current/prebuilt-rule-1-0-2-threat-intel-indicator-match.html).
 
 ![image2](https://github.com/elastic/labs-releases/assets/7442091/3aa7815a-84a3-4863-ae01-0692ee0b9191)
-
-## Author
-Cyril Francois (@cyril-t-f)
