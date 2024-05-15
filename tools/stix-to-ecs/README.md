@@ -29,21 +29,38 @@ python -m pip install -r requirements.txt
 
 The input is a STIX 2.x JSON document (or a folder of JSON documents); the output defaults to STDOUT, with an option to create an NDJSON file and/or send to an Elasticsearch cluster.
 
-```bash
-usage: .\stix_to_ecs.py [-h] -i INPUT [-o OUTPUT] [-e] [--index INDEX] [--url URL] [--user USER] [-p PROVIDER] [-r] [-c CONFIGURATION]
+```text
+usage: .\stix_to_ecs.py [-h] -i INPUT [-o OUTPUT] [-e] [--cloud-id CLOUD_ID] [--index INDEX] [-p PROVIDER] [-r] [-c CONFIGURATION]
+
+Convert STIX indicator(s) into ECS indicator(s)
+
+options:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        STIX input file or directory
+  -o OUTPUT, --output OUTPUT
+                        ECS output directory
+  -e, --elastic         Write to Elastic cluster
+  --cloud-id CLOUD_ID   The cloud ID of the Elastic cluster, required with -e,--elastic
+  --index INDEX         Elastic cluster's index where ECS indicators will be written, required with -e,--elastic
+  -p PROVIDER, --provider PROVIDER
+                        Override ECS provider
+  -r, --recursive       Recursive processing when input is a directory
+  -c CONFIGURATION, --configuration CONFIGURATION
+                        Path to the configuration file
 ```
 
 By default, the ECS file is named the same as the STIX file, but with `.ecs.ndjson` appended.
 
 ### Options
 
-The script has several options, the only mandatory options are `-i` for the input and `-o` for the output directory.
+The script has several options, the only mandatory options are `-i` for the input.
 
 | Option              | Description                                                                                                            |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | -h, --help          | displays the help menu                                                                                                 |
 | -i, --input         | specifies the input STIX document (mandatory)                                                                          |
-| -o, --output        | specifies the output ECS document (mandatory)                                                                          |
+| -o, --output        | specifies the output ECS document (optional), if not provided, dfault to output on STDIN                               |
 | -p, --provider      | defines the ECS provider field (optional)                                                                              |
 | -r, --recursive     | recursive mode to convert multiple STIX documents (optional)                                                           |
 | -e, --elastic       | specifies the Elasticsearch output mode (optional)                                                                     |
