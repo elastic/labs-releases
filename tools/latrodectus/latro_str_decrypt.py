@@ -130,6 +130,6 @@ for addr, encrypted_str in addrs_encrypted_strings:
         except UnicodeDecodeError:
             continue
     else:
-        print(f"Unable to decode as {', '.join(encodings)}")
+        print(f"Unable to decode as {', '.join(encoding)}")
 
     set_decompiler_comment(addr, new_decrypted_str)
