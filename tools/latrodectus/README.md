@@ -6,7 +6,7 @@ Elastic Security Labs wrote IDAPython script used to decrypt strings from LATROD
 
 LATRODECTUS research is published here:
 
-- https://www.elastic.co/security-labs/LATRODECTUS-caught-in-the-web
+- https://www.elastic.co/security-labs/spring-cleaning-with-latrodectus
 
 ## Description
 
