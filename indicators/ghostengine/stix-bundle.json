@@ -1,0 +1,745 @@
+{
+    "type": "bundle",
+    "id": "bundle--1f09cad7-f318-482d-8219-66f635e3aa70",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2024-02-27T06:26:26.824Z",
+            "x_opencti_organization_type": "vendor",
+            "x_opencti_reliability": "A",
+            "x_opencti_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_opencti_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--aa3043b6-7fde-5ba1-9a73-df4afb546b54",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:21.634Z",
+            "modified": "2024-05-17T17:30:18.591Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '93.95.225.137']",
+            "name": "93.95.225.137",
+            "description": "Simple indicator of observable {93.95.225.137}",
+            "valid_from": "2024-05-17T17:29:21.603Z",
+            "valid_until": "2024-06-16T17:29:21.603Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "c2 server",
+                "ref4578",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "23b573d2-4a1d-41eb-8918-26e69f0ea858",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--1e18747d-974c-572a-92cd-5145533f9211",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:21.397Z",
+            "modified": "2024-05-17T17:30:18.393Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '111.90.158.40']",
+            "name": "111.90.158.40",
+            "description": "Simple indicator of observable {111.90.158.40}",
+            "valid_from": "2024-05-17T17:29:21.362Z",
+            "valid_until": "2024-06-16T17:29:21.362Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "c2 server",
+                "ref4578",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "2fd50420-8525-4701-afaf-3bcec860c532",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--516fd93c-82f9-5075-b0fa-12cf4e3f0c6d",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:21.178Z",
+            "modified": "2024-05-17T17:30:18.195Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'online.yrnvtklot.com']",
+            "name": "online.yrnvtklot.com",
+            "description": "Simple indicator of observable {online.yrnvtklot.com}",
+            "valid_from": "2024-05-17T17:29:21.146Z",
+            "valid_until": "2025-05-17T17:29:21.146Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "Domain-Name",
+            "labels": [
+                "c2 server",
+                "ref4578",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "6d3dc083-6eba-4fc7-98c0-cbb0c7577017",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--1e219faa-4a67-51d1-a029-ed75f49b6dc0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:20.969Z",
+            "modified": "2024-05-17T17:30:17.999Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'ftp.yrnvtklot.com']",
+            "name": "ftp.yrnvtklot.com",
+            "description": "Simple indicator of observable {ftp.yrnvtklot.com}",
+            "valid_from": "2024-05-17T17:29:20.935Z",
+            "valid_until": "2025-05-17T17:29:20.935Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "Domain-Name",
+            "labels": [
+                "c2 server",
+                "ref4578",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "24237e1e-b479-4d0c-ab3a-c52772834201",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5fc7fe4c-774d-5bd7-8e27-7831c1d9b785",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:20.748Z",
+            "modified": "2024-05-17T17:30:17.792Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'download.yrnvtklot.com']",
+            "name": "download.yrnvtklot.com",
+            "description": "Simple indicator of observable {download.yrnvtklot.com}",
+            "valid_from": "2024-05-17T17:29:20.712Z",
+            "valid_until": "2025-05-17T17:29:20.712Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "Domain-Name",
+            "labels": [
+                "c2 server",
+                "ref4578",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "c7357660-e377-4ef9-8e15-59108bbfc093",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--3984fb75-7e73-5a4c-843e-06ea1d3e26a2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:20.531Z",
+            "modified": "2024-05-17T17:30:17.584Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '7c242a08ee2dfd5da8a4c6bc86231985e2c26c7b9931ad0b3ea4723e49ceb1c1' OR file:hashes.'SHA-1' = '792d5430ef2c60088fbc388714eb4aff63f5f593' OR file:hashes.MD5 = '587b173ef971d242933e18f43c18256b']",
+            "name": "7c242a08ee2dfd5da8a4c6bc86231985e2c26c7b9931ad0b3ea4723e49ceb1c1",
+            "description": "Simple indicator of observable {7c242a08ee2dfd5da8a4c6bc86231985e2c26c7b9931ad0b3ea4723e49ceb1c1}",
+            "valid_from": "2024-05-17T17:29:20.495Z",
+            "valid_until": "2025-05-17T17:29:20.495Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "powershell",
+                "spreader",
+                "loader",
+                "ref4578",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "ef5d5481-3c8d-4fc5-a7cd-988266107a54",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--8b41938a-8fc9-582b-8c0d-4e1cc2422d39",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:20.314Z",
+            "modified": "2024-05-17T17:30:17.382Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'cc4384510576131c126db3caca027c5d159d032d33ef90ef30db0daa2a0c4104' OR file:hashes.'SHA-1' = '4b851160b5f87dee9c526e36c0d7e0a28c6de0a9' OR file:hashes.MD5 = 'b9e37dd582a6ff810672f9b33865c217']",
+            "name": "cc4384510576131c126db3caca027c5d159d032d33ef90ef30db0daa2a0c4104",
+            "description": "Simple indicator of observable {cc4384510576131c126db3caca027c5d159d032d33ef90ef30db0daa2a0c4104}",
+            "valid_from": "2024-05-17T17:29:20.279Z",
+            "valid_until": "2025-05-17T17:29:20.279Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "javascript",
+                "ref4578",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "6dd4f85a-ea8c-4ab9-9834-adc783e5bc27",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5c3bf8ee-85e1-57ed-a4a5-0c8f8e46033f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:20.094Z",
+            "modified": "2024-05-17T17:30:17.179Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '6f3e913c93887a58e64da5070d96dc34d3265f456034446be89167584a0b347e' OR file:hashes.'SHA-1' = '8de84714fe4e0fc52c3ff988653b9c69e5753cb2' OR file:hashes.MD5 = '271520c83f847743aa6eaccd1b949797']",
+            "name": "6f3e913c93887a58e64da5070d96dc34d3265f456034446be89167584a0b347e",
+            "description": "Simple indicator of observable {6f3e913c93887a58e64da5070d96dc34d3265f456034446be89167584a0b347e}",
+            "valid_from": "2024-05-17T17:29:20.057Z",
+            "valid_until": "2025-05-17T17:29:20.057Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "exe-pattern",
+                "checks-network-adapters",
+                "long-sleeps",
+                "detect-debug-environment",
+                "powershell",
+                "checks-cpu-name",
+                "url-pattern",
+                "ref4578",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "ae83a97f-ca73-4322-ad6e-c7a9101c80b8",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2fb323a8-30ce-5fc6-b3c1-7fdfb769f2fe",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:19.863Z",
+            "modified": "2024-05-17T17:30:16.964Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'aac7f8e174ba66d62620bd07613bac1947f996bb96b9627b42910a1db3d3e22b' OR file:hashes.'SHA-1' = '9a77e7e641f1336b4b6fbe0dadb54ea4356212f1' OR file:hashes.MD5 = 'bf05392d1205ce66a45a1104fb67adf8']",
+            "name": "aac7f8e174ba66d62620bd07613bac1947f996bb96b9627b42910a1db3d3e22b",
+            "description": "Simple indicator of observable {aac7f8e174ba66d62620bd07613bac1947f996bb96b9627b42910a1db3d3e22b}",
+            "valid_from": "2024-05-17T17:29:19.827Z",
+            "valid_until": "2025-05-17T17:29:19.827Z",
+            "x_opencti_score": 57,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "peexe",
+                "checks-user-input",
+                "checks-network-adapters",
+                "long-sleeps",
+                "detect-debug-environment",
+                "calls-wmi",
+                "ref4578",
+                "ghostengine",
+                "stager"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "6135349b-dedd-4d16-ac9e-0bf0eb900022",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2e9720f8-645a-583e-ab6c-87aedbca384b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:19.640Z",
+            "modified": "2024-05-17T17:30:16.754Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5' OR file:hashes.'SHA-1' = 'd25340ae8e92a6d29f599fef426a2bc1b5217299' OR file:hashes.MD5 = '0c0195c48b6b8582fa6f6373032118da']",
+            "name": "11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5",
+            "description": "Simple indicator of observable {11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5}",
+            "valid_from": "2024-05-17T17:29:19.601Z",
+            "valid_until": "2025-05-17T17:29:19.601Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "peexe",
+                "assembly",
+                "overlay",
+                "long-sleeps",
+                "checks-disk-space",
+                "detect-debug-environment",
+                "signed",
+                "revoked-cert",
+                "idle",
+                "invalid-signature",
+                "via-tor",
+                "ref4578",
+                "xmrig",
+                "ghostengine",
+                "driver",
+                "native"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "c89ee326-fbaf-45dc-bb7a-0685c6933c3e",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--fa78bc54-0b02-5da5-975c-356b97fc2e41",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:19.412Z",
+            "modified": "2024-05-17T17:30:16.499Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '786591953336594473d171e269c3617d7449876993b508daa9b96eedc12ea1ca' OR file:hashes.'SHA-1' = '993323c62dab609fd1d8f5876f604d9da861fb35' OR file:hashes.MD5 = 'cf66c76445f74b90be8914dfe06697cb']",
+            "name": "786591953336594473d171e269c3617d7449876993b508daa9b96eedc12ea1ca",
+            "description": "Simple indicator of observable {786591953336594473d171e269c3617d7449876993b508daa9b96eedc12ea1ca}",
+            "valid_from": "2024-05-17T17:29:19.378Z",
+            "valid_until": "2025-05-17T17:29:19.378Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "ref4578",
+                "xmrig",
+                "ghostengine",
+                "configuration_file",
+                "json"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "88a27397-0fc8-413d-b798-534c160064cb",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--dc24d747-f192-5d8f-89a3-c0dc4c799579",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:19.183Z",
+            "modified": "2024-05-17T17:30:16.293Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '35eb368c14ad25e3b1c58579ebaeae71bdd8ef7f9ccecfc00474aa066b32a03f' OR file:hashes.'SHA-1' = '41fce204948df6af1fe2f3f6dec02086678eab3b' OR file:hashes.MD5 = 'bd877072c51ee58ec7aaf091bff0b80c']",
+            "name": "35eb368c14ad25e3b1c58579ebaeae71bdd8ef7f9ccecfc00474aa066b32a03f",
+            "description": "Simple indicator of observable {35eb368c14ad25e3b1c58579ebaeae71bdd8ef7f9ccecfc00474aa066b32a03f}",
+            "valid_from": "2024-05-17T17:29:19.144Z",
+            "valid_until": "2025-05-17T17:29:19.144Z",
+            "x_opencti_score": 71,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "peexe",
+                "idle",
+                "ref4578",
+                "xmrig",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "36cdc32f-4ea9-44b3-8fcc-3a36fa3ead2e",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9dbb7b99-a690-50b2-9a7c-2a855609fd70",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:18.943Z",
+            "modified": "2024-05-17T17:30:16.088Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '3b2724f3350cb5f017db361bd7aae49a8dbc6faa7506de6a4b8992ef3fd9d7ab' OR file:hashes.'SHA-1' = '1c552f0ade7213e81c3aeb581faab24061f03485' OR file:hashes.MD5 = 'f8f3a7faa13d6370b96d07d4d184357f']",
+            "name": "3b2724f3350cb5f017db361bd7aae49a8dbc6faa7506de6a4b8992ef3fd9d7ab",
+            "description": "Simple indicator of observable {3b2724f3350cb5f017db361bd7aae49a8dbc6faa7506de6a4b8992ef3fd9d7ab}",
+            "valid_from": "2024-05-17T17:29:18.905Z",
+            "valid_until": "2025-05-17T17:29:18.905Z",
+            "x_opencti_score": 61,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "persistence",
+                "pedll",
+                "ref4578",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "3ee2605a-6248-477b-8ff9-e1b549fdcd3c",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5d85179e-bc35-53e4-a8da-5ae6ab276f25",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:18.712Z",
+            "modified": "2024-05-17T17:30:15.887Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '3ced0552b9ecf3dfecd14cbcc3a0d246b10595d5048d7f0d4690e26ecccc1150' OR file:hashes.'SHA-1' = 'd6dfce664ee28cdcf143da2ec71d2a0ff18c1280' OR file:hashes.MD5 = '4c8e4c5c0e150c210cd2014a84e39ec6']",
+            "name": "3ced0552b9ecf3dfecd14cbcc3a0d246b10595d5048d7f0d4690e26ecccc1150",
+            "description": "Simple indicator of observable {3ced0552b9ecf3dfecd14cbcc3a0d246b10595d5048d7f0d4690e26ecccc1150}",
+            "valid_from": "2024-05-17T17:29:18.677Z",
+            "valid_until": "2025-05-17T17:29:18.677Z",
+            "x_opencti_score": 53,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "pedll",
+                "ref4578",
+                "ghostengine"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "c05ab36d-8bc3-42bc-b702-4c787d74b5f8",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--515835e1-b87c-54de-b701-5b3812136d85",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:18.482Z",
+            "modified": "2024-05-17T17:30:15.681Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '2b33df9aff7cb99a782b252e8eb65ca49874a112986a1c49cd9971210597a8ae' OR file:hashes.'SHA-1' = '288daefd1ce65fb01011dc8a64491111207d3965' OR file:hashes.MD5 = 'd7b749051da5fb4604f4141f19c47660']",
+            "name": "2b33df9aff7cb99a782b252e8eb65ca49874a112986a1c49cd9971210597a8ae",
+            "description": "Simple indicator of observable {2b33df9aff7cb99a782b252e8eb65ca49874a112986a1c49cd9971210597a8ae}",
+            "valid_from": "2024-05-17T17:29:18.444Z",
+            "valid_until": "2025-05-17T17:29:18.444Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "peexe",
+                "assembly",
+                "overlay",
+                "signed",
+                "ref4578",
+                "native"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "91b59104-4066-44aa-8c5a-65c35fb31827",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--a5f78183-58d7-54b5-8685-d902521a29a8",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:18.254Z",
+            "modified": "2024-05-17T17:30:15.469Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1' OR file:hashes.'SHA-1' = '5d6b9e80e12bfc595d4d26f6afb099b3cb471dd4' OR file:hashes.MD5 = 'a179c4093d05a3e1ee73f6ff07f994aa']",
+            "name": "4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1",
+            "description": "Simple indicator of observable {4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1}",
+            "valid_from": "2024-05-17T17:29:18.216Z",
+            "valid_until": "2025-05-17T17:29:18.216Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "peexe",
+                "assembly",
+                "overlay",
+                "signed",
+                "ref4578",
+                "native"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "8c94ce11-a215-4f9a-bcf5-d5f2c89f1629",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c68d1ae2-9d81-504b-84a1-8418f7392e32",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-05-17T17:29:17.999Z",
+            "modified": "2024-05-17T17:30:15.265Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '2fe78941d74d35f721556697491a438bf3573094d7ac091b42e4f59ecbd25753' OR file:hashes.'SHA-1' = '125982676af23e93fa58b31ef1bdb93725cb91c3' OR file:hashes.MD5 = '18957d83337a7f6a879d739be02b173e']",
+            "name": "2fe78941d74d35f721556697491a438bf3573094d7ac091b42e4f59ecbd25753",
+            "description": "Simple indicator of observable {2fe78941d74d35f721556697491a438bf3573094d7ac091b42e4f59ecbd25753}",
+            "valid_from": "2024-05-17T17:29:17.960Z",
+            "valid_until": "2025-05-17T17:29:17.960Z",
+            "x_opencti_score": 67,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "StixFile",
+            "labels": [
+                "malware",
+                "peexe",
+                "checks-user-input",
+                "checks-network-adapters",
+                "executes-dropped-file",
+                "detect-debug-environment",
+                "calls-wmi",
+                "checks-cpu-name",
+                "ref4578",
+                "ghostengine",
+                "hiddenshovel"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Invisible miners: unveiling GHOSTENGINE\u2019s crypto mining operations",
+                    "url": "https://www.elastic.co/security-labs/invisible-miners-unveiling-GHOSTENGINE"
+                },
+                {
+                    "source_name": "Analysis Of \u201cHidden Shovel\u201d Mining Trojan Activity",
+                    "url": "https://www.antiy.com/response/HideShoveling.html"
+                }
+            ],
+            "x_opencti_id": "7c4980b5-7f57-49fe-9751-22e2350f387a",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
