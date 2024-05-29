@@ -15,18 +15,15 @@ import dataclasses
 from stix2 import pattern_visitor
 from stix2 import patterns
 
+AUTHOR = "Cyril François (cyril-t-f)"
+VERSION = "0.2.0"
+
+
 T = typing.TypeVar("T")
 
 Json = dict[str, T]
 ECSIndicator = STIXIndicator = Json
 ECSIndicators = STIXIndicators = list[Json]
-
-
-@dataclasses.dataclass
-class ElasticInformation:
-    url: str
-    auth: tuple[str, str]
-    index: str
 
 
 MARKING_TO_TLP = {
@@ -229,10 +226,13 @@ def check_arguments(args: argparse.Namespace) -> bool:
         return False
 
     if args.elastic:
-        for x in ["url", "index", "user"]:
+        if args.configuration:
+            return True
+
+        for x in ["cloud_id", "index"]:
             if not getattr(args, x):
                 print(
-                    f"argument --{x} is required to connect to the Elastic cluster (-e, --elastic)"
+                    f"argument --{x} is required to connect to the Elastic cluster (-e, --elastic) unless configuration file is provided (-c, --configuration)"
                 )
                 return False
 
@@ -355,11 +355,11 @@ def get_json_files(path: pathlib.Path, recursive: bool) -> list[pathlib.Path]:
 def get_password() -> str:
     """
     Get password from user input.
-    :return: The password entered by the user.
+    :return: The api key entered by the user.
     """
 
     return getpass.getpass(
-        "Please enter your password to connect to the Elastic cluster: "
+        "Please enter your api key to connect to the Elastic cluster: "
     )
 
 
@@ -401,6 +401,15 @@ def load_stix_objects_from_file(input_path: pathlib.Path) -> list[dict]:
     return [dict(x) for x in objects]
 
 
+def load_configuration(path: pathlib.Path) -> tuple[str, str, str]:
+    c = json.loads(path.read_text())
+    for x in ["cloud_id", "api_key", "index"]:
+        if not c.get(x, None):
+            raise RuntimeError(f'Missing "{x}" in configuration file')
+
+    return c["cloud_id"], c["api_key"], c["index"]
+
+
 def main() -> None:
     args = parse_arguments()
 
@@ -414,16 +423,22 @@ def main() -> None:
             write_ecs_files(zip(files, results), args.output)
 
         if args.elastic:
-            write_ecs_to_elastic(
-                flatten_list(results),
-                ElasticInformation(args.url, (args.user, get_password()), args.index),
-            )
+            if args.configuration:
+                cloud_id, api_key, index = load_configuration(args.configuration)
+            else:
+                cloud_id, api_key, index = (
+                    args.cloud_id,
+                    get_password(),
+                    args.index,
+                )
+
+            write_ecs_to_elastic(flatten_list(results), cloud_id, api_key, index)
 
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         sys.argv[0],
-        description="Convert STIX indicator(s) into ECS indicator(s)",
+        description=f"Convert STIX indicator(s) into ECS indicator(s)",
     )
 
     parser.add_argument(
@@ -446,17 +461,13 @@ def parse_arguments() -> argparse.Namespace:
     )
 
     parser.add_argument(
+        "--cloud-id",
+        help="The cloud ID of the Elastic cluster, required with -e,--elastic",
+    )
+
+    parser.add_argument(
         "--index",
         help="Elastic cluster's index where ECS indicators will be written, required with -e,--elastic",
-    )
-
-    parser.add_argument(
-        "--url", help="The URL of the Elastic cluster, required with -e,--elastic"
-    )
-
-    parser.add_argument(
-        "--user",
-        help="The authentification username for connecting to the Elastic cluster, required with -e,--elastic",
     )
 
     parser.add_argument("-p", "--provider", help="Override ECS provider")
@@ -466,6 +477,13 @@ def parse_arguments() -> argparse.Namespace:
         "--recursive",
         help="Recursive processing when input is a directory",
         action="store_true",
+    )
+
+    parser.add_argument(
+        "-c",
+        "--configuration",
+        help="Path to the configuration file",
+        type=pathlib.Path,
     )
 
     args = parser.parse_args()
@@ -539,7 +557,9 @@ def write_ecs_files(
 
 def write_ecs_to_elastic(
     ecs_indicators: ECSIndicators,
-    elastic_information: ElasticInformation,
+    cloud_id: str,
+    api_key: str,
+    index: str,
 ) -> None:
     """
     The function write each ECS indicator to the given Elastic cluster and index.
@@ -549,16 +569,19 @@ def write_ecs_to_elastic(
     """
 
     elastic = elasticsearch.Elasticsearch(
-        hosts=elastic_information.url, basic_auth=elastic_information.auth
+        cloud_id=cloud_id,
+        api_key=api_key,
     )
 
+    """
     if not elastic.ping():
         raise RuntimeError(
-            f"Failed to connect to Elastic cluster at {elastic_information.url}"
+            f"Failed to connect to Elastic cluster, reason: {elastic.info()}"
         )
+    """
 
     for x in map(format_ecs_indicator_for_elastic, ecs_indicators):
-        elastic.index(index=elastic_information.index, document=x)
+        elastic.index(index=index, document=x)
 
 
 if __name__ == "__main__":
