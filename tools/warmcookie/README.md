@@ -6,7 +6,7 @@ Elastic Security Labs wrote IDAPython script used to decrypt strings from WARMCO
 
 WARMCOOKIE research is published here:
 
-- https://www.elastic.co/security-labs/placeholder
+- https://www.elastic.co/security-labs/dipping-into-danger
 
 ## Description
 
