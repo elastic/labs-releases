@@ -1,0 +1,229 @@
+{
+    "type": "bundle",
+    "id": "bundle--d96f11e7-1f48-4bf4-96fe-33123b90d9b6",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2024-02-27T06:26:26.824Z",
+            "x_organization_type": "vendor",
+            "x_reliability": "A",
+            "x_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "ipv4-addr--d5b9c411-8d53-5016-9105-df8e35b566ac",
+            "spec_version": "2.1",
+            "x_score": 50,
+            "value": "185.49.69.41",
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/ip-address/185.49.69.41"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/dipping-into-danger",
+                    "external_id": "Dipping into Danger: The WARMCOOKIE backdoor"
+                }
+            ],
+            "x_id": "306b4daa-8f44-4cf5-aa1c-fb8b2550bd9f",
+            "x_type": "IPv4-Addr",
+            "type": "ipv4-addr",
+            "x_created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "x_labels": [
+                "c2 server",
+                "ref6127",
+                "warmcookie"
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "ipv4-addr--3c32b973-bcfa-59d7-859e-07fd203eaee8",
+            "spec_version": "2.1",
+            "x_score": 50,
+            "value": "80.66.88.146",
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/ip-address/80.66.88.146"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/dipping-into-danger",
+                    "external_id": "Dipping into Danger: The WARMCOOKIE backdoor"
+                }
+            ],
+            "x_id": "c6655711-a0a9-4921-8f12-38f4839c06c9",
+            "x_type": "IPv4-Addr",
+            "type": "ipv4-addr",
+            "x_created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "x_labels": [
+                "c2 server",
+                "ref6127",
+                "warmcookie"
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "ipv4-addr--140f338c-a4dc-50b9-bc7c-3ae70957081d",
+            "spec_version": "2.1",
+            "x_score": 50,
+            "value": "45.9.74.135",
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/ip-address/45.9.74.135"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/dipping-into-danger",
+                    "external_id": "Dipping into Danger: The WARMCOOKIE backdoor"
+                }
+            ],
+            "x_id": "114a45c0-0c52-40a3-938b-8c595e5fc4eb",
+            "x_type": "IPv4-Addr",
+            "type": "ipv4-addr",
+            "x_created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "x_labels": [
+                "phishing",
+                "ref6127",
+                "warmcookie"
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "file--3291e131-9b4a-5d82-b642-891ba413338f",
+            "spec_version": "2.1",
+            "x_score": 72,
+            "size": 144384,
+            "name": "RtlUpd.dll",
+            "x_additional_names": [
+                "C:\\Users\\user\\AppData\\Local\\Temp\\nwuhhqo0.xz5\\ccde1ded028948f5cd3277d2d4af6b22fa33f53abde84ea2aa01f1872fad1d13.exe",
+                "ccde1ded028948f5cd3277d2d4af6b22fa33f53abde84ea2aa01f1872fad1d13.exe",
+                "C:\\ProgramData\\RtlUpd\\RtlUpd.dll",
+                "Defender detected and quarantined active a threat in file 'h1syifwz.s1n'",
+                "RtlUpd.dll"
+            ],
+            "hashes": {
+                "SHA-1": "129aa22329dd45f7bce5172e97cbd8016dec830e",
+                "SHA-256": "ccde1ded028948f5cd3277d2d4af6b22fa33f53abde84ea2aa01f1872fad1d13",
+                "MD5": "1b7b6fb1a99996587a3c20ee9c390a9c"
+            },
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
+                    "url": "https://www.virustotal.com/gui/file/ccde1ded028948f5cd3277d2d4af6b22fa33f53abde84ea2aa01f1872fad1d13"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/dipping-into-danger",
+                    "external_id": "Dipping into Danger: The WARMCOOKIE backdoor"
+                }
+            ],
+            "x_id": "985f6a49-acb7-4e83-bc5f-6734ef871d78",
+            "x_type": "StixFile",
+            "type": "file",
+            "x_created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "x_labels": [
+                "64bits",
+                "long-sleeps",
+                "detect-debug-environment",
+                "pedll",
+                "checks-cpu-name",
+                "loader",
+                "ref6127",
+                "warmcookie"
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "domain-name--145a07e1-3c42-51be-ba55-b26416978d5e",
+            "spec_version": "2.1",
+            "x_score": 50,
+            "value": "assets.work-for.top",
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/assets.work-for.top"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/dipping-into-danger",
+                    "external_id": "Dipping into Danger: The WARMCOOKIE backdoor"
+                }
+            ],
+            "x_id": "9ad5a33b-4a01-4915-b4c6-27f69cb3e75d",
+            "x_type": "Domain-Name",
+            "type": "domain-name",
+            "x_created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "x_labels": [
+                "phishing",
+                "ref6127",
+                "warmcookie"
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "domain-name--c584b14b-9a55-5e4f-abfa-a87467d06bd8",
+            "spec_version": "2.1",
+            "x_score": 50,
+            "value": "omeindia.com",
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/omeindia.com"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/dipping-into-danger",
+                    "external_id": "Dipping into Danger: The WARMCOOKIE backdoor"
+                }
+            ],
+            "x_id": "bb33bbb9-611e-4c63-8d96-886eb6952bfd",
+            "x_type": "Domain-Name",
+            "type": "domain-name",
+            "x_created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "x_labels": [
+                "phishing",
+                "ref6127",
+                "warmcookie"
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
