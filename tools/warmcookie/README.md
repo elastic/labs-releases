@@ -12,7 +12,7 @@ WARMCOOKIE research is published here:
 
 | Path               | Description                             |
 | ------------------ | --------------------------------------- |
-| [`warmcookie_str_decrypt`](warmcookie_str_decrypt)    | Annotates IDA Pro IDB with decrypted strings in decompiler |
+| [`warmcookie_str_decrypt.py`](warmcookie_str_decrypt.py)    | Annotates IDA Pro IDB with decrypted strings in decompiler |
 
 ## Requirements
 
