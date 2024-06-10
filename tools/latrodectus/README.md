@@ -12,7 +12,7 @@ LATRODECTUS research is published here:
 
 | Path               | Description                             |
 | ------------------ | --------------------------------------- |
-| [`latro_str_decrypt`](latro_str_decrypt)    | Annotates IDA Pro IDB with decrypted strings in decompiler |
+| [`latro_str_decrypt.py`](latro_str_decrypt.py)    | Annotates IDA Pro IDB with decrypted strings in decompiler |
 
 ## Requirements
 
