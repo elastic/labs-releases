@@ -14,3 +14,4 @@ These tools are operated by Elastic Security Labs' [nightMARE](../nightMARE) lib
 | [`icedid`](icedid/) | Tools to aid in the analysis of the ICEDID malware family. |
 | [`ida_scripts`](ida_scripts/) | IDA scripts and plugins. |
 | [`latrodectus`](latrodectus/) | Tools to aid in the analysis of the LATRODECTUS malware family. |
+| [`warmcookie`](warmcookie/) | Tools to aid in the analysis of the WARMCOOKIE malware family. |
