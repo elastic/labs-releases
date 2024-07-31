@@ -1,0 +1,347 @@
+{
+    "type": "bundle",
+    "id": "bundle--02297c1b-5564-4439-96d1-607171418525",
+    "objects": [
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--79976eb6-75a1-5c82-bffd-c15f67775d99",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2024-07-31T17:57:26.271Z",
+            "modified": "2024-07-31T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'updater.microsoft.com']",
+            "name": "updater.microsoft.com",
+            "description": "Simple indicator of observable {updater.microsoft.com}",
+            "valid_from": "2024-07-31T17:57:26.271Z",
+            "valid_until": "2025-10-25T17:57:27.339Z",
+            "x_score": 20,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8747",
+                "bitsloth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BITS and Bytes: Elastic Security Labs finds new backdoor, BITSLOTH",
+                    "url": "https://www.elastic.co/security-labs/bits-and-bytes-analyzing-bitsloth"
+                }
+            ],
+            "x_id": "43e02778-1734-424a-84ce-73fb7952e0ee",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b1821c76-0cfc-5853-8602-cffe356fab78",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2024-07-31T17:57:26.271Z",
+            "modified": "2024-07-31T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://updater.microsoft.com/index.aspx']",
+            "name": "http://updater.microsoft.com/index.aspx",
+            "description": "Simple indicator of observable {http://updater.microsoft.com/index.aspx}",
+            "valid_from": "2024-07-31T17:57:26.271Z",
+            "valid_until": "2025-10-25T17:57:27.339Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8747",
+                "bitsloth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BITS and Bytes: Elastic Security Labs finds new backdoor, BITSLOTH",
+                    "url": "https://www.elastic.co/security-labs/bits-and-bytes-analyzing-bitsloth"
+                }
+            ],
+            "x_id": "003e5711-966e-4fb2-985d-72ec460f9b3e",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--a1dbcb7d-0adc-5c71-a7aa-b68a4decb6a2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2024-07-31T17:57:26.271Z",
+            "modified": "2024-07-31T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '0f9c0d9b77678d7360e492e00a7fa00af9b78331dc926b0747b07299b4e64afd']",
+            "name": "0f9c0d9b77678d7360e492e00a7fa00af9b78331dc926b0747b07299b4e64afd",
+            "description": "Simple indicator of observable {0f9c0d9b77678d7360e492e00a7fa00af9b78331dc926b0747b07299b4e64afd}",
+            "valid_from": "2024-07-31T17:57:26.271Z",
+            "valid_until": "2025-10-25T17:57:27.339Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8747",
+                "bitsloth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BITS and Bytes: Elastic Security Labs finds new backdoor, BITSLOTH",
+                    "url": "https://www.elastic.co/security-labs/bits-and-bytes-analyzing-bitsloth"
+                }
+            ],
+            "x_id": "003e5711-966e-4fb2-985d-72ec460f9b3f",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2dca7aa8-dd24-545a-a1d8-097ca91138da",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2024-07-31T17:57:26.271Z",
+            "modified": "2024-07-31T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '0944b17a4330e1c97600f62717d6bae7e4a4260604043f2390a14c8d76ef1507']",
+            "name": "0944b17a4330e1c97600f62717d6bae7e4a4260604043f2390a14c8d76ef1507",
+            "description": "Simple indicator of observable {0944b17a4330e1c97600f62717d6bae7e4a4260604043f2390a14c8d76ef1507}",
+            "valid_from": "2024-07-31T17:57:26.271Z",
+            "valid_until": "2025-10-25T17:57:27.339Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8747",
+                "bitsloth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BITS and Bytes: Elastic Security Labs finds new backdoor, BITSLOTH",
+                    "url": "https://www.elastic.co/security-labs/bits-and-bytes-analyzing-bitsloth"
+                }
+            ],
+            "x_id": "003e5711-966e-4fb2-985d-72ec460f9b40",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0872fff4-f466-582e-a6a4-2cfd74e77de3",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2024-07-31T17:57:26.271Z",
+            "modified": "2024-07-31T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '4fb6dd11e723209d12b2d503a9fcf94d8fed6084aceca390ac0b7e7da1874f50']",
+            "name": "4fb6dd11e723209d12b2d503a9fcf94d8fed6084aceca390ac0b7e7da1874f50",
+            "description": "Simple indicator of observable {4fb6dd11e723209d12b2d503a9fcf94d8fed6084aceca390ac0b7e7da1874f50}",
+            "valid_from": "2024-07-31T17:57:26.271Z",
+            "valid_until": "2025-10-25T17:57:27.339Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8747",
+                "bitsloth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BITS and Bytes: Elastic Security Labs finds new backdoor, BITSLOTH",
+                    "url": "https://www.elastic.co/security-labs/bits-and-bytes-analyzing-bitsloth"
+                }
+            ],
+            "x_id": "003e5711-966e-4fb2-985d-72ec460f9b41",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0abf5464-363b-58f0-a155-2250e3f0710d",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2024-07-31T17:57:26.271Z",
+            "modified": "2024-07-31T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'dfb76bcf5a3e29225559ebbdae8bdd24f69262492eca2f99f7a9525628006d88']",
+            "name": "dfb76bcf5a3e29225559ebbdae8bdd24f69262492eca2f99f7a9525628006d88",
+            "description": "Simple indicator of observable {dfb76bcf5a3e29225559ebbdae8bdd24f69262492eca2f99f7a9525628006d88}",
+            "valid_from": "2024-07-31T17:57:26.271Z",
+            "valid_until": "2025-10-25T17:57:27.339Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8747",
+                "bitsloth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BITS and Bytes: Elastic Security Labs finds new backdoor, BITSLOTH",
+                    "url": "https://www.elastic.co/security-labs/bits-and-bytes-analyzing-bitsloth"
+                }
+            ],
+            "x_id": "003e5711-966e-4fb2-985d-72ec460f9b42",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--a7cadebb-5e48-5b74-90c2-b8a0101e5125",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2024-07-31T17:57:26.271Z",
+            "modified": "2024-07-31T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '4a4356faad620bf12ff53bcfac62e12eb67783bd22e66bf00a19a4c404bf45df']",
+            "name": "4a4356faad620bf12ff53bcfac62e12eb67783bd22e66bf00a19a4c404bf45df",
+            "description": "Simple indicator of observable {4a4356faad620bf12ff53bcfac62e12eb67783bd22e66bf00a19a4c404bf45df}",
+            "valid_from": "2024-07-31T17:57:26.271Z",
+            "valid_until": "2025-10-25T17:57:27.339Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8747",
+                "bitsloth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BITS and Bytes: Elastic Security Labs finds new backdoor, BITSLOTH",
+                    "url": "https://www.elastic.co/security-labs/bits-and-bytes-analyzing-bitsloth"
+                }
+            ],
+            "x_id": "003e5711-966e-4fb2-985d-72ec460f9b43",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--1c8adab4-5866-5116-9baf-f6ccba055f6f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2024-07-31T17:57:26.271Z",
+            "modified": "2024-07-31T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '15.235.132.67']",
+            "name": "15.235.132.67",
+            "description": "Simple indicator of observable {15.235.132.67}",
+            "valid_from": "2024-07-31T17:57:26.271Z",
+            "valid_until": "2025-10-25T17:57:27.339Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8747",
+                "bitsloth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BITS and Bytes: Elastic Security Labs finds new backdoor, BITSLOTH",
+                    "url": "https://www.elastic.co/security-labs/bits-and-bytes-analyzing-bitsloth"
+                }
+            ],
+            "x_id": "003e5711-966e-4fb2-985d-72ec460f9b44",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ce1e96d4-0c4e-592f-9b6d-9a6f6ede7d95",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2024-07-31T17:57:26.271Z",
+            "modified": "2024-07-31T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '45.116.13.178']",
+            "name": "45.116.13.178",
+            "description": "Simple indicator of observable {45.116.13.178}",
+            "valid_from": "2024-07-31T17:57:26.271Z",
+            "valid_until": "2025-10-25T17:57:27.339Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8747",
+                "bitsloth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BITS and Bytes: Elastic Security Labs finds new backdoor, BITSLOTH",
+                    "url": "https://www.elastic.co/security-labs/bits-and-bytes-analyzing-bitsloth"
+                }
+            ],
+            "x_id": "003e5711-966e-4fb2-985d-72ec460f9b45",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e4d76d4e-586d-5319-961c-9a280a0bc391",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 15,
+            "created": "2024-07-31T17:57:26.271Z",
+            "modified": "2024-07-31T17:57:26.271Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '216.238.121.132']",
+            "name": "216.238.121.132",
+            "description": "Simple indicator of observable {216.238.121.132}",
+            "valid_from": "2024-07-31T17:57:26.271Z",
+            "valid_until": "2025-10-25T17:57:27.339Z",
+            "x_score": 13,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref8747",
+                "bitsloth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BITS and Bytes: Elastic Security Labs finds new backdoor, BITSLOTH",
+                    "url": "https://www.elastic.co/security-labs/bits-and-bytes-analyzing-bitsloth"
+                }
+            ],
+            "x_id": "003e5711-966e-4fb2-985d-72ec460f9b46",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
