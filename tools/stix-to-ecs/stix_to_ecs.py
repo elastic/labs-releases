@@ -10,14 +10,16 @@ import sys
 import elasticsearch
 import typing
 import getpass
-import dataclasses
+import logging
 
 from stix2 import pattern_visitor
 from stix2 import patterns
 
-AUTHOR = "Cyril François (cyril-t-f)"
-VERSION = "0.2.0"
+AUTHOR = "Cyril François (cyril-t-f) , RoDerick Hines (roderickch01)"
+VERSION = "0.3.0"
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 T = typing.TypeVar("T")
 
@@ -189,9 +191,9 @@ class STIXToECSPatternParser(object):
 
         if type(self.data) is dict and (hash := self.data.get("hash", None)):
             # ctf -> SHA256 may not be always available, in this case do we want to crash or take an other algo?
-            observable = hash.get("sha256", None)
+            observable = hash.get("sha256", None) or hash.get("sha1", None) or hash.get("md5", None)
             if not observable:
-                raise RuntimeError("Missing SHA256 observable from set of hashes.")
+                raise RuntimeError("Missing SHA256, SHA1, or MD5 observable from set of hashes.")
         else:
             observable = self.data
 
@@ -401,14 +403,25 @@ def load_stix_objects_from_file(input_path: pathlib.Path) -> list[dict]:
     return [dict(x) for x in objects]
 
 
-def load_configuration(path: pathlib.Path) -> tuple[str, str, str]:
+def load_configuration(path: pathlib.Path) -> tuple[str | None, str | None, str, str | None, bool]:
+    """
+    Load configuration from a given JSON file.
+    :param path: Path to the configuration file.
+    :return: Tuple containing (cloud_id, api_key, index, auth_or_url, use_cloud).
+    """
     c = json.loads(path.read_text())
-    for x in ["cloud_id", "api_key", "index"]:
-        if not c.get(x, None):
-            raise RuntimeError(f'Missing "{x}" in configuration file')
 
-    return c["cloud_id"], c["api_key"], c["index"]
+    # Check if it's a cloud configuration
+    if all(k in c for k in ["cloud_id", "api_key", "index"]):
+        return c["cloud_id"], c["api_key"], c["index"], None, True
 
+    # Check if it's a local configuration
+    elif all(k in c for k in ["url", "username", "password", "index"]):
+        auth = f"{c['username']}:{c['password']}"
+        return None, None, c["index"], c["url"], False
+
+    else:
+        raise RuntimeError('Missing required keys in configuration file')
 
 def main() -> None:
     args = parse_arguments()
@@ -416,29 +429,55 @@ def main() -> None:
     files = get_json_files(args.input if args.input else args.directory, args.recursive)
     results = process_stix_files(files, args.provider)
 
-    if not args.output and not args.elastic:
+    if not args.output and not args.elastic and not args.local:
         print(json.dumps(flatten_list(results), indent=4))
     else:
         if args.output:
             write_ecs_files(zip(files, results), args.output)
 
-        if args.elastic:
+        if args.elastic or args.local:
             if args.configuration:
-                cloud_id, api_key, index = load_configuration(args.configuration)
-            else:
-                cloud_id, api_key, index = (
-                    args.cloud_id,
-                    get_password(),
-                    args.index,
-                )
+                cloud_id, api_key, index, auth_or_url, use_cloud = load_configuration(pathlib.Path(args.configuration))
+                
+                if use_cloud:
+                    url = None  # URL not needed for cloud
+                    auth = None  # Authentication not needed for cloud
+                else:
+                    url = auth_or_url  # URL for local
+                    auth = auth_or_url  # Authentication for local
 
-            write_ecs_to_elastic(flatten_list(results), cloud_id, api_key, index)
+            else:
+                if args.elastic:
+                    cloud_id = args.cloud_id
+                    api_key = get_password()
+                    index = args.index
+                    url = None  # URL not needed for cloud
+                    auth = None  # Authentication not needed for cloud
+                    use_cloud = True
+                elif args.local:
+                    cloud_id = None
+                    api_key = None
+                    index = args.index
+                    url = args.url
+                    auth = f"{args.username}:{args.password}"
+                    use_cloud = False
+
+            write_ecs_to_elastic(
+                flatten_list(results),
+                cloud_id,
+                api_key,
+                url,
+                auth,
+                index,
+                use_cloud,
+                verify_certs=args.verify_certs
+            )
 
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         sys.argv[0],
-        description=f"Convert STIX indicator(s) into ECS indicator(s)",
+        description=f"Convert STIX indicator(s) into ECS indicator(s) - Version {VERSION}",
     )
 
     parser.add_argument(
@@ -457,17 +496,36 @@ def parse_arguments() -> argparse.Namespace:
     )
 
     parser.add_argument(
-        "-e", "--elastic", action="store_true", help="Write to Elastic cluster"
+        "-e", "--elastic", action="store_true", help="Use Elastic cloud configuration"
+    )
+
+    parser.add_argument(
+        "-l", "--local", action="store_true", help="Use local Elastic instance configuration"
     )
 
     parser.add_argument(
         "--cloud-id",
-        help="The cloud ID of the Elastic cluster, required with -e,--elastic",
+        help="The cloud ID of the Elastic cluster, required with -e, --cloud for cloud configurations.",
     )
 
     parser.add_argument(
         "--index",
-        help="Elastic cluster's index where ECS indicators will be written, required with -e,--elastic",
+        help="Elastic cluster's index where ECS indicators will be written, required with -e, --cloud or -l, --local",
+    )
+
+    parser.add_argument(
+        "--url", type= str,
+        help="URL of the local Elastic instance, required with -l, --local for local configurations.",
+    )
+
+    parser.add_argument(
+        "--username", type= str,
+        help="Username for local Elastic instance, required with -l, --local for local configurations.",
+    )
+
+    parser.add_argument(
+        "--password", type= str,
+        help="Password for local Elastic instance, required with -l, --local for local configurations.",
     )
 
     parser.add_argument("-p", "--provider", help="Override ECS provider")
@@ -486,13 +544,20 @@ def parse_arguments() -> argparse.Namespace:
         type=pathlib.Path,
     )
 
+    parser.add_argument(
+        "-x",
+        "--insecure",
+        action="store_false",
+        dest="verify_certs",
+        help="Disable SSL certificate verification (useful for local instances with self-signed certificates)."
+    )
     args = parser.parse_args()
+
     if not check_arguments(args):
         parser.print_usage()
         exit(1)
 
     return args
-
 
 def parse_tlp(markings: list[str]) -> str | None:
     """
@@ -506,7 +571,6 @@ def parse_tlp(markings: list[str]) -> str | None:
             return tlp
     else:
         return None
-
 
 def process_stix_file(input_file: pathlib.Path, provider: str | None) -> list[dict]:
     """
@@ -538,7 +602,6 @@ def process_stix_files(
 
     return [process_stix_file(x, provider) for x in input_files]
 
-
 def write_ecs_files(
     ecs_files: typing.Iterable[tuple[pathlib.Path, ECSIndicators]],
     output_path: pathlib.Path,
@@ -554,35 +617,41 @@ def write_ecs_files(
         with output_path.joinpath(f"{x[0].stem}.ecs.ndjson").open("w") as f:
             f.write("\n".join(json.dumps(x) for x in x[1]))
 
-
 def write_ecs_to_elastic(
     ecs_indicators: ECSIndicators,
-    cloud_id: str,
-    api_key: str,
+    cloud_id: str | None,
+    api_key: str | None,
+    url: str | None,
+    auth: str | None,
     index: str,
+    use_cloud: bool,
+    verify_certs: bool = True
 ) -> None:
     """
-    The function write each ECS indicator to the given Elastic cluster and index.
-    :param url: The Elastic cluster URL.
-    :param auth: A tuple containing the username and password to connect to the cluster.
+    The function writes each ECS indicator to the given Elastic cluster and index.
+    :param cloud_id: The Elastic cloud ID (required for cloud).
+    :param api_key: The API key for cloud (required for cloud).
+    :param url: The URL of the local Elastic instance (required for local).
+    :param auth: A string containing the username and password, formatted as 'username:password' (required for local).
     :param index: The index where documents will be written.
+    :param use_cloud: Boolean indicating whether to use Elastic Cloud.
+    :param verify_certs: Boolean to determine whether to verify SSL certificates (default is True).
     """
 
-    elastic = elasticsearch.Elasticsearch(
-        cloud_id=cloud_id,
-        api_key=api_key,
-    )
-
-    """
-    if not elastic.ping():
-        raise RuntimeError(
-            f"Failed to connect to Elastic cluster, reason: {elastic.info()}"
+    if use_cloud:
+        elastic = elasticsearch.Elasticsearch(
+            cloud_id=cloud_id,
+            api_key=api_key,
         )
-    """
+    else:
+        elastic = elasticsearch.Elasticsearch(
+            hosts=[url],  # Wrap the URL in a list
+            http_auth=auth.split(':'),
+            verify_certs=verify_certs  # Optional SSL verification flag
+        )
 
     for x in map(format_ecs_indicator_for_elastic, ecs_indicators):
         elastic.index(index=index, document=x)
-
 
 if __name__ == "__main__":
     main()
