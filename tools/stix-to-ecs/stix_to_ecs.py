@@ -647,6 +647,8 @@ def write_ecs_to_elastic(
             http_auth=auth.split(':'),
             verify_certs=verify_certs  # Optional SSL verification flag
         )
+else:
+    # Raise exception because neither `cloud_id` or `url` are provided
 
     for x in map(format_ecs_indicator_for_elastic, ecs_indicators):
         elastic.index(index=index, document=x)
