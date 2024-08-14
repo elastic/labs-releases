@@ -500,9 +500,6 @@ def parse_arguments() -> argparse.Namespace:
         "-e", "--elastic", action="store_true", help="Use Elastic cloud configuration"
     )
 
-    parser.add_argument(
-        "-l", "--local", action="store_true", help="Use local Elastic instance configuration"
-    )
 
     parser.add_argument(
         "--cloud-id",
