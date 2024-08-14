@@ -636,7 +636,7 @@ def write_ecs_to_elastic(
     :param verify_certs: Boolean to determine whether to verify SSL certificates (default is True).
     """
 
-    if use_cloud:
+    if cloud_id:
         elastic = elasticsearch.Elasticsearch(
             cloud_id=cloud_id,
             api_key=api_key,
