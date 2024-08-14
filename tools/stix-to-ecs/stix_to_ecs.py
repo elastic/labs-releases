@@ -10,7 +10,6 @@ import sys
 import elasticsearch
 import typing
 import getpass
-import logging
 
 from stix2 import pattern_visitor
 from stix2 import patterns
