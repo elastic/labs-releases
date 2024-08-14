@@ -641,7 +641,7 @@ def write_ecs_to_elastic(
             cloud_id=cloud_id,
             api_key=api_key,
         )
-    else:
+    elif url:
         elastic = elasticsearch.Elasticsearch(
             hosts=[url],  # Wrap the URL in a list
             http_auth=auth.split(':'),
