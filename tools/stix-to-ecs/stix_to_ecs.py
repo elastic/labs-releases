@@ -15,7 +15,8 @@ import logging
 from stix2 import pattern_visitor
 from stix2 import patterns
 
-AUTHOR = "Cyril François (cyril-t-f) , RoDerick Hines (roderickch01)"
+AUTHOR = ("Cyril François (cyril-t-f)", "RoDerick Hines (roderickch01)")
+
 VERSION = "0.3.0"
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
