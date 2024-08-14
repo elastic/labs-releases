@@ -19,8 +19,6 @@ AUTHOR = ("Cyril François (cyril-t-f)", "RoDerick Hines (roderickch01)")
 
 VERSION = "0.3.0"
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
 
 T = typing.TypeVar("T")
 
