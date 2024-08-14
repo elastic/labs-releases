@@ -18,7 +18,6 @@ AUTHOR = ("Cyril François (cyril-t-f)", "RoDerick Hines (roderickch01)")
 
 VERSION = "0.3.0"
 
-
 T = typing.TypeVar("T")
 
 Json = dict[str, T]
@@ -235,7 +234,7 @@ def check_arguments(args: argparse.Namespace) -> bool:
                     f"argument --{x} is required to connect to the Elastic cluster (-e, --elastic) unless configuration file is provided (-c, --configuration)"
                 )
                 return False
-
+            
     return True
 
 
@@ -405,28 +404,22 @@ def load_configuration(path: pathlib.Path) -> tuple[str | None, str | None, str 
     """
     Load configuration from a given JSON file.
     :param path: Path to the configuration file.
-    :param use_cloud: Boolean indicating whether to use cloud configuration.
     :return: Tuple containing (cloud_id, api_key, url, user, password, index).
     """
+
+    # Load JSON configuration
     c = json.loads(path.read_text())
-
-    if use_cloud:
-        # Ensure cloud credentials are present
-        if all(k in c for k in ["cloud_id", "api_key", "index"]):
-            return c["cloud_id"], c["api_key"], c["index"], None, None, True
-        else:
-            raise RuntimeError('Missing required keys for cloud configuration')
-
-    else:
-        # Ensure local credentials are present
-        if all(k in c for k in ["url", "username", "password", "index"]):
-            url = c["url"]
-            auth = f"{c['username']}:{c['password']}"
-            return None, None, c["index"], url, auth, False
-        else:
-            raise RuntimeError('Missing required keys for local configuration')
-
-
+    
+    # Check for presence of either cloud_id or url
+    if c["cloud_id"] and not all(c.get(k) for k in ["api_key", "index"]):
+        raise ValueError("If cloud_id is provided, api_key and index must also be provided.")
+    elif c["url"] and not all(c.get(k) for k in ["username", "password", "index"]):
+        raise ValueError("If url is provided, username, password, and index must also be provided.")
+    elif not c["cloud_id"] and not c["url"]:
+        raise ValueError("Either cloud_id or url must be provided.")
+    
+    # Convert empty strings to None
+    return tuple(c.get(k) if c.get(k) else None for k in ["cloud_id", "api_key", "url", "username", "password","index"])
 
 def main() -> None:
     args = parse_arguments()
@@ -434,44 +427,54 @@ def main() -> None:
     files = get_json_files(args.input if args.input else args.directory, args.recursive)
     results = process_stix_files(files, args.provider)
 
-    if not args.output and not args.elastic and not args.local:
+    if not args.output and not args.elastic:
         print(json.dumps(flatten_list(results), indent=4))
     else:
-        if args.output:
-            write_ecs_files(zip(files, results), args.output)
+        # Initialize variables
+        cloud_id, api_key, url, username, password, index = None, None, None, None, None, None
 
-        if args.elastic or args.local:
-            use_cloud = bool(args.elastic)  # Use cloud if -e is passed, otherwise use local
+        if args.configuration:
+            # Load configuration from file
+            cloud_id, api_key, url, username, password, index = load_configuration(pathlib.Path(args.configuration))
+            auth = f"{username}:{password}" if username and password else None
+        else:
+            # Set values based on arguments
+            if args.elastic:
+                cloud_id = args.cloud_id
+                api_key = get_password()
+                url = None
+                auth = None
+                index = args.index
+            elif args.local:
+                cloud_id = None
+                api_key = None
+                url = args.url
+                auth = f"{args.username}:{args.password}"
+                index = args.index
 
-            if args.configuration:
-                cloud_id, api_key, index, url, auth, use_cloud = load_configuration(pathlib.Path(args.configuration), use_cloud)
+        # Determine whether to use local or cloud configuration
+        if cloud_id or (args.configuration and cloud_id):
+            # Cloud configuration
+            if not cloud_id:
+                cloud_id, api_key, url, username, password, index = load_configuration(pathlib.Path(args.configuration))
+            auth = f"{username}:{password}" if username and password else None
 
-            else:
-                if args.elastic:
-                    cloud_id = args.cloud_id
-                    api_key = get_password()
-                    index = args.index
-                    url = None  # URL not needed for cloud
-                    auth = None  # Authentication not needed for cloud
-                    use_cloud = True
-                elif args.local:
-                    cloud_id = None
-                    api_key = None
-                    index = args.index
-                    url = args.url
-                    auth = f"{args.username}:{args.password}"
-                    use_cloud = False
+        elif url:
+            # Local configuration
+            if not url:
+                cloud_id, api_key, url, username, password, index = load_configuration(pathlib.Path(args.configuration))
+            auth = f"{username}:{password}" if username and password else None
 
-            write_ecs_to_elastic(
-                flatten_list(results),
-                cloud_id,
-                api_key,
-                url,
-                auth,
-                index,
-                verify_certs=args.verify_certs
-            )
-
+        # Ensure `elastic` or `auth` is defined based on arguments
+        write_ecs_to_elastic(
+            flatten_list(results),
+            cloud_id,
+            api_key,
+            url,
+            auth,
+            index,
+            verify_certs=args.verify_certs
+        )
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -506,22 +509,22 @@ def parse_arguments() -> argparse.Namespace:
 
     parser.add_argument(
         "--index",
-        help="Elastic cluster's index where ECS indicators will be written, required with -e, --cloud or -l, --local",
+        help="Elastic cluster's index where ECS indicators will be written, required with -e, for cloud and local",
     )
 
     parser.add_argument(
         "--url", type= str,
-        help="URL of the local Elastic instance, required with -l, --local for local configurations.",
+        help="URL of the local Elastic instance, required for local configurations.",
     )
 
     parser.add_argument(
         "--username", type= str,
-        help="Username for local Elastic instance, required with -l, --local for local configurations.",
+        help="Username for local Elastic instance, required for local for local configurations.",
     )
 
     parser.add_argument(
         "--password", type= str,
-        help="Password for local Elastic instance, required with -l, --local for local configurations.",
+        help="Password for local Elastic instance, required for local for local configurations.",
     )
 
     parser.add_argument("-p", "--provider", help="Override ECS provider")
@@ -620,7 +623,6 @@ def write_ecs_to_elastic(
     url: str | None,
     auth: str | None,
     index: str,
-    use_cloud: bool,
     verify_certs: bool = True
 ) -> None:
     """
@@ -630,7 +632,6 @@ def write_ecs_to_elastic(
     :param url: The URL of the local Elastic instance (required for local).
     :param auth: A string containing the username and password, formatted as 'username:password' (required for local).
     :param index: The index where documents will be written.
-    :param use_cloud: Boolean indicating whether to use Elastic Cloud.
     :param verify_certs: Boolean to determine whether to verify SSL certificates (default is True).
     """
 
@@ -645,11 +646,11 @@ def write_ecs_to_elastic(
             http_auth=auth.split(':'),
             verify_certs=verify_certs  # Optional SSL verification flag
         )
-else:
-    # Raise exception because neither `cloud_id` or `url` are provided
+    else:
+        raise ValueError("Raise exception because neither `cloud_id` or `url` are provided")
 
     for x in map(format_ecs_indicator_for_elastic, ecs_indicators):
-        elastic.index(index=index, document=x)
+            elastic.index(index=index, document=x)
 
 if __name__ == "__main__":
     main()
