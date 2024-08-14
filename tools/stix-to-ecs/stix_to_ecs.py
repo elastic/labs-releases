@@ -469,7 +469,6 @@ def main() -> None:
                 url,
                 auth,
                 index,
-                use_cloud,
                 verify_certs=args.verify_certs
             )
 
