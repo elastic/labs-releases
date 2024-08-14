@@ -402,12 +402,12 @@ def load_stix_objects_from_file(input_path: pathlib.Path) -> list[dict]:
     return [dict(x) for x in objects]
 
 
-def load_configuration(path: pathlib.Path, use_cloud: bool) -> tuple[str | None, str | None, str, str | None, bool]:
+def load_configuration(path: pathlib.Path) -> tuple[str | None, str | None, str | None, str | None, str | None, str]:
     """
     Load configuration from a given JSON file.
     :param path: Path to the configuration file.
     :param use_cloud: Boolean indicating whether to use cloud configuration.
-    :return: Tuple containing (cloud_id, api_key, index, url, auth, use_cloud).
+    :return: Tuple containing (cloud_id, api_key, url, user, password, index).
     """
     c = json.loads(path.read_text())
 
