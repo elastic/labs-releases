@@ -1,0 +1,108 @@
+{
+    "type": "bundle",
+    "id": "bundle--7c4a4b5c-e793-49fc-8803-81fa9f5b8144",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2024-02-27T06:26:26.824Z",
+            "x_opencti_organization_type": "vendor",
+            "x_opencti_reliability": "A",
+            "x_opencti_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_opencti_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--4cb7166a-2ac0-5c1c-b278-fb9eb661cea7",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 3,
+            "created": "2024-08-14T20:23:33.273Z",
+            "modified": "2024-08-14T20:28:20.335Z",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "pattern": "[file:hashes.'SHA-256' = '11aa6eeca2547fcf807129787bec0d576de1a29b56945c5a8fb16ed8bf68f782']",
+            "name": "11aa6eeca2547fcf807129787bec0d576de1a29b56945c5a8fb16ed8bf68f782",
+            "description": "Created by VirusTotal connector as the positive count was >= 10",
+            "valid_from": "2024-08-14T20:28:17.884Z",
+            "valid_until": "2032-07-03T20:28:17.884Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "Artifact",
+            "labels": [
+                "infostealer",
+                "banshee"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Beyond the wail: deconstructing the Banshee infostealer",
+                    "url": "https://elastic.co/security-labs/beyond-the-wail",
+                    "external_id": "Beyond the wail: deconstructing the Banshee infostealer"
+                },
+                {
+                    "source_name": "VirusTotal",
+                    "description": "Mach-O 64-bit x86_64 executable, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|WEAK_DEFINES|BINDS_TO_WEAK|PIE>",
+                    "url": "https://www.virustotal.com/gui/file/11aa6eeca2547fcf807129787bec0d576de1a29b56945c5a8fb16ed8bf68f782"
+                }
+            ],
+            "x_opencti_id": "94c045ba-be5a-4af6-863e-a1a16ca968b4",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7e779504-13be-5129-a1db-f84c48075b26",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-08-14T20:22:44.487Z",
+            "modified": "2024-08-14T20:22:44.540Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '45.142.122.92']",
+            "name": "45.142.122.92",
+            "description": "Simple indicator of observable {45.142.122.92}",
+            "valid_from": "2024-08-14T20:22:44.440Z",
+            "valid_until": "2024-09-13T20:22:44.440Z",
+            "x_opencti_score": 50,
+            "x_opencti_detection": false,
+            "x_opencti_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "c2 server",
+                "infostealer",
+                "banshee"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Beyond the wail: deconstructing the Banshee infostealer",
+                    "url": "https://elastic.co/security-labs/beyond-the-wail",
+                    "external_id": "Beyond the wail: deconstructing the Banshee infostealer"
+                }
+            ],
+            "x_opencti_id": "55dafc3a-c527-42be-8609-90a96c6eed74",
+            "x_opencti_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
