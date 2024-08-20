@@ -621,10 +621,12 @@ def write_ecs_to_elastic(
     cloud_id: str | None,
     api_key: str | None,
     url: str | None,
-    auth: str | None,
+    username: str | None,
+    password: str | None
     index: str,
     verify_certs: bool = True
 ) -> None:
+
     """
     The function writes each ECS indicator to the given Elastic cluster and index.
     :param cloud_id: The Elastic cloud ID (required for cloud).
