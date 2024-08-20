@@ -643,7 +643,8 @@ def write_ecs_to_elastic(
     elif url:
         elastic = elasticsearch.Elasticsearch(
             hosts=[url],  # Wrap the URL in a list
-            http_auth=auth.split(':'),
+            http_auth=(username, password),
+
             verify_certs=verify_certs  # Optional SSL verification flag
         )
     else:
