@@ -10,14 +10,13 @@ import sys
 import elasticsearch
 import typing
 import getpass
-import dataclasses
 
 from stix2 import pattern_visitor
 from stix2 import patterns
 
-AUTHOR = "Cyril François (cyril-t-f)"
-VERSION = "0.2.0"
+AUTHOR = ("Cyril François (cyril-t-f)", "RoDerick Hines (roderickch01)")
 
+VERSION = "0.3.0"
 
 T = typing.TypeVar("T")
 
@@ -189,9 +188,9 @@ class STIXToECSPatternParser(object):
 
         if type(self.data) is dict and (hash := self.data.get("hash", None)):
             # ctf -> SHA256 may not be always available, in this case do we want to crash or take an other algo?
-            observable = hash.get("sha256", None)
+            observable = hash.get("sha256", None) or hash.get("sha1", None) or hash.get("md5", None)
             if not observable:
-                raise RuntimeError("Missing SHA256 observable from set of hashes.")
+                raise RuntimeError("Missing SHA256, SHA1, or MD5 observable from set of hashes.")
         else:
             observable = self.data
 
@@ -216,9 +215,9 @@ class STIXToECSPatternParser(object):
 
 def check_arguments(args: argparse.Namespace) -> bool:
     """
-    The function check if the provided arguments are correctly used.
+    The function checks if the provided arguments are correctly used.
     :param args: The parsed arguments.
-    :return: True if the arguments are corrects, False otherwise.
+    :return: True if the arguments are correct, False otherwise.
     """
 
     if args.recursive and not args.input.is_dir():
@@ -229,14 +228,22 @@ def check_arguments(args: argparse.Namespace) -> bool:
         if args.configuration:
             return True
 
-        for x in ["cloud_id", "index"]:
-            if not getattr(args, x):
-                print(
-                    f"argument --{x} is required to connect to the Elastic cluster (-e, --elastic) unless configuration file is provided (-c, --configuration)"
-                )
-                return False
+        # Check if either cloud_id or url is provided
+        if not args.cloud_id and not args.url:
+            print(
+                "Either argument --cloud_id or --url is required to connect to the Elastic cluster (-e, --elastic) unless configuration file is provided (-c, --configuration)"
+            )
+            return False
+
+        # Check if the index is provided
+        if not args.index:
+            print(
+                "argument --index is required to connect to the Elastic cluster (-e, --elastic) unless configuration file is provided (-c, --configuration)"
+            )
+            return False
 
     return True
+
 
 
 def convert_ecs_word_to_field(word: str) -> str:
@@ -359,7 +366,7 @@ def get_password() -> str:
     """
 
     return getpass.getpass(
-        "Please enter your api key to connect to the Elastic cluster: "
+        "Please enter your api key or password to connect to the Elastic cluster: "
     )
 
 
@@ -401,14 +408,26 @@ def load_stix_objects_from_file(input_path: pathlib.Path) -> list[dict]:
     return [dict(x) for x in objects]
 
 
-def load_configuration(path: pathlib.Path) -> tuple[str, str, str]:
+def load_configuration(path: pathlib.Path) -> tuple[str | None, str | None, str | None, str | None, str | None, str]:
+    """
+    Load configuration from a given JSON file.
+    :param path: Path to the configuration file.
+    :return: Tuple containing (cloud_id, api_key, url, user, password, index).
+    """
+
+    # Load JSON configuration
     c = json.loads(path.read_text())
-    for x in ["cloud_id", "api_key", "index"]:
-        if not c.get(x, None):
-            raise RuntimeError(f'Missing "{x}" in configuration file')
 
-    return c["cloud_id"], c["api_key"], c["index"]
+    # Check for presence of either cloud_id or url
+    if c["cloud_id"] and not all(c.get(k) for k in ["api_key", "index"]):
+        raise ValueError("If cloud_id is provided, api_key and index must also be provided.")
+    elif c["url"] and not all(c.get(k) for k in ["username", "password", "index"]):
+        raise ValueError("If url is provided, username, password, and index must also be provided.")
+    elif not c["cloud_id"] and not c["url"]:
+        raise ValueError("Either cloud_id or url must be provided.")
 
+    # Convert empty strings to None
+    return tuple(c.get(k) if c.get(k) else None for k in ["cloud_id", "api_key", "url", "username", "password","index"])
 
 def main() -> None:
     args = parse_arguments()
@@ -418,27 +437,29 @@ def main() -> None:
 
     if not args.output and not args.elastic:
         print(json.dumps(flatten_list(results), indent=4))
-    else:
-        if args.output:
-            write_ecs_files(zip(files, results), args.output)
+        return
 
-        if args.elastic:
-            if args.configuration:
-                cloud_id, api_key, index = load_configuration(args.configuration)
-            else:
-                cloud_id, api_key, index = (
-                    args.cloud_id,
-                    get_password(),
-                    args.index,
-                )
+    if args.output:
+        write_ecs_files(zip(files, results), args.output)
 
-            write_ecs_to_elastic(flatten_list(results), cloud_id, api_key, index)
+    if args.elastic:
+        if args.configuration:
+            cloud_id, api_key, url, username, password, index = load_configuration(args.configuration)
+        else:
+           cloud_id, api_key, url, username, password, index = (
+               args.cloud_id,
+               get_password() if args.cloud_id else None, #Looks for api key in the original get_pass function.
+               args.url,
+               args.username,
+               get_password() if args.url else None, #Looks for password in the original get_pass function.
+                args.index)
 
+        write_ecs_to_elastic(flatten_list(results), cloud_id, api_key, url, username, password, index, args.verify_certs)      
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         sys.argv[0],
-        description=f"Convert STIX indicator(s) into ECS indicator(s)",
+        description=f"Convert STIX indicator(s) into ECS indicator(s) - Version {VERSION}",
     )
 
     parser.add_argument(
@@ -457,17 +478,33 @@ def parse_arguments() -> argparse.Namespace:
     )
 
     parser.add_argument(
-        "-e", "--elastic", action="store_true", help="Write to Elastic cluster"
+        "-e", "--elastic", action="store_true", help="Use Elastic cloud configuration"
     )
+
 
     parser.add_argument(
         "--cloud-id",
-        help="The cloud ID of the Elastic cluster, required with -e,--elastic",
+        help="The cloud ID of the Elastic cluster, required with -e, --cloud for cloud configurations.",
     )
 
     parser.add_argument(
         "--index",
-        help="Elastic cluster's index where ECS indicators will be written, required with -e,--elastic",
+        help="Elastic cluster's index where ECS indicators will be written, required with -e, for cloud and local",
+    )
+
+    parser.add_argument(
+        "--url", type= str,
+        help="URL of the local Elastic instance, required for local configurations.",
+    )
+
+    parser.add_argument(
+        "--username", type= str,
+        help="Username for local Elastic instance, required for local for local configurations.",
+    )
+
+    parser.add_argument(
+        "--password", type= str,
+        help="Password for local Elastic instance, required for local for local configurations.",
     )
 
     parser.add_argument("-p", "--provider", help="Override ECS provider")
@@ -486,13 +523,20 @@ def parse_arguments() -> argparse.Namespace:
         type=pathlib.Path,
     )
 
+    parser.add_argument(
+        "-x",
+        "--insecure",
+        action="store_false",
+        dest="verify_certs",
+        help="Disable SSL certificate verification (useful for local instances with self-signed certificates)."
+    )
     args = parser.parse_args()
+
     if not check_arguments(args):
         parser.print_usage()
         exit(1)
 
     return args
-
 
 def parse_tlp(markings: list[str]) -> str | None:
     """
@@ -506,7 +550,6 @@ def parse_tlp(markings: list[str]) -> str | None:
             return tlp
     else:
         return None
-
 
 def process_stix_file(input_file: pathlib.Path, provider: str | None) -> list[dict]:
     """
@@ -538,7 +581,6 @@ def process_stix_files(
 
     return [process_stix_file(x, provider) for x in input_files]
 
-
 def write_ecs_files(
     ecs_files: typing.Iterable[tuple[pathlib.Path, ECSIndicators]],
     output_path: pathlib.Path,
@@ -554,35 +596,44 @@ def write_ecs_files(
         with output_path.joinpath(f"{x[0].stem}.ecs.ndjson").open("w") as f:
             f.write("\n".join(json.dumps(x) for x in x[1]))
 
-
 def write_ecs_to_elastic(
     ecs_indicators: ECSIndicators,
-    cloud_id: str,
-    api_key: str,
+    cloud_id: str | None,
+    api_key: str | None,
+    url: str | None,
+    username: str | None,
+    password: str,
     index: str,
+    verify_certs: bool = True
 ) -> None:
+
     """
-    The function write each ECS indicator to the given Elastic cluster and index.
-    :param url: The Elastic cluster URL.
-    :param auth: A tuple containing the username and password to connect to the cluster.
+    The function writes each ECS indicator to the given Elastic cluster and index.
+    :param cloud_id: The Elastic cloud ID (required for cloud).
+    :param api_key: The API key for cloud (required for cloud).
+    :param url: The URL of the local Elastic instance (required for local).
+    :param auth: A string containing the username and password, formatted as 'username:password' (required for local).
     :param index: The index where documents will be written.
+    :param verify_certs: Boolean to determine whether to verify SSL certificates (default is True).
     """
 
-    elastic = elasticsearch.Elasticsearch(
-        cloud_id=cloud_id,
-        api_key=api_key,
-    )
-
-    """
-    if not elastic.ping():
-        raise RuntimeError(
-            f"Failed to connect to Elastic cluster, reason: {elastic.info()}"
+    if cloud_id:
+        elastic = elasticsearch.Elasticsearch(
+            cloud_id=cloud_id,
+            api_key=api_key,
         )
-    """
+    elif url:
+        elastic = elasticsearch.Elasticsearch(
+            hosts=[url],  # Wrap the URL in a list
+            http_auth=(username, password),
+            verify_certs=verify_certs  # Optional SSL verification flag
+        )
+
+    else:
+        raise ValueError("Raise exception because neither `cloud_id` or `url` are provided")
 
     for x in map(format_ecs_indicator_for_elastic, ecs_indicators):
-        elastic.index(index=index, document=x)
-
+            elastic.index(index=index, document=x)
 
 if __name__ == "__main__":
-    main()
+        main()
