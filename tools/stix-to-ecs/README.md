@@ -1,13 +1,30 @@
 <img width="1440" alt="Elastic Security Labs Banner Image" src="https://user-images.githubusercontent.com/7442091/234121634-fd2518cf-70cb-4eee-8134-393c1f712bac.png">
 
-# STIX 2 ECS
+# STIX to ECS
 
-Version: `0.2.0`
+Version: `0.3.1`
 
 This project will take a STIX 2.x formatted JSON document and create an ECS version. There are three output options: STDOUT as JSON, an NDJSON file, and/or directly to an Elasticsearch cluster.
 
 ## Author
-Cyril Francois (@cyril-t-f)
+- Cyril Francois ([@cyril-t-f](https://github.com/cyril-t-f))
+- RoDerick Hines ([@roderickch01](https://github.com/roderickch01))
+
+## Changelog
+### 0.3.1
+  - Added additional STIX pattern hash support: `md5` and `sha1`.
+  - Enhanced connection methods for exporting to an Elastic cluster:
+    - Support for `cloud-id` and `url`.
+    - Authentication via `api-key` or `username` and `password`.
+  - Added support for insecure connections to an Elastic cluster, allowing certificate verification to be disabled.
+  - Various bug fixes and code refactorings.
+
+### 0.2.0
+  - Added support for passing a configuration file as a parameter, enabling storage of `cloud-id` and `api-key`.  By doing so, we hope that the script will be easier to integrate into any automation without requiring user input.
+  - Various bug fixes and code refactorings.
+
+### 0.1.0
+  - Initial release.
 
 ## Prerequisites
 
@@ -30,9 +47,10 @@ python -m pip install -r requirements.txt
 The input is a STIX 2.x JSON document (or a folder of JSON documents); the output defaults to STDOUT, with an option to create an NDJSON file and/or send to an Elasticsearch cluster.
 
 ```text
-usage: .\stix_to_ecs.py [-h] -i INPUT [-o OUTPUT] [-e] [--cloud-id CLOUD_ID] [--index INDEX] [-p PROVIDER] [-r] [-c CONFIGURATION]
+usage: .\stix_to_ecs.py [-h] -i INPUT [-o OUTPUT] [-r] [-e] [-p PROVIDER] [-c CONFIGURATION] [--cloud-id CLOUD_ID]
+                        [--url URL] [--username USERNAME] [--password PASSWORD] [--index INDEX] [-x]
 
-Convert STIX indicator(s) into ECS indicator(s)
+Convert STIX indicator(s) into ECS indicator(s) - Version 0.3.1
 
 options:
   -h, --help            show this help message and exit
@@ -40,33 +58,27 @@ options:
                         STIX input file or directory
   -o OUTPUT, --output OUTPUT
                         ECS output directory
-  -e, --elastic         Write to Elastic cluster
-  --cloud-id CLOUD_ID   The cloud ID of the Elastic cluster, required with -e,--elastic
-  --index INDEX         Elastic cluster's index where ECS indicators will be written, required with -e,--elastic
+  -r, --recursive       Recursive processing when input is a directory
+  -e, --elastic         Use Elastic cloud configuration
   -p PROVIDER, --provider PROVIDER
                         Override ECS provider
-  -r, --recursive       Recursive processing when input is a directory
   -c CONFIGURATION, --configuration CONFIGURATION
-                        Path to the configuration file
+                        Path to the configuration file used to connect to the Elastic cluster, used with --elastic
+  --cloud-id CLOUD_ID   The cloud ID of the Elastic cluster, required with --elastic unless configuration file is
+                        provided (--configuration), can't be provided along --url
+  --url URL             The URL of the Elastic cluster, required with --elastic unless configuration file is provided
+                        (--configuration), can't be provided along --cloud-id
+  --username USERNAME   The username of the Elastic cluster, required with --elastic unless a configuration file is
+                        provided (--configuration)
+  --password PASSWORD   The password of the Elastic cluster, required with --elastic unless a configuration file is
+                        provided (--configuration)
+  --index INDEX         Elastic cluster's index where ECS indicators will be written, required with --elastic unless
+                        configuration file is provided (--configuration)
+  -x, --insecure        Disable TLS certificate verification when connecting to the Elastic cluster
 ```
 
+
 By default, the ECS file is named the same as the STIX file, but with `.ecs.ndjson` appended.
-
-### Options
-
-The script has several options, the only mandatory options are `-i` for the input.
-
-| Option              | Description                                                                                                            |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| -h, --help          | displays the help menu                                                                                                 |
-| -i, --input         | specifies the input STIX document (mandatory)                                                                          |
-| -o, --output        | specifies the output ECS document (optional), if not provided, dfault to output on STDIN                               |
-| -p, --provider      | defines the ECS provider field (optional)                                                                              |
-| -r, --recursive     | recursive mode to convert multiple STIX documents (optional)                                                           |
-| -e, --elastic       | specifies the Elasticsearch output mode (optional)                                                                     |
-| -c, --configuration | specifies the Json configuration file with the required information to connect to the Elastic cluster `-e` (optionnal) |
-| --cloud-id          | defines the Elasticsearch cloud-id, requires `-e` (optional)                                                           |
-| --index             | defines the Elasticsearch index, requires `-e` (optional)                                                              |
 
 ### Examples
 
@@ -199,13 +211,17 @@ Or use the configuration file.
 // configuration.json
 {
     "cloud_id": "your-cloud-id", 
+    "url": "",
     "api_key": "your-api-key", 
+    "username": "",
+    "password": "",
     "index": "stix2ecs"
+
 }
 ```
 
 ```bash
-python .\stix_to_ecs.py -i .\test-inputs\cisa_sample_stix.jso -e -c .\configuration.jsonn
+python .\stix_to_ecs.py -i .\test-inputs\cisa_sample_stix.jso -e -c .\configuration.json
 ```
 
 If you’re storing the data in Elasticsearch for use in another platform, you can view the indicators using cURL.
