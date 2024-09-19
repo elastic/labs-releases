@@ -192,7 +192,7 @@ class STIXToECSPatternParser(object):
 
     def __visit_equality_comparison_expression(self, o) -> STIXToECSPatternParser:
         lhs = o.lhs
-        rhs = o.rhs
+        rhs = patterns.StringConstant(str(o.rhs))
 
         if not (t := type(lhs)) == patterns.ObjectPath:
             raise NotImplemented(t)
