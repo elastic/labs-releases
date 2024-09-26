@@ -1,0 +1,1801 @@
+{
+    "type": "bundle",
+    "id": "bundle--cdf053a0-f7db-4355-9c5b-d0973c728edb",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2024-02-27T06:26:26.824Z",
+            "x_organization_type": "vendor",
+            "x_reliability": "A",
+            "x_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--a92bbd56-5263-5429-8efc-fe4922c62ae0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:53.855Z",
+            "modified": "2024-09-26T01:59:43.589Z",
+            "pattern_type": "stix",
+            "pattern": "[cryptocurrency-wallet:value = '1CSUkd5FZMis5NDauKLDkcpvvgV1zrBCBz']",
+            "name": "1CSUkd5FZMis5NDauKLDkcpvvgV1zrBCBz",
+            "description": "Simple indicator of observable {1CSUkd5FZMis5NDauKLDkcpvvgV1zrBCBz}",
+            "valid_from": "2024-09-26T01:58:53.826Z",
+            "valid_until": "2025-09-26T01:58:53.826Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Cryptocurrency-Wallet",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "022c315e-8044-4039-9851-e650089def99",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e0511676-8a96-5090-9003-e42693ed1df0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:53.667Z",
+            "modified": "2024-09-26T01:59:43.481Z",
+            "pattern_type": "stix",
+            "pattern": "[cryptocurrency-wallet:value = '42CJPfp1jJ6PXv4cbjXbBRMhp9YUZsXH6V5kEvp7XzNGKLnuTNZQVU9bhxsqBEMstvDwymNSysietQ5VubezYfoq4fT4Ptc']",
+            "name": "42CJPfp1jJ6PXv4cbjXbBRMhp9YUZsXH6V5kEvp7XzNGKLnuTNZQVU9bhxsqBEMstvDwymNSysietQ5VubezYfoq4fT4Ptc",
+            "description": "Simple indicator of observable {42CJPfp1jJ6PXv4cbjXbBRMhp9YUZsXH6V5kEvp7XzNGKLnuTNZQVU9bhxsqBEMstvDwymNSysietQ5VubezYfoq4fT4Ptc}",
+            "valid_from": "2024-09-26T01:58:53.638Z",
+            "valid_until": "2025-09-26T01:58:53.638Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Cryptocurrency-Wallet",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "5d167fb7-9e1c-4db8-9f53-9d3da414f709",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--be519170-e915-5043-9dcb-b03834cc07e0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:53.468Z",
+            "modified": "2024-09-26T01:59:43.379Z",
+            "pattern_type": "stix",
+            "pattern": "[cryptocurrency-wallet:value = '41qBGWTRXUoUMGXsr78Aie3LYCBSDGZyaQeceMxn11qi9av1adZqsVWCrUwhhwqrt72qTzMbweeqMbA89mnFepja9XERfHL']",
+            "name": "41qBGWTRXUoUMGXsr78Aie3LYCBSDGZyaQeceMxn11qi9av1adZqsVWCrUwhhwqrt72qTzMbweeqMbA89mnFepja9XERfHL",
+            "description": "Simple indicator of observable {41qBGWTRXUoUMGXsr78Aie3LYCBSDGZyaQeceMxn11qi9av1adZqsVWCrUwhhwqrt72qTzMbweeqMbA89mnFepja9XERfHL}",
+            "valid_from": "2024-09-26T01:58:53.439Z",
+            "valid_until": "2025-09-26T01:58:53.439Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Cryptocurrency-Wallet",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "75edc7d2-03ee-4bcb-9089-7cbbf399ffac",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ad378430-2f29-5eb9-adcf-e8ea11094a7a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:53.265Z",
+            "modified": "2024-09-26T01:59:43.279Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '72ac2877c9e4cd7d70673c0643eb16805977a9b8d55b6b2e5a6491db565cee1f' OR file:hashes.'SHA-1' = 'a7fad4de1ce0ed2c137c09d4bf9fe7276555f4a0' OR file:hashes.MD5 = '7429d24207b100f6c164bf4703b5941e']",
+            "name": "72ac2877c9e4cd7d70673c0643eb16805977a9b8d55b6b2e5a6491db565cee1f",
+            "description": "Simple indicator of observable {72ac2877c9e4cd7d70673c0643eb16805977a9b8d55b6b2e5a6491db565cee1f}",
+            "valid_from": "2024-09-26T01:58:53.232Z",
+            "valid_until": "2025-09-26T01:58:53.232Z",
+            "x_score": 67,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "detect-debug-environment",
+                "elf",
+                "checks-cpu-name",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "9cd98e99-7902-4b11-a47d-a02b04260cee",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0fc7f430-558c-52c2-a040-c2d8e722fd19",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:53.057Z",
+            "modified": "2024-09-26T01:59:43.171Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '82c55c169b6cb5e348be6e202163296b2b5d80fff2be791c21da9a8b84188684']",
+            "name": "82c55c169b6cb5e348be6e202163296b2b5d80fff2be791c21da9a8b84188684",
+            "description": "Simple indicator of observable {82c55c169b6cb5e348be6e202163296b2b5d80fff2be791c21da9a8b84188684}",
+            "valid_from": "2024-09-26T01:58:53.027Z",
+            "valid_until": "2025-09-26T01:58:53.027Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "1ccfb912-bd34-43e2-aa45-2908cd4b3305",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7a28de55-bde1-586a-8f0d-5febcf33fc61",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:52.852Z",
+            "modified": "2024-09-26T01:59:43.070Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '0fede7231267afc03b096ee6c1d3ded479b10ab235e260120bc9f68dd1fc54dd' OR file:hashes.'SHA-1' = 'bc672f24b271d32973927f6cb68c4c898cb820e8' OR file:hashes.MD5 = '883580ab79bfe83a6f66972b550ea452']",
+            "name": "0fede7231267afc03b096ee6c1d3ded479b10ab235e260120bc9f68dd1fc54dd",
+            "description": "Simple indicator of observable {0fede7231267afc03b096ee6c1d3ded479b10ab235e260120bc9f68dd1fc54dd}",
+            "valid_from": "2024-09-26T01:58:52.820Z",
+            "valid_until": "2025-09-26T01:58:52.820Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "upx",
+                "elf",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "e4417c91-bb88-490d-ab61-5bd045b20e9a",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--421966eb-9d7c-57ff-9f6b-bdaf96c6d8eb",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:52.575Z",
+            "modified": "2024-09-26T01:59:42.964Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '9ee695e55907a99f097c4c0ad4eb24ae5cf3f8215e9904d787817f1becb9449e' OR file:hashes.'SHA-1' = '07b20f52e7a1b8f4e1f715930ecebca3adb31aa7' OR file:hashes.MD5 = '9ca990fd6b8ae828586441a0970a2a7c']",
+            "name": "9ee695e55907a99f097c4c0ad4eb24ae5cf3f8215e9904d787817f1becb9449e",
+            "description": "Simple indicator of observable {9ee695e55907a99f097c4c0ad4eb24ae5cf3f8215e9904d787817f1becb9449e}",
+            "valid_from": "2024-09-26T01:58:52.543Z",
+            "valid_until": "2025-09-26T01:58:52.543Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "long-sleeps",
+                "persistence",
+                "self-delete",
+                "detect-debug-environment",
+                "checks-hostname",
+                "ref6138",
+                "sets-process-name",
+                "shell",
+                "service-scan"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "c005f884-ce30-47bd-b4e0-e22be20ed16d",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e9cc3cd2-4efc-5018-ab31-6b94cce46509",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:52.371Z",
+            "modified": "2024-09-26T01:59:42.855Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '1cdfb522acb1ad0745a4b88f072e40bf9aa113b63030fe002728bac50a46ae79']",
+            "name": "1cdfb522acb1ad0745a4b88f072e40bf9aa113b63030fe002728bac50a46ae79",
+            "description": "Simple indicator of observable {1cdfb522acb1ad0745a4b88f072e40bf9aa113b63030fe002728bac50a46ae79}",
+            "valid_from": "2024-09-26T01:58:52.342Z",
+            "valid_until": "2025-09-26T01:58:52.342Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "81e98f4b-4a47-416e-9cea-097ee918b3a3",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--03360364-8f72-5146-a5d2-183e788c79df",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:52.172Z",
+            "modified": "2024-09-26T01:59:42.709Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'd0ef2f020082556884361914114429ed82611ef8de09d878431745ccd07c06d8' OR file:hashes.'SHA-1' = '85e135309f96aeb1887e45f037803d3e6a3cc160' OR file:hashes.MD5 = 'bf782da0cacf70df1dec8cffa5d285ed']",
+            "name": "d0ef2f020082556884361914114429ed82611ef8de09d878431745ccd07c06d8",
+            "description": "Simple indicator of observable {d0ef2f020082556884361914114429ed82611ef8de09d878431745ccd07c06d8}",
+            "valid_from": "2024-09-26T01:58:52.141Z",
+            "valid_until": "2025-09-26T01:58:52.141Z",
+            "x_score": 61,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "long-sleeps",
+                "detect-debug-environment",
+                "elf",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "a6ed7741-f7b4-4b6f-a8b6-7a54ffbb018c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7244220f-7328-5231-b6ab-36011be5680f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:51.971Z",
+            "modified": "2024-09-26T01:59:42.606Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'ad36cf59b5eb08799a50e9aece6f12cdfe8620062606ac6684d3b4509acc681b']",
+            "name": "ad36cf59b5eb08799a50e9aece6f12cdfe8620062606ac6684d3b4509acc681b",
+            "description": "Simple indicator of observable {ad36cf59b5eb08799a50e9aece6f12cdfe8620062606ac6684d3b4509acc681b}",
+            "valid_from": "2024-09-26T01:58:51.943Z",
+            "valid_until": "2025-09-26T01:58:51.943Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "4d42256a-22c5-47bc-be92-f771d6800f24",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--3f1173b5-3da2-5f6f-8c07-8bd7161ffd29",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:51.766Z",
+            "modified": "2024-09-26T01:59:42.502Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '792a84a5bc8530285e2f6eb997054edb3d43460a99a089468e2cf81b5fd5cde6']",
+            "name": "792a84a5bc8530285e2f6eb997054edb3d43460a99a089468e2cf81b5fd5cde6",
+            "description": "Simple indicator of observable {792a84a5bc8530285e2f6eb997054edb3d43460a99a089468e2cf81b5fd5cde6}",
+            "valid_from": "2024-09-26T01:58:51.739Z",
+            "valid_until": "2025-09-26T01:58:51.739Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "c5c7d17d-9548-421b-a81c-476450089d7b",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7d3b67c8-ff2b-5267-a2d1-116358e43c0c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:51.566Z",
+            "modified": "2024-09-26T01:59:42.395Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'e19fb249db323d2388e91f92ff0c8a7a169caf34c3bdaf4d3544ce6bfb8b88b4']",
+            "name": "e19fb249db323d2388e91f92ff0c8a7a169caf34c3bdaf4d3544ce6bfb8b88b4",
+            "description": "Simple indicator of observable {e19fb249db323d2388e91f92ff0c8a7a169caf34c3bdaf4d3544ce6bfb8b88b4}",
+            "valid_from": "2024-09-26T01:58:51.538Z",
+            "valid_until": "2025-09-26T01:58:51.538Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "6a3d009b-a4d9-478e-a8dc-81b7e7df6553",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--1c64d2d4-11b9-5ae7-80c4-17812e9a5e45",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:51.376Z",
+            "modified": "2024-09-26T01:59:42.291Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '3847c06f95dd92ec482212116408286986bb4b711e27def446fb4a524611b745']",
+            "name": "3847c06f95dd92ec482212116408286986bb4b711e27def446fb4a524611b745",
+            "description": "Simple indicator of observable {3847c06f95dd92ec482212116408286986bb4b711e27def446fb4a524611b745}",
+            "valid_from": "2024-09-26T01:58:51.349Z",
+            "valid_until": "2025-09-26T01:58:51.349Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "3a476505-4e14-432d-990c-8d08faef41af",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--164a67da-51bb-5433-93e7-229a1d0eed11",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:51.186Z",
+            "modified": "2024-09-26T01:59:42.187Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'fffee23324813743b8660282ccd745daa6fb058f2bf84b9960f70d888cd33ba0']",
+            "name": "fffee23324813743b8660282ccd745daa6fb058f2bf84b9960f70d888cd33ba0",
+            "description": "Simple indicator of observable {fffee23324813743b8660282ccd745daa6fb058f2bf84b9960f70d888cd33ba0}",
+            "valid_from": "2024-09-26T01:58:51.157Z",
+            "valid_until": "2025-09-26T01:58:51.157Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "d8aa2eb1-7028-475c-b9d8-98d715631255",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--6c9c308f-7b62-5ff3-bf17-e8cee4f35f6c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:50.991Z",
+            "modified": "2024-09-26T01:59:42.084Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '6d40b58e97c7b4c34f7b5bdac88f46e943e25faa887e0e6ce5f2855008e83f55']",
+            "name": "6d40b58e97c7b4c34f7b5bdac88f46e943e25faa887e0e6ce5f2855008e83f55",
+            "description": "Simple indicator of observable {6d40b58e97c7b4c34f7b5bdac88f46e943e25faa887e0e6ce5f2855008e83f55}",
+            "valid_from": "2024-09-26T01:58:50.962Z",
+            "valid_until": "2025-09-26T01:58:50.962Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "903ed771-5b44-49e3-b048-7359e5a9479c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ace78f23-0573-58eb-b0b3-934a6c8ee60c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:50.791Z",
+            "modified": "2024-09-26T01:59:41.980Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '0c3442b8c49844a1ee41705a9e4a710ae3c7cde76c69c2eab733366b2aa34814']",
+            "name": "0c3442b8c49844a1ee41705a9e4a710ae3c7cde76c69c2eab733366b2aa34814",
+            "description": "Simple indicator of observable {0c3442b8c49844a1ee41705a9e4a710ae3c7cde76c69c2eab733366b2aa34814}",
+            "valid_from": "2024-09-26T01:58:50.762Z",
+            "valid_until": "2025-09-26T01:58:50.762Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "78e05ded-cacf-4528-be8d-35b1dbf7c15c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9934bc7a-df4a-55d9-9214-7aa39bf0f8f5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:50.602Z",
+            "modified": "2024-09-26T01:59:41.878Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '310973f6f186947cb7cff0e7b46b4645acdd71e90104f334caa88a4fa8ad9988']",
+            "name": "310973f6f186947cb7cff0e7b46b4645acdd71e90104f334caa88a4fa8ad9988",
+            "description": "Simple indicator of observable {310973f6f186947cb7cff0e7b46b4645acdd71e90104f334caa88a4fa8ad9988}",
+            "valid_from": "2024-09-26T01:58:50.573Z",
+            "valid_until": "2025-09-26T01:58:50.573Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "8713b95e-7d93-4e50-807d-4f76207eb4e8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--52eca3ad-26fb-581c-9d18-cf6cb92e9dd5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:50.403Z",
+            "modified": "2024-09-26T01:59:41.771Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '0d24a2e7da52bad03b0bda45c8435a29c4e1c9b483e425ae71b79fd122598527']",
+            "name": "0d24a2e7da52bad03b0bda45c8435a29c4e1c9b483e425ae71b79fd122598527",
+            "description": "Simple indicator of observable {0d24a2e7da52bad03b0bda45c8435a29c4e1c9b483e425ae71b79fd122598527}",
+            "valid_from": "2024-09-26T01:58:50.374Z",
+            "valid_until": "2025-09-26T01:58:50.374Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "e1c16252-27a6-4466-b314-8b14864e5531",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0fc2249c-035f-532c-9016-2fcb0ac1113d",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:50.207Z",
+            "modified": "2024-09-26T01:59:41.669Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '36fc8eef2e1574e00ba3cf9e2267d4d295f6e9f138474e3bd85eb4d215f63196']",
+            "name": "36fc8eef2e1574e00ba3cf9e2267d4d295f6e9f138474e3bd85eb4d215f63196",
+            "description": "Simple indicator of observable {36fc8eef2e1574e00ba3cf9e2267d4d295f6e9f138474e3bd85eb4d215f63196}",
+            "valid_from": "2024-09-26T01:58:50.178Z",
+            "valid_until": "2025-09-26T01:58:50.178Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "fe196534-cb46-4d2d-991b-84b661cc6506",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0575903e-67f8-5e40-bdcc-084f7cd7f118",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:50.009Z",
+            "modified": "2024-09-26T01:59:41.566Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '3c25a4406787cc5089e83e00350e49eb9f192d03d69e7a61b780b6828db1344f']",
+            "name": "3c25a4406787cc5089e83e00350e49eb9f192d03d69e7a61b780b6828db1344f",
+            "description": "Simple indicator of observable {3c25a4406787cc5089e83e00350e49eb9f192d03d69e7a61b780b6828db1344f}",
+            "valid_from": "2024-09-26T01:58:49.979Z",
+            "valid_until": "2025-09-26T01:58:49.979Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "78a715e5-0b5e-40fa-b6b1-1aa2cae3f020",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5d5c2130-8470-5431-8b55-e05dd87c3dac",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:49.794Z",
+            "modified": "2024-09-26T01:59:41.466Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '7c16149db7766c6fd89f28031aa123408228f045e90aa03828c02562d9f9d1d7']",
+            "name": "7c16149db7766c6fd89f28031aa123408228f045e90aa03828c02562d9f9d1d7",
+            "description": "Simple indicator of observable {7c16149db7766c6fd89f28031aa123408228f045e90aa03828c02562d9f9d1d7}",
+            "valid_from": "2024-09-26T01:58:49.764Z",
+            "valid_until": "2025-09-26T01:58:49.764Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "cb0d118b-d687-4091-91d0-404a05ac20a8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--de9a1384-a9be-5c2e-a65a-d35890e3b033",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:49.577Z",
+            "modified": "2024-09-26T01:59:41.363Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '09f935acbac36d224acfb809ad82c475d53d74ab505f057f5ac40611d7c3dbe7' OR file:hashes.'SHA-1' = '85e022c4844e61924aef2ceb762e413cecf1f55c' OR file:hashes.MD5 = '69fbc5a9a30e443e66f0c4d290ace01f']",
+            "name": "09f935acbac36d224acfb809ad82c475d53d74ab505f057f5ac40611d7c3dbe7",
+            "description": "Simple indicator of observable {09f935acbac36d224acfb809ad82c475d53d74ab505f057f5ac40611d7c3dbe7}",
+            "valid_from": "2024-09-26T01:58:49.547Z",
+            "valid_until": "2025-09-26T01:58:49.547Z",
+            "x_score": 67,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "persistence",
+                "detect-debug-environment",
+                "elf",
+                "checks-cpu-name",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "6aa63c30-6af7-4a70-a819-15b70b49787f",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--c6f44680-c0fa-5d2b-b49d-3e37088023cc",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:49.374Z",
+            "modified": "2024-09-26T01:59:41.256Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'ea0068702ea65725700b1dad73affe68cf29705c826d12a497dccf92d3cded46' OR file:hashes.'SHA-1' = '59888e7a8aae7ed96f44eefc64f282f30dee9d74' OR file:hashes.MD5 = '817ce41e3c4bbb5e198a2688122a4e7f']",
+            "name": "ea0068702ea65725700b1dad73affe68cf29705c826d12a497dccf92d3cded46",
+            "description": "Simple indicator of observable {ea0068702ea65725700b1dad73affe68cf29705c826d12a497dccf92d3cded46}",
+            "valid_from": "2024-09-26T01:58:49.343Z",
+            "valid_until": "2025-09-26T01:58:49.343Z",
+            "x_score": 53,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "persistence",
+                "detect-debug-environment",
+                "elf",
+                "checks-cpu-name",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "c9a6edd4-5f0c-4e44-8553-d7a4ed2cc136",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--6c94ca28-375d-503f-8ab6-7c77c2879546",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:49.154Z",
+            "modified": "2024-09-26T01:59:41.145Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '160f232566968ade54ee875def81fc4ca69e5507faae0fceb5bef6139346496a' OR file:hashes.'SHA-1' = 'fd81d1609f2db0ab049e5bd5878d9e3c327057d9' OR file:hashes.MD5 = '5a9613c8d03bdc1e088ef26f1befd2a7']",
+            "name": "160f232566968ade54ee875def81fc4ca69e5507faae0fceb5bef6139346496a",
+            "description": "Simple indicator of observable {160f232566968ade54ee875def81fc4ca69e5507faae0fceb5bef6139346496a}",
+            "valid_from": "2024-09-26T01:58:49.120Z",
+            "valid_until": "2025-09-26T01:58:49.120Z",
+            "x_score": 53,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "persistence",
+                "detect-debug-environment",
+                "exploit",
+                "elf",
+                "checks-cpu-name",
+                "ref6138",
+                "cve-2016-0101"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "89801f94-4664-41bd-a36c-5171361a1bc7",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--16f01b80-c17b-5810-978f-4f485712e090",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:48.943Z",
+            "modified": "2024-09-26T01:59:41.036Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '89b60cedc3a4efb02ceaf629d6675ec9541addae4689489f3ab8ec7741ec8055' OR file:hashes.'SHA-1' = '67b6af64384e58fe021e25254261f36b4e57e1df' OR file:hashes.MD5 = '1f89a0a6968d307da93241b62e5cd3c2']",
+            "name": "89b60cedc3a4efb02ceaf629d6675ec9541addae4689489f3ab8ec7741ec8055",
+            "description": "Simple indicator of observable {89b60cedc3a4efb02ceaf629d6675ec9541addae4689489f3ab8ec7741ec8055}",
+            "valid_from": "2024-09-26T01:58:48.910Z",
+            "valid_until": "2025-09-26T01:58:48.910Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "persistence",
+                "detect-debug-environment",
+                "exploit",
+                "elf",
+                "checks-cpu-name",
+                "ref6138",
+                "cve-2016-0101"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "13365a9d-37c1-42b0-90e0-eb82b3dd425b",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--69230019-7f83-5f84-9e7e-9cb25b8c2a66",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:48.736Z",
+            "modified": "2024-09-26T01:59:40.928Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '20899c5e2ecd94b9e0a8d1af0114332c408fb65a6eb3837d4afee000b2a0941b' OR file:hashes.'SHA-1' = '430bc2e67af4ca229f1b1a460536fd6969a0524b' OR file:hashes.MD5 = 'eb56533cff0b2a027faaeb44f55c8d6a']",
+            "name": "20899c5e2ecd94b9e0a8d1af0114332c408fb65a6eb3837d4afee000b2a0941b",
+            "description": "Simple indicator of observable {20899c5e2ecd94b9e0a8d1af0114332c408fb65a6eb3837d4afee000b2a0941b}",
+            "valid_from": "2024-09-26T01:58:48.704Z",
+            "valid_until": "2025-09-26T01:58:48.704Z",
+            "x_score": 69,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "persistence",
+                "detect-debug-environment",
+                "elf",
+                "checks-cpu-name",
+                "spreader",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "540e7742-33bc-4da3-a9ff-cf41c7721b6d",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--9dd7dd7c-f799-5fbc-af86-aab6e6eb0ebe",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:48.504Z",
+            "modified": "2024-09-26T01:59:40.818Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '728dce11ffd7eb35f80553d0b2bc82191fe9ff8f0d0750fcca04d0e77d5be28c' OR file:hashes.'SHA-1' = '78fe0792b9a49f7a3e611b4640b686da4da4547e' OR file:hashes.MD5 = '2933ad2f25ebd111785acee13f3f3b28']",
+            "name": "728dce11ffd7eb35f80553d0b2bc82191fe9ff8f0d0750fcca04d0e77d5be28c",
+            "description": "Simple indicator of observable {728dce11ffd7eb35f80553d0b2bc82191fe9ff8f0d0750fcca04d0e77d5be28c}",
+            "valid_from": "2024-09-26T01:58:48.472Z",
+            "valid_until": "2025-09-26T01:58:48.472Z",
+            "x_score": 53,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "persistence",
+                "detect-debug-environment",
+                "elf",
+                "checks-cpu-name",
+                "spreader",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "3e372ead-9bef-4dc8-a43d-5003cf4f199c",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--deb1bb50-a2bc-505e-b7ad-706ab7619dbb",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:48.293Z",
+            "modified": "2024-09-26T01:59:40.714Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '47ceca049bfcb894c9a229e7234e8146d8aeda6edd1629bc4822ab826b5b9a40' OR file:hashes.'SHA-1' = '2c18b90ea30236acd3ec5550aa985ee4840d96d6' OR file:hashes.MD5 = 'dd83f4a35500ad0b3d96e418ddeec937']",
+            "name": "47ceca049bfcb894c9a229e7234e8146d8aeda6edd1629bc4822ab826b5b9a40",
+            "description": "Simple indicator of observable {47ceca049bfcb894c9a229e7234e8146d8aeda6edd1629bc4822ab826b5b9a40}",
+            "valid_from": "2024-09-26T01:58:48.260Z",
+            "valid_until": "2025-09-26T01:58:48.260Z",
+            "x_score": 65,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "persistence",
+                "detect-debug-environment",
+                "elf",
+                "checks-cpu-name",
+                "spreader",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "12146855-2c16-42ae-a2dc-0034a751dba4",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--6e1a84e5-31eb-55ef-96ee-c9a4c960b471",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:48.081Z",
+            "modified": "2024-09-26T01:59:40.611Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'e89f4073490e48aa03ec0256d0bfa6cf9c9ac6feb271a23cb6bc571170d1bcb5' OR file:hashes.'SHA-1' = '4eb20ce62a3c24bced94e00af15b74a88e558ea8' OR file:hashes.MD5 = '55115d2fd4cc3d8d357f3ab1b7770082']",
+            "name": "e89f4073490e48aa03ec0256d0bfa6cf9c9ac6feb271a23cb6bc571170d1bcb5",
+            "description": "Simple indicator of observable {e89f4073490e48aa03ec0256d0bfa6cf9c9ac6feb271a23cb6bc571170d1bcb5}",
+            "valid_from": "2024-09-26T01:58:48.051Z",
+            "valid_until": "2025-09-26T01:58:48.051Z",
+            "x_score": 53,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "persistence",
+                "detect-debug-environment",
+                "elf",
+                "checks-cpu-name",
+                "spreader",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "aa939a90-8c95-484c-910f-fecc71aae2d7",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d3474924-120c-58e6-a904-b8b26bee8c7f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:47.863Z",
+            "modified": "2024-09-26T01:59:40.507Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'd6350d8a664b3585108ee2b6f04f031d478e97a53962786b18e4780a3ca3da60' OR file:hashes.'SHA-1' = '76daedc184a0cb9a717fc49f86a57b5baed0a35c' OR file:hashes.MD5 = 'a2af48a018c65d34b445bd35bdd1b597']",
+            "name": "d6350d8a664b3585108ee2b6f04f031d478e97a53962786b18e4780a3ca3da60",
+            "description": "Simple indicator of observable {d6350d8a664b3585108ee2b6f04f031d478e97a53962786b18e4780a3ca3da60}",
+            "valid_from": "2024-09-26T01:58:47.826Z",
+            "valid_until": "2025-09-26T01:58:47.826Z",
+            "x_score": 88,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "malware",
+                "peexe",
+                "checks-network-adapters",
+                "long-sleeps",
+                "persistence",
+                "detect-debug-environment",
+                "calls-wmi",
+                "checks-cpu-name",
+                "spreader",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "9d48c253-bb78-4d05-993b-e67d4689a516",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--813a5eca-41f7-520d-8926-25fc5f09154c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:47.606Z",
+            "modified": "2024-09-26T01:59:40.400Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '54a5c82e4c68c399f56f0af6bde9fb797122239f0ebb8bcdb302e7c4fb02e1de' OR file:hashes.'SHA-1' = '4d650cfd3846dd3148fc62df7564ecd4bec965bc' OR file:hashes.MD5 = '41f880f7904c9cdd0279abc69ae08327']",
+            "name": "54a5c82e4c68c399f56f0af6bde9fb797122239f0ebb8bcdb302e7c4fb02e1de",
+            "description": "Simple indicator of observable {54a5c82e4c68c399f56f0af6bde9fb797122239f0ebb8bcdb302e7c4fb02e1de}",
+            "valid_from": "2024-09-26T01:58:47.552Z",
+            "valid_until": "2025-09-26T01:58:47.552Z",
+            "x_score": 77,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "64bits",
+                "peexe",
+                "long-sleeps",
+                "persistence",
+                "detect-debug-environment",
+                "calls-wmi",
+                "checks-cpu-name",
+                "spreader",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "5d83acbe-4a23-404f-9956-6ed57359fb0f",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--47f2cb41-79c9-5214-92bd-dc1fbfac6237",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:47.372Z",
+            "modified": "2024-09-26T01:59:40.293Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '9e32be17b25d3a6c00ebbfd03114a0947361b4eaf4b0e9d6349cbb95350bf976' OR file:hashes.'SHA-1' = '6ba5005d63ae7962e73cee4d35eb7f9d184ff353' OR file:hashes.MD5 = 'f65b34895b65477691d56a680c5aedf3']",
+            "name": "9e32be17b25d3a6c00ebbfd03114a0947361b4eaf4b0e9d6349cbb95350bf976",
+            "description": "Simple indicator of observable {9e32be17b25d3a6c00ebbfd03114a0947361b4eaf4b0e9d6349cbb95350bf976}",
+            "valid_from": "2024-09-26T01:58:47.339Z",
+            "valid_until": "2025-09-26T01:58:47.339Z",
+            "x_score": 89,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "peexe",
+                "checks-user-input",
+                "long-sleeps",
+                "checks-disk-space",
+                "detect-debug-environment",
+                "calls-wmi",
+                "checks-cpu-name",
+                "spreader",
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "8e49a6dd-015a-431a-a174-d69e3f348af3",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--41a5a747-f746-5b98-aa4b-9a0c63e3bf1f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:47.157Z",
+            "modified": "2024-09-26T01:59:40.181Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://gcp.pagaelrescate.com:8080/ifindyou']",
+            "name": "http://gcp.pagaelrescate.com:8080/ifindyou",
+            "description": "Simple indicator of observable {http://gcp.pagaelrescate.com:8080/ifindyou}",
+            "valid_from": "2024-09-26T01:58:47.124Z",
+            "valid_until": "2024-11-25T01:58:47.124Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "015d96fe-9f9f-448e-95d4-ce36a68b8aec",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--5604647d-401d-59d8-91fe-80d789381847",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:46.947Z",
+            "modified": "2024-09-26T01:59:40.071Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://gcp.pagaelrescate.com:8080/cycnet']",
+            "name": "http://gcp.pagaelrescate.com:8080/cycnet",
+            "description": "Simple indicator of observable {http://gcp.pagaelrescate.com:8080/cycnet}",
+            "valid_from": "2024-09-26T01:58:46.920Z",
+            "valid_until": "2024-11-25T01:58:46.920Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "42fd1db7-2136-4aee-9b8f-9fe28c11dc67",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--bfa0b6f8-a280-5a83-9892-42bc98278469",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:46.748Z",
+            "modified": "2024-09-26T01:59:39.960Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://gcp.pagaelrescate.com:8080/testslot/enviador_slot']",
+            "name": "http://gcp.pagaelrescate.com:8080/testslot/enviador_slot",
+            "description": "Simple indicator of observable {http://gcp.pagaelrescate.com:8080/testslot/enviador_slot}",
+            "valid_from": "2024-09-26T01:58:46.719Z",
+            "valid_until": "2024-11-25T01:58:46.719Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "ed1ba711-9e57-4980-8ce6-38459e8b9618",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--ea5ede46-79a2-5853-b017-a624c642e5f0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:46.540Z",
+            "modified": "2024-09-26T01:59:39.856Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://gcp.pagaelrescate.com:8080/t9r/SystemdXC']",
+            "name": "http://gcp.pagaelrescate.com:8080/t9r/SystemdXC",
+            "description": "Simple indicator of observable {http://gcp.pagaelrescate.com:8080/t9r/SystemdXC}",
+            "valid_from": "2024-09-26T01:58:46.513Z",
+            "valid_until": "2024-11-25T01:58:46.513Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "49299c75-d895-4b4f-8619-0687e7fbc917",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b2118191-df4a-5181-98f1-77852ea970bf",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:46.347Z",
+            "modified": "2024-09-26T01:59:39.748Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://38.54.125.192:8080/nginx-rc']",
+            "name": "http://38.54.125.192:8080/nginx-rc",
+            "description": "Simple indicator of observable {http://38.54.125.192:8080/nginx-rc}",
+            "valid_from": "2024-09-26T01:58:46.319Z",
+            "valid_until": "2024-11-25T01:58:46.319Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "515a07ca-4aac-4d03-94a3-8c69dab18380",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--a12db5a3-5eee-53ca-843f-9897de2ffd82",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:46.152Z",
+            "modified": "2024-09-26T01:59:39.646Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://62.72.22.91/apache2']",
+            "name": "http://62.72.22.91/apache2",
+            "description": "Simple indicator of observable {http://62.72.22.91/apache2}",
+            "valid_from": "2024-09-26T01:58:46.120Z",
+            "valid_until": "2024-11-25T01:58:46.120Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "58b13b0b-572d-403c-9df3-e7c920200010",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b9d28860-e0ae-5bf9-be07-0208da7446cd",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:45.921Z",
+            "modified": "2024-09-26T01:59:39.538Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://62.72.22.91/apache2v86']",
+            "name": "http://62.72.22.91/apache2v86",
+            "description": "Simple indicator of observable {http://62.72.22.91/apache2v86}",
+            "valid_from": "2024-09-26T01:58:45.864Z",
+            "valid_until": "2024-11-25T01:58:45.864Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "6f13a52c-49b4-4a46-9d38-300f38bb99b4",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--25c1eb8c-1363-56bb-a600-ece37739f367",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:45.696Z",
+            "modified": "2024-09-26T01:59:39.434Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = 'http://91.92.241.103:8002/gk.php']",
+            "name": "http://91.92.241.103:8002/gk.php",
+            "description": "Simple indicator of observable {http://91.92.241.103:8002/gk.php}",
+            "valid_from": "2024-09-26T01:58:45.666Z",
+            "valid_until": "2024-11-25T01:58:45.666Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "3cf3cfe7-8437-4777-ac4f-fdc1db9fad03",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--bedc0748-8ad3-54d1-a4ec-86a4d649fe79",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:44.987Z",
+            "modified": "2024-09-26T01:59:39.325Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'gcp.pagaelrescate.com']",
+            "name": "gcp.pagaelrescate.com",
+            "description": "malware hosting domain",
+            "valid_from": "2024-09-26T01:58:44.957Z",
+            "valid_until": "2025-09-26T01:58:44.957Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "eb69ac06-dc40-410f-99eb-441da692ad20",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--0d9e14f0-ea1c-5c87-b1bc-cfbc5c7f5afe",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:44.786Z",
+            "modified": "2024-09-26T01:59:39.223Z",
+            "pattern_type": "stix",
+            "pattern": "[domain-name:value = 'nishabii.xyz']",
+            "name": "nishabii.xyz",
+            "description": "RUDEDEVIL C2",
+            "valid_from": "2024-09-26T01:58:44.757Z",
+            "valid_until": "2025-09-26T01:58:44.757Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "a1d055d0-50ef-4ab2-bbfe-198f1b34c695",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--2fce694e-81c6-5194-be3a-88e8742a836b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:44.572Z",
+            "modified": "2024-09-26T01:59:39.118Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '3.147.53.183']",
+            "name": "3.147.53.183",
+            "description": "Python Reverse Shell C2",
+            "valid_from": "2024-09-26T01:58:44.543Z",
+            "valid_until": "2024-10-26T01:58:44.543Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "0f251927-fdd5-4153-b552-97d9650cd8fe",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--7484f5ac-f491-5103-a7a4-22a17ef7cda1",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:44.369Z",
+            "modified": "2024-09-26T01:59:39.014Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '38.54.125.192']",
+            "name": "38.54.125.192",
+            "description": "C2 Server",
+            "valid_from": "2024-09-26T01:58:44.340Z",
+            "valid_until": "2024-10-26T01:58:44.340Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "d5594313-aef9-4636-93f1-13d1e28bfc58",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--bcdb1fae-3aab-59ca-abc5-a0d6d0455858",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:44.164Z",
+            "modified": "2024-09-26T01:59:38.908Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '107.178.101.245']",
+            "name": "107.178.101.245",
+            "description": "Malware File Server (Rejetto)",
+            "valid_from": "2024-09-26T01:58:44.132Z",
+            "valid_until": "2024-10-26T01:58:44.132Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "ae8893b3-75ea-401f-a40a-a5e2d7cc6ac8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--fb48cdc8-de67-5e75-99b7-01146af2c88b",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:43.942Z",
+            "modified": "2024-09-26T01:59:38.801Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '62.72.22.91']",
+            "name": "62.72.22.91",
+            "description": "Server Hosting Malware",
+            "valid_from": "2024-09-26T01:58:43.909Z",
+            "valid_until": "2024-10-26T01:58:43.909Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "1289f327-9323-41c6-aa8c-b0772edfe382",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--bf05383b-6336-5496-a241-3788f7ecac44",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-09-26T01:58:43.396Z",
+            "modified": "2024-09-26T01:59:38.696Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '61.160.194.160']",
+            "name": "61.160.194.160",
+            "description": "Server Hosting Malware",
+            "valid_from": "2024-09-26T01:58:43.362Z",
+            "valid_until": "2024-10-26T01:58:43.362Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "7a361575-a267-4b07-8469-6197c5516d0b",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "identity--173c879a-bfb3-5dee-9f1f-3fffd76a8756",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "VirusTotal",
+            "description": "VirusTotal service.",
+            "created": "2021-12-30T17:50:51.818Z",
+            "modified": "2023-12-06T16:40:48.104Z",
+            "x_organization_type": "vendor",
+            "x_reliability": "B",
+            "x_id": "3669df35-abb0-42ba-a6e8-f618bb552ff2",
+            "x_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "id": "indicator--b74b9e6f-9409-549b-aae8-6e6e0e410ea2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 3,
+            "created": "2024-09-26T01:32:29.172Z",
+            "modified": "2024-09-26T01:59:38.582Z",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "pattern": "[url:value = 'http://hfs.t1linux.com:7845/scdsshfk']",
+            "name": "http://hfs.t1linux.com:7845/scdsshfk",
+            "description": "Simple indicator of observable {http://hfs.t1linux.com:7845/scdsshfk}",
+            "valid_from": "2024-09-26T01:58:45.414Z",
+            "valid_until": "2024-11-25T01:58:45.414Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Url",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/url/86420c8e58b7fa8a7002b16762d00b13f6755e53287f8c9472728f67d80eb5d6"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "b716b3f5-c0f0-48e3-8f68-11446b197144",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--173c879a-bfb3-5dee-9f1f-3fffd76a8756",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--98f4129f-8694-55af-88ea-1c209f7be721",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 3,
+            "created": "2024-09-26T01:32:03.318Z",
+            "modified": "2024-09-26T01:59:38.474Z",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "pattern": "[domain-name:value = 'hfs.t1linux.com']",
+            "name": "hfs.t1linux.com",
+            "description": "malware hosting domain",
+            "valid_from": "2024-09-26T01:58:45.160Z",
+            "valid_until": "2025-09-26T01:58:45.160Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "Domain-Name",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/domain/hfs.t1linux.com"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "8cb90e21-5145-4f18-87b7-a283e1cb7a53",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--173c879a-bfb3-5dee-9f1f-3fffd76a8756",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b1e6b206-c156-5dab-8ecf-8d86336f0a14",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 3,
+            "created": "2024-09-26T01:28:22.137Z",
+            "modified": "2024-09-26T01:59:38.349Z",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "pattern": "[ipv4-addr:value = '91.92.241.103']",
+            "name": "91.92.241.103",
+            "description": "C2 Server",
+            "valid_from": "2024-09-26T01:58:43.618Z",
+            "valid_until": "2024-10-26T01:58:43.618Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "IPv4-Addr",
+            "labels": [
+                "ref6138"
+            ],
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "description": "VirusTotal Report",
+                    "url": "https://www.virustotal.com/gui/ip-address/91.92.241.103"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/betting-on-bots"
+                }
+            ],
+            "x_id": "23e3dbb0-3b75-47dd-9155-d501fdac4f4d",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--173c879a-bfb3-5dee-9f1f-3fffd76a8756",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
