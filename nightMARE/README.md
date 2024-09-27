@@ -24,6 +24,11 @@ Example usage: https://www.elastic.co/security-labs/unpacking-icedid
 | `nightmare.malware.redlinestealer` | Implement REDLINESTEALER algorithms |
 | `nightmare.malware.remcos`         | Implement REMCOS algorithms         |
 | `nightmare.malware.xorddos`        | Implement XORDDOS algorithms        |
+| `nightmare.malware.netwire`        | Implement NetWire algorithms        |
+| `nightmare.malware.smokeloader`    | Implement SmokeLoader algorithms    |
+| `nightmare.malware.stealc`         | Implement StealC algorithms         |
+| `nightmare.malware.strelastealer`  | Implement StrelaStealer algorithms  |
+
 
 
 ## Install
