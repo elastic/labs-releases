@@ -3,11 +3,11 @@ requires = ["setuptools"]
 
 [project]
 name = "nightMARE"
-version = "0.9.2"
+version = "0.13.1"
 dependencies = [
     "unicorn",
     "lief",
-    "capstone",
+    "capstone==5.0.0",
     "construct",
     "yara-python",
     "requests",
