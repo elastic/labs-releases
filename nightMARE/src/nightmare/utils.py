@@ -5,6 +5,7 @@ import typing
 import requests
 import lief
 import re
+import yara
 
 from nightmare import cast
 
@@ -12,8 +13,14 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0"
 }
 
-
+URL_REGEX = re.compile(
+    rb"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
+)
 BRACKET_RE = re.compile(r"(\w+)\[(\d+)\]")
+PRINTABLE_STRING_REGEX = re.compile(rb"[\x20-\x7E]{4,}")
+BASE64_REGEX = re.compile(
+    rb"^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$"
+)
 
 
 def __download_aux(
@@ -67,7 +74,7 @@ def get_data(data: bytes, offset: int, size: int = 0) -> bytes:
 
 def get_section_content(pe: lief.PE.Binary, section_name: str) -> None | bytes:
     """
-    The function get the section content from a lief._lief.PE.Binary object
+    The function gets the section content from a lief._lief.PE.Binary object
     :param pe: is a lief._lief.PE.Binary
     :param section_name: is the section name
     """
@@ -117,6 +124,47 @@ def write_files(directory: pathlib.Path, files: dict[str, bytes]) -> None:
     """
 
     for filename, data in files.items():
-        path = directory.joinpath(filename)
-        with path.open("wb") as output:
-            output.write(data)
+        directory.joinpath(filename).write_bytes(data)
+
+
+def is_base64(s: bytes) -> bool:
+    return bool(BASE64_REGEX.fullmatch(s))
+
+
+def is_url(s: bytes) -> bool:
+    return bool(URL_REGEX.fullmatch(s))
+
+
+def find_strings(section_data: bytes) -> list[bytes]:
+    """
+    This function builds up the a list of string candidates based on bytes from data.
+    The strings are picked based on regular expression for printable characters
+    """
+    all_strings = []
+    for match in PRINTABLE_STRING_REGEX.findall(section_data):
+        all_strings.append(match)
+
+    return all_strings
+
+
+def yara_scan(data: bytes, compiled_rule: yara.Rules) -> int | None:
+    """
+    Scans the given data using a compiled YARA rule and returns the offset of the first match.
+
+    :param data: The binary data to scan.
+    :param compiled_rule: The compiled YARA rule to use for scanning.
+
+    :return:
+        int: The offset of the first match found by the YARA rule.
+    """
+    matches = compiled_rule.match(data=data)
+    if not matches:
+        return None
+    return matches[0].strings[0].instances[0].offset
+
+
+def get_pe_data_from_rva(pe: lief.PE, va: int, size=None) -> bytes:
+    image_base = pe.optional_header.imagebase
+    rva = va - image_base
+    data = pe.get_content_from_virtual_address(rva, size)
+    return data
