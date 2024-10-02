@@ -17,14 +17,20 @@ class WarmCookie(object):
         strings:
             $seq_str_decrypt = 
             { 
-                48 89 5C 24 ??
-                48 89 6C 24 ??
-                48 89 74 24 ??
-                57
-                48 81 EC ?? ?? ?? ??
+                48894C24??4881EC68010000488B05????????4833C448898424????????48C74424
             }
+            $seq_str_decrypt2 =  
+            { 
+                48895C24??48896C24??48897424??574881EC50010000488B05????????4833C448
+            }
+            $seq_str_decrypt3 =  
+            { 
+                554881ec40010000488dac248000000048898dd0000000
+            }
+
+            
         condition:
-            1 of them
+            any of them
     }
     """
 
@@ -87,12 +93,10 @@ class WarmCookie(object):
                     break
 
             arg_ea = idc.get_operand_value(lea_ea, 1)
-
-            if idc.is_loaded(arg_ea):
-                size = idc.get_wide_dword(arg_ea)
+            size = idc.get_wide_dword(arg_ea)
+            if size < 1000:
                 key = idc.get_bytes(arg_ea + WarmCookie.KEY_OFFSET, WarmCookie.KEY_SIZE)
                 data = idc.get_bytes(arg_ea + WarmCookie.DATA_OFFSET, size)
-
                 encrypted_strings.append((candidate_addr, key, data))
 
         return encrypted_strings
@@ -103,16 +107,24 @@ class WarmCookie(object):
             for addr, key, encrypted_str in WarmCookie.get_encrypted_string(
                 WarmCookie.get_xrefs(func)
             ):
-                decrypted_str = WarmCookie.decrypt_string(encrypted_str, key)
-                null_byte_count = decrypted_str.count(b"\x00")
+                try:
+                    decrypted_str = WarmCookie.decrypt_string(encrypted_str, key)
+                    null_byte_count = decrypted_str.count(b"\x00")
 
-                if null_byte_count > 1:
-                    new_decrypted_str = decrypted_str.decode("utf-16")
-                else:
-                    new_decrypted_str = decrypted_str.decode("utf-8")
+                    try:
+                        if null_byte_count > 1:
+                            new_decrypted_str = decrypted_str.decode("utf-16")
+                        else:
+                            new_decrypted_str = decrypted_str.decode("utf-8")
 
-                print(hex(addr), new_decrypted_str)
-                WarmCookie.set_decompiler_comment(addr, new_decrypted_str)
+                    except UnicodeDecodeError as e:
+                        print(f"Decoding error at {hex(addr)}: {e}")
+                        continue
+
+                    print(hex(addr), new_decrypted_str)
+                    WarmCookie.set_decompiler_comment(addr, new_decrypted_str)
+                except TypeError:
+                    print(f"Failed to decrypt string at: {hex(addr)}")
 
 
 if __name__ == "__main__":
