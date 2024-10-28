@@ -1,0 +1,232 @@
+{
+    "type": "bundle",
+    "id": "bundle--94b7f18f-8925-4c42-a888-1667cd5516d3",
+    "objects": [
+        {
+            "id": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "Elastic Security Labs",
+            "contact_information": "threat-notification@elastic.co",
+            "created": "2021-04-14T14:56:07.680Z",
+            "modified": "2024-02-27T06:26:26.824Z",
+            "x_organization_type": "vendor",
+            "x_reliability": "A",
+            "x_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+            "x_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:CLEAR",
+            "definition": {
+                "tlp": "clear"
+            }
+        },
+        {
+            "id": "indicator--186e84a5-ff8c-5b45-8412-d00e4f8fb73d",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-10-28T14:56:32.924Z",
+            "modified": "2024-10-28T14:56:32.951Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = 'b74733d68e95220ab0630a68ddf973b0c959fd421628e639c1b91e465ba9299b' OR file:hashes.'SHA-1' = '7c23ce7f7e9a11dc262c19e21a328605985f20df' OR file:hashes.MD5 = '7991038132e6655cae80a373d9113af3']",
+            "name": "b74733d68e95220ab0630a68ddf973b0c959fd421628e639c1b91e465ba9299b",
+            "description": "Simple indicator of observable {b74733d68e95220ab0630a68ddf973b0c959fd421628e639c1b91e465ba9299b}",
+            "valid_from": "2024-10-28T14:56:32.891Z",
+            "valid_until": "2025-10-28T14:56:32.891Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "peexe",
+                "assembly",
+                "checks-user-input",
+                "long-sleeps",
+                "detect-debug-environment",
+                "spreader",
+                "infostealer",
+                "xenostealer"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Katz and Mouse Game: MaaS Infostealers Adapt to Patched Chrome Defenses",
+                    "url": "https://www.elastic.co/security-labs/katz-and-mouse-game"
+                }
+            ],
+            "x_id": "c61d1205-a937-489e-97bd-616d186171b9",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--6ac0910b-1d05-5e2c-b15c-d5de521488a0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-10-28T14:56:32.723Z",
+            "modified": "2024-10-28T14:56:32.750Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '84033def9ffa70c7b77ce9a7f6008600c0145c28fe5ea0e56dfafd8474fb8176' OR file:hashes.'SHA-1' = '95dede154fe7e31fea0bfca069c9d0ab686d41da' OR file:hashes.MD5 = '1b9dfd4cb7f0414950c80a4e0ed96329']",
+            "name": "84033def9ffa70c7b77ce9a7f6008600c0145c28fe5ea0e56dfafd8474fb8176",
+            "description": "Simple indicator of observable {84033def9ffa70c7b77ce9a7f6008600c0145c28fe5ea0e56dfafd8474fb8176}",
+            "valid_from": "2024-10-28T14:56:32.694Z",
+            "valid_until": "2025-10-28T14:56:32.694Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "malware",
+                "peexe",
+                "checks-user-input",
+                "idle",
+                "infostealer",
+                "lumma"
+            ],            
+            "external_references": [
+                {
+                    "source_name": "Katz and Mouse Game: MaaS Infostealers Adapt to Patched Chrome Defenses",
+                    "url": "https://www.elastic.co/security-labs/katz-and-mouse-game"
+                }
+            ],
+            "x_id": "fe647304-e9a7-487f-a7bf-17e6ebf20ec8",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--e8681715-7c18-53e4-910c-93c7e82d3f62",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-10-28T14:56:32.525Z",
+            "modified": "2024-10-28T14:56:32.552Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '43cb70d31daa43d24e5b063f4309281753176698ad2aba9c557d80cf710f9b1d' OR file:hashes.'SHA-1' = 'd23776e825707607de6bb284ace14fa2fa4acb2f' OR file:hashes.MD5 = '8fad2a41f8f710002830f1b2adeeeda5']",
+            "name": "43cb70d31daa43d24e5b063f4309281753176698ad2aba9c557d80cf710f9b1d",
+            "description": "Simple indicator of observable {43cb70d31daa43d24e5b063f4309281753176698ad2aba9c557d80cf710f9b1d}",
+            "valid_from": "2024-10-28T14:56:32.492Z",
+            "valid_until": "2025-10-28T14:56:32.492Z",
+            "x_score": 53,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "peexe",
+                "assembly",
+                "long-sleeps",
+                "detect-debug-environment",
+                "spreader",
+                "infostealer",
+                "metastealer"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Katz and Mouse Game: MaaS Infostealers Adapt to Patched Chrome Defenses",
+                    "url": "https://www.elastic.co/security-labs/katz-and-mouse-game"
+                }
+            ],
+            "x_id": "03d28aa9-29a3-43b1-9a1b-8d847a0421c6",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--22f64ea2-8ac3-5c65-bf6f-f94181ae4831",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-10-28T14:56:32.312Z",
+            "modified": "2024-10-28T14:56:32.342Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '08d9d4e6489dc5b05a6caa434fc36ad6c1bd8c8eb08888f61cbed094eac6cb37' OR file:hashes.'SHA-1' = '145d6bfa4eeceaf3c91e05a955c3ca77ee62fca2' OR file:hashes.MD5 = '150df9d8d8d7dfa6806fd746f5046278']",
+            "name": "08d9d4e6489dc5b05a6caa434fc36ad6c1bd8c8eb08888f61cbed094eac6cb37",
+            "description": "Simple indicator of observable {08d9d4e6489dc5b05a6caa434fc36ad6c1bd8c8eb08888f61cbed094eac6cb37}",
+            "valid_from": "2024-10-28T14:56:32.282Z",
+            "valid_until": "2025-10-28T14:56:32.282Z",
+            "x_score": 50,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "malware",
+                "64bits",
+                "peexe",
+                "overlay",
+                "long-sleeps",
+                "checks-disk-space",
+                "executes-dropped-file",
+                "detect-debug-environment",
+                "calls-wmi",
+                "infostealer",
+                "trojan",
+                "phemedrone"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Katz and Mouse Game: MaaS Infostealers Adapt to Patched Chrome Defenses",
+                    "url": "https://www.elastic.co/security-labs/katz-and-mouse-game"
+                }
+            ],
+            "x_id": "0ecf31d0-d321-476a-8ac0-159a40635fb5",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d1f189bc-873b-5091-bc5f-29eecec1c282",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 0,
+            "created": "2024-10-28T14:56:32.081Z",
+            "modified": "2024-10-28T14:56:32.116Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '27e4a3627d7df2b22189dd4bebc559ae1986d49a8f4e35980b428fadb66cf23d' OR file:hashes.'SHA-1' = '04a88c60ae1539a63411fe4765e9b931e8d2d992' OR file:hashes.MD5 = '791fcee57312d4a20cc86ae1cea8dfc4']",
+            "name": "27e4a3627d7df2b22189dd4bebc559ae1986d49a8f4e35980b428fadb66cf23d",
+            "description": "Simple indicator of observable {27e4a3627d7df2b22189dd4bebc559ae1986d49a8f4e35980b428fadb66cf23d}",
+            "valid_from": "2024-10-28T14:56:32.044Z",
+            "valid_until": "2025-10-28T14:56:32.044Z",
+            "x_score": 86,
+            "x_detection": false,
+            "x_main_observable_type": "StixFile",
+            "labels": [
+                "malware",
+                "peexe",
+                "checks-user-input",
+                "detect-debug-environment",
+                "idle",
+                "spreader",
+                "infostealer",
+                "stealc"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Katz and Mouse Game: MaaS Infostealers Adapt to Patched Chrome Defenses",
+                    "url": "https://www.elastic.co/security-labs/katz-and-mouse-game"
+                }
+            ],
+            "x_id": "55478542-9893-475b-8312-5f52bd133637",
+            "x_type": "Indicator",
+            "type": "indicator",
+            "created_by_ref": "identity--5963478b-9800-50f4-997b-57546caaeb7f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
