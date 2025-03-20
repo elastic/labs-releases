@@ -4,4 +4,4 @@ Elastic Security Labs explores a campaign leveraging the r77 rootkit and has bee
 
 Instructions are in the root [indicators](../README.md) directory
 
-Reference: https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit
+Reference: https://www.elastic.co/security-labs/elastic-security-labs-steps-through-the-r77-rootkit 
