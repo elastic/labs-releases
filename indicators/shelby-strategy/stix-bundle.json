@@ -1,0 +1,656 @@
+{
+    "type": "bundle",
+    "id": "bundle--937ab626-776a-4b08-86d2-5ee2947dc713",
+    "objects": [
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "statement",
+            "definition": {
+                "statement": "TLP:CLEAR"
+            }
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--34046c6d-22d5-4cdf-9070-75c5347ee33f",
+            "created": "2025-03-20T21:07:25.64405Z",
+            "modified": "2025-03-20T21:07:25.64405Z",
+            "name": "Phishing: Spearphishing Attachment",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1566.001/",
+                    "external_id": "T1566.001"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e958811e-af4b-4b6d-88f9-dcada562a935",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "Initial stage dropper",
+            "pattern": "[file:hashes.'MD5' = '0db1dc4bbce3c292f8ce1bb7ab1f7a83' AND file:hashes.'SHA1' = '7bd2631c509b41fdb105f267a97356aa7e5f679a' AND file:hashes.'SHA256' = 'feb5d225fa38efe2a627ddfbe9654bf59c171ac0742cd565b7a5f22b45a4cc3a']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.virustotal.com/gui/file/feb5d225fa38efe2a627ddfbe9654bf59c171ac0742cd565b7a5f22b45a4cc3a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--72433f9c-7923-43c6-907f-7a20edcd6210",
+            "created": "2025-03-20T21:07:25.649325Z",
+            "modified": "2025-03-20T21:07:25.649325Z",
+            "name": "Command and Scripting Interpreter",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1059/",
+                    "external_id": "T1059"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--34ca5d2c-b958-4d82-82c7-20e3bf0b7c1b",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "Secondary payload",
+            "pattern": "[file:hashes.'MD5' = '274a45a8a2a6e5f85d798b6c9dfb3093' AND file:hashes.'SHA1' = '9a59b0f5b7dbd3f10c76ecbe5de353f3715b3e93' AND file:hashes.'SHA256' = '5c384109d3e578a0107e8518bcb91cd63f6926f0c0d0e01525d34a734445685c']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.virustotal.com/gui/file/5c384109d3e578a0107e8518bcb91cd63f6926f0c0d0e01525d34a734445685c"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--9be838c7-459d-407a-a65d-65b1f3c1603b",
+            "created": "2025-03-20T21:07:25.650814Z",
+            "modified": "2025-03-20T21:07:25.650814Z",
+            "name": "Web Protocols",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071.001/",
+                    "external_id": "T1071.001"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8e155274-1eff-4d6e-8871-767d85d52dd4",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "SHELBYC2 Backdoor",
+            "pattern": "[file:hashes.'MD5' = '64a7f6234e31616d8d62ac45d4a4a999' AND file:hashes.'SHA1' = 'f073c9833bdecc0d324f6eec3c48b41770a8a022' AND file:hashes.'SHA256' = 'fb8d4c24bcfd853edb15c5c4096723b239f03255f17cec42f2d881f5f31b6025']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.virustotal.com/gui/file/fb8d4c24bcfd853edb15c5c4096723b239f03255f17cec42f2d881f5f31b6025"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--8ad77619-d9d9-4738-b377-006dc032c35b",
+            "created": "2025-03-20T21:07:25.651816Z",
+            "modified": "2025-03-20T21:07:25.651816Z",
+            "name": "Obfuscated Files or Information",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1027/",
+                    "external_id": "T1027"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e1928dd4-4324-42e3-9dbf-34b45bfd9a66",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "SHELBYLOADER DLL",
+            "pattern": "[file:hashes.'MD5' = '07db0c535df9c8fd6bb08b9a5315eecc' AND file:hashes.'SHA1' = 'a3d20552e8b2dc3c59a487814527867e7ecdd55e' AND file:hashes.'SHA256' = '0354862d83a61c8e69adc3e65f6e5c921523eff829ef1b169e4f0f143b04091f']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                },
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.virustotal.com/gui/file/0354862d83a61c8e69adc3e65f6e5c921523eff829ef1b169e4f0f143b04091f"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--4f06a94c-385b-4146-baef-f70a3ad1a3a3",
+            "created": "2025-03-20T21:07:25.652799Z",
+            "modified": "2025-03-20T21:07:25.652799Z",
+            "name": "Phishing: Spearphishing Attachment",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1566.001/",
+                    "external_id": "T1566.001"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--616a5e38-ceff-4eab-8d9b-4a8e9d2a6c6c",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "Lure ZIP file",
+            "pattern": "[file:hashes.'SHA256' = '0e25efeb4e3304815f9e51c1d9bd3a2e2a23ece3a32f0b47f829536f71ead17a']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--9d0d0a9f-602f-47db-b52d-daff78d77676",
+            "created": "2025-03-20T21:07:25.653328Z",
+            "modified": "2025-03-20T21:07:25.653328Z",
+            "name": "Phishing: Spearphishing Attachment",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1566.001/",
+                    "external_id": "T1566.001"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--69f1406b-577d-4318-8f33-1871fef93d03",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "Zipped lure archive",
+            "pattern": "[file:hashes.'SHA256' = '472e685e7994f51bbb259be9c61f01b8b8f35d20030f03215ce205993dbad7f5']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--8c57959d-9c96-45d5-9861-47b18f90b9d0",
+            "created": "2025-03-20T21:07:25.653867Z",
+            "modified": "2025-03-20T21:07:25.653867Z",
+            "name": "Phishing: Spearphishing Attachment",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1566.001/",
+                    "external_id": "T1566.001"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8ad430f0-be2b-4075-b8f1-e6aa727915b8",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "Unspecified lure ZIP file",
+            "pattern": "[file:hashes.'SHA256' = 'e51c6f0fbc5a7e0b03a0d6e1e1d26ab566d606b551c785bf882e9a02f04c862b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--335b2059-2c79-4ae4-8d98-46c75b1bd8d1",
+            "created": "2025-03-20T21:07:25.654474Z",
+            "modified": "2025-03-20T21:07:25.654474Z",
+            "name": "Web Protocols",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071.001/",
+                    "external_id": "T1071.001"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c9d15e40-0389-4f0c-8093-ffec8a67e8f1",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "GitHub C2 Account",
+            "pattern": "[url:value = 'https://github.com/johnshelllby']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--8dc96a1c-afc0-4892-a74c-066f78459e96",
+            "created": "2025-03-20T21:07:25.655537Z",
+            "modified": "2025-03-20T21:07:25.655537Z",
+            "name": "Web Protocols",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071.001/",
+                    "external_id": "T1071.001"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--be30cf4c-afbc-4413-859a-b766aa75465a",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "GitHub C2 Account",
+            "pattern": "[url:value = 'https://github.com/arturshellby']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--6a53949e-fe66-4940-9203-2a3a6781fd13",
+            "created": "2025-03-20T21:07:25.655995Z",
+            "modified": "2025-03-20T21:07:25.655995Z",
+            "name": "Application Layer Protocol: DNS",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071.004/",
+                    "external_id": "T1071.004"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--0dd5c797-21ce-4a25-b4cb-b75121b7f32e",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "C2 domain",
+            "pattern": "[domain-name:value = 'arthurshelby.click']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--120b7276-38b7-41d2-87c8-22fcbb1c2207",
+            "created": "2025-03-20T21:07:25.65676Z",
+            "modified": "2025-03-20T21:07:25.65676Z",
+            "name": "Application Layer Protocol: DNS",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071.004/",
+                    "external_id": "T1071.004"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--dd34ae66-c3fb-4b84-a5d9-b97e7ec85f77",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "C2 domain",
+            "pattern": "[domain-name:value = 'speed-test.click']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--1c38b7fa-977a-47a9-a7a1-387a87f2b795",
+            "created": "2025-03-20T21:07:25.657249Z",
+            "modified": "2025-03-20T21:07:25.657249Z",
+            "name": "Application Layer Protocol",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071/",
+                    "external_id": "T1071"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--cb933948-84ce-49f0-8bfd-516294027135",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "C2 server",
+            "pattern": "[ipv4-addr:value = '2.56.126.151']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--a912f941-3f89-4eb5-8878-2a28639a3176",
+            "created": "2025-03-20T21:07:25.657825Z",
+            "modified": "2025-03-20T21:07:25.657825Z",
+            "name": "Application Layer Protocol",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071/",
+                    "external_id": "T1071"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ff0c892e-0ffc-424d-b0d6-f6f23866ecc0",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "C2 server",
+            "pattern": "[ipv4-addr:value = '2.56.126.157']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--34de4ffa-2b51-4eca-9251-801e8fc210c2",
+            "created": "2025-03-20T21:07:25.658247Z",
+            "modified": "2025-03-20T21:07:25.658247Z",
+            "name": "Application Layer Protocol",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071/",
+                    "external_id": "T1071"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--fbb39258-29f9-4633-9899-bbb3038daac4",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "C2 server",
+            "pattern": "[ipv4-addr:value = '2.56.126.188']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--df0209ed-6d09-4dfa-8147-ab4f0ab223a4",
+            "created": "2025-03-20T21:07:25.658665Z",
+            "modified": "2025-03-20T21:07:25.658665Z",
+            "name": "Application Layer Protocol",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071/",
+                    "external_id": "T1071"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--f68e908d-9df4-489d-a3c9-828ca93b9763",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "C2 server",
+            "pattern": "[ipv4-addr:value = '172.86.68.55']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--880d4b5d-2a86-4cc1-8ad9-c561a0a2e394",
+            "created": "2025-03-20T21:07:25.659171Z",
+            "modified": "2025-03-20T21:07:25.659171Z",
+            "name": "Application Layer Protocol",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071/",
+                    "external_id": "T1071"
+                }
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6c1990db-8558-45cd-a25b-28fc87558751",
+            "created": "2025-03-01T00:00:00.000Z",
+            "modified": "2025-03-01T00:00:00.000Z",
+            "name": "C2 server",
+            "pattern": "[ipv4-addr:value = '195.16.74.138']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-03-01T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/the-shelby-strategy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
