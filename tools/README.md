@@ -9,6 +9,7 @@ These tools are operated by Elastic Security Labs' [nightMARE](../nightMARE) lib
 | Tool                | Description                                                |
 | ------------------- | ---------------------------------------------------------- |
 | [`abyssworker`](abyssworker/) | Tools to aid in the analysis of the ABYSSWORKER malware family. |
+| [`alcatraz`](alcatraz/) | Tools to aid in the analysis of the ALCATRAZ protected binaries. |
 | [`blister`](blister/) | Tools to aid in the analysis of the BLISTER malware family. |
 | [`ghostpulse`](ghostpulse/) | Tools to aid in the analysis of the GHOSTPULSE malware family. |
 | [`guloader`](guloader/) | Tools to aid in the analysis of the GULOADER malware family. |
