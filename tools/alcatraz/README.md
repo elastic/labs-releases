@@ -6,7 +6,7 @@ Elastic Security Labs has observed open-source obfuscator, [Alcatraz](https://gi
 
 Alcatraz research is published here:
 
-- https://www.elastic.co/security-labs/alcatraz
+- https://www.elastic.co/security-labs/deobfuscating-alcatraz
 
 ## Description
 
