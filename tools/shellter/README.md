@@ -12,6 +12,9 @@ SHELLTER research is published here:
 
 - https://www.elastic.co/security-labs/taking-shellter
 
+## Author
+-   [`x86matthew`](https://x.com/x86matthew)
+
 ## Description
 
 | Path               | Description                             |
