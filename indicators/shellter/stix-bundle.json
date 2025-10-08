@@ -1,0 +1,232 @@
+{
+    "type": "bundle",
+    "id": "bundle--059d0a66-b48b-469a-abba-a387e4a1a2ff",
+    "objects": [
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "statement",
+            "definition": {
+                "statement": "TLP:CLEAR"
+            }
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--0d3bffac-5f6a-4cd7-ad32-2ce3ce47b47d",
+            "created": "2025-10-08T00:00:00.000Z",
+            "modified": "2025-10-08T00:00:00.000Z",
+            "name": "Downloaded from Virustotal using hash c865f24e4b9b0855b8b559fc3769239b0aa6e8d680406616a13d9a36fbbc2d30",
+            "pattern": "file:hashes.'SHA256' = 'c865f24e4b9b0855b8b559fc3769239b0aa6e8d680406616a13d9a36fbbc2d30']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-10-08T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/taking-shellter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--afaed3e5-766f-400d-989e-a98ee4b2631b",
+            "created": "2025-10-08T00:00:00.000Z",
+            "modified": "2025-10-08T00:00:00.000Z",
+            "name": "Downloaded from Virustotal using hash 7d0c9855167e7c19a67f800892e974c4387e1004b40efb25a2a1d25a99b03a10",
+            "pattern": "file:hashes.'SHA256' = '7d0c9855167e7c19a67f800892e974c4387e1004b40efb25a2a1d25a99b03a10']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-10-08T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/taking-shellter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--df7af01a-89b2-4491-8b9f-d7dd3ec33764",
+            "created": "2025-10-08T00:00:00.000Z",
+            "modified": "2025-10-08T00:00:00.000Z",
+            "name": "Downloaded from Virustotal using hash b3e93bfef12678294d9944e61d90ca4aa03b7e3dae5e909c3b2166f122a14dad",
+            "pattern": "file:hashes.'SHA256' = 'b3e93bfef12678294d9944e61d90ca4aa03b7e3dae5e909c3b2166f122a14dad']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-10-08T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/taking-shellter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--fce5f716-42b8-4dbb-88b0-96658f65d6d4",
+            "created": "2025-10-08T00:00:00.000Z",
+            "modified": "2025-10-08T00:00:00.000Z",
+            "name": "Downloaded from Virustotal using hash da59d67ced88beae618b9d6c805f40385d0301d412b787e9f9c9559d00d2c880",
+            "pattern": "file:hashes.'SHA256' = 'da59d67ced88beae618b9d6c805f40385d0301d412b787e9f9c9559d00d2c880']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-10-08T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/taking-shellter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7bd23e2f-16ce-48e9-9555-14155c565351",
+            "created": "2025-10-08T00:00:00.000Z",
+            "modified": "2025-10-08T00:00:00.000Z",
+            "name": "Downloaded from Virustotal using hash 70ec2e65f77a940fd0b2b5c0a78a83646dec17583611741521e0992c1bf974f1",
+            "pattern": "file:hashes.'SHA256' = '70ec2e65f77a940fd0b2b5c0a78a83646dec17583611741521e0992c1bf974f1']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-10-08T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/taking-shellter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3cb0415c-8569-4270-a449-589409f0a63b",
+            "created": "2025-10-08T00:00:00.000Z",
+            "modified": "2025-10-08T00:00:00.000Z",
+            "name": "Downloaded from Virustotal using hash 263ab8c9ec821ae573979ef2d5ad98cda5009a39e17398cd31b0fad98d862892",
+            "pattern": "file:hashes.'SHA256' = '263ab8c9ec821ae573979ef2d5ad98cda5009a39e17398cd31b0fad98d862892']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-10-08T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/taking-shellter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--daf2fcfd-c2b4-4b83-b3ef-6c41f027e9ed",
+            "created": "2025-10-08T00:00:00.000Z",
+            "modified": "2025-10-08T00:00:00.000Z",
+            "name": "C2 server",
+            "pattern": "[ipv4-addr:value = '185.156.72.80']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-10-08T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/taking-shellter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b4122afd-4100-4366-bf6c-c9c24a65e525",
+            "created": "2025-10-08T00:00:00.000Z",
+            "modified": "2025-10-08T00:00:00.000Z",
+            "name": "C2 server",
+            "pattern": "[ipv4-addr:value = '94.141.12.182']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-10-08T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/taking-shellter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6804e9c3-edc3-4f84-aa2d-fd49204f960d",
+            "created": "2025-10-08T00:00:00.000Z",
+            "modified": "2025-10-08T00:00:00.000Z",
+            "name": "C2 server",
+            "pattern": "[domain-name:value = 'eaglekl.digital']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-10-08T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/taking-shellter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
