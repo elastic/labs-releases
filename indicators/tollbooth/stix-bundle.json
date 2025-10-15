@@ -1,0 +1,401 @@
+{
+    "type": "bundle",
+    "id": "bundle--7a692233-d92e-40aa-8d42-20f675165460",
+    "objects": [
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "statement",
+            "definition": {
+                "statement": "TLP:CLEAR"
+            }
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ff72c163-91e0-45f2-9ae6-581250c1505b",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "Simple indicator of observable 'WingtbCLI.exe'",
+            "pattern": "file:hashes.'SHA256' = '913431f1d36ee843886bb052bfc89c0e5db903c673b5e6894c49aabc19f1e2fc']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "ref3927",
+                "hiddencli"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8877a6b7-edbc-4965-b0c8-c561399dcd35",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "Simple indicator of observable 'Winkbj.sys'",
+            "pattern": "file:hashes.'SHA256' = 'f9dd0b57a5c133ca0c4cab3cca1ac8debdc4a798b452167a1e5af78653af00c1']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "ref3927",
+                "hiddendriver"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e1f98a40-7e9d-4017-ab23-ac39723b6551",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "Simple indicator of observable 'caches.dll'",
+            "pattern": "file:hashes.'SHA256' = 'c1ca053e3c346513bac332b5740848ed9c496895201abc734f2de131ec1b9fb2']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "ref3927",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--85e5c402-08a4-4ee9-b70d-0c783eb432c1",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "Simple indicator of observable 'scripts.dll'",
+            "pattern": "file:hashes.'SHA256' = 'c348996e27fc14e3dce8a2a476d22e52c6b97bf24dd9ed165890caf88154edd2']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "ref3927",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--1266fd63-7654-4bee-a79a-8f6e7a3a572b",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "Simple indicator of observable 'scripts.dll'",
+            "pattern": "file:hashes.'SHA256' = '82b7f077021df9dc2cf1db802ed48e0dec8f6fa39a34e3f2ade2f0b63a1b5788']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "ref3927",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6c7526a6-1cbb-4d65-abb1-401231702a3c",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "Simple indicator of observable 'caches.dll'",
+            "pattern": "file:hashes.'SHA256' = 'bd2de6ca6c561cec1c1c525e7853f6f73bf6f2406198cd104ecb2ad00859f7d3']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "ref3927",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--a97d7905-0dec-494e-bc78-f4785e7858ea",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "Simple indicator of observable 'CustomIISModule.dll'",
+            "pattern": "file:hashes.'SHA256' = '915441b7d7ddb7d885ecfe75b11eed512079b49875fc288cd65b023ce1e05964']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "ref3927",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--dfdd3daa-1d32-4d7a-83d2-e2b845a35410",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "Simple indicator of observable '1.aspx'",
+            "pattern": "file:hashes.'SHA256' = 'bae5a7722814948fbba197e9b0f8ec5a6fe8328c7078c3adcca0022a533a84fe']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "ref3927",
+                "godzilla"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--2cb09ffe-5afe-4aef-b4dd-3639982d9087",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "Simple indicator of observable 'GotoHTTP.exe'",
+            "pattern": "file:hashes.'SHA256' = '230b84398e873938bbcc7e4a1a358bde4345385d58eb45c1726cee22028026e9']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "ref3927",
+                "gotohttp",
+                "rmm"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--355e3d0f-a216-4185-8b56-62d73e00a3ab",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "TOLLBOOTH config server",
+            "pattern": "[domain-name:value = 'c.cseo99.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--12bcff03-8b9d-41ca-b145-329e0b91e2bd",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "TOLLBOOTH SEO farming config server",
+            "pattern": "[domain-name:value = 'f.fseo99.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--0e073bfa-27b7-4148-89f2-7370e2c35a06",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "TOLLBOOTH crawler reporting & page redirector API",
+            "pattern": "[domain-name:value = 'api.aseo99.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ee3f6da9-2b06-4eaa-9793-3d023dbd9d21",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "TOLLBOOTH page hijacker payload hosting server",
+            "pattern": "[domain-name:value = 'mlxya.oss-accelerate.aliyuncs.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--14fffa4b-4cdf-4a44-9f62-8cf45ae34d5d",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "TOLLBOOTH page hijacker content-fetching server",
+            "pattern": "[domain-name:value = 'asf-sikkeiyjga.cn-shenzhen.fcapp.run']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--afadd6fb-42cb-4a99-9b1d-53ad8a042620",
+            "created": "2025-15-08T00:00:00.000Z",
+            "modified": "2025-15-08T00:00:00.000Z",
+            "name": "TOLLBOOTH page hijacker content-fetching server",
+            "pattern": "[domain-name:value = 'ask-bdtj-selohjszlw.cn-shenzhen.fcapp.run']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2025-15-08T00:00:00Z",
+            "labels": [
+                "malicious-activity",
+                "tollbooth"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Elastic Security Labs",
+                    "url": "https://www.elastic.co/security-labs/tollbooth"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
