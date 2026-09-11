@@ -63,7 +63,6 @@ Reference: https://www.elastic.co/security-labs/threat-command/malicious-browser
 | `zaviro[.]online` | Domain | Ethereum transition | 2026-08-13 | [https://www.virustotal.com/gui/domain/zaviro.online](https://www.virustotal.com/gui/domain/zaviro.online) |
 | `seguranca.versionnova[.]site` | Domain | Ethereum transition | 2026-06-22 | [https://www.virustotal.com/gui/domain/seguranca.versionnova[.]site](https://www.virustotal.com/gui/domain/seguranca.versionnova[.]site) |
 | `178.92.162[.]38:443` | IP | Ethereum transition | 2026-07-16 | [https://www.virustotal.com/gui/ip-address/178.92.162.38](https://www.virustotal.com/gui/ip-address/178.92.162.38) |
-  |
 
 ### File indicators
 
